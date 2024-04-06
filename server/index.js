@@ -23,14 +23,11 @@ app.get('/', (req, res) => {
 
 // Вывод товаров
 
-// app.get('/products', ProductsController.getAll
-// );
-// app.get('/products/:id', ProductsController.getOne
-// );
+app.get('/products', ProductsController.getAll);
+app.get('/products/:id', ProductsController.getOne);
 app.post('/products', productValidation, ProductsController.addProduct);
-// app.get('/products', ProductsController.remove);
+app.delete('/products/:id', ProductsController.remove);
 // app.patch('/products/:id', ProductsController.update);
-
 
 // Логин
 app.post('/auth/login', loginValidation, UserController.login);
