@@ -17,6 +17,7 @@ export const register = async (req, res) => {
       fullname: req.body.fullname,
       avatarUrl: req.body.avatarUrl,
       passwordHash: hash,
+      isAdmin: req.body.isAdmin,
     });
 
     const user = await doc.save();
@@ -73,6 +74,23 @@ export const login = async (req, res) => {
     console.log(error);
     res.status(500).json({
       message: 'Не удалось авторизироваться',
+    });
+  }
+};
+export const authMe = async (req, res) => {
+  try {
+    const user = await UserModel.findById(req.userId);
+    if (!user) {
+      return res.status(404).json({
+        message: 'Пользователь не найден',
+      });
+    }
+    const { passwordHash, ...userData } = user._doc;
+    res.json(userData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: 'не удалось получить данные о пользователе',
     });
   }
 };

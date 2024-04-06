@@ -7,6 +7,8 @@ import { productValidation } from './validations/products.js';
 import * as UserController from './controllers/UserController.js';
 import * as ProductsController from './controllers/ProductsController.js';
 
+import checkAuth from './utils/checkAuth.js';
+
 mongoose
   .connect(
     'mongodb+srv://antvolkov84:j0Pal1thWa5XtHwS@cluster0.1t50rt5.mongodb.net/check?retryWrites=true&w=majority&appName=Cluster0'
@@ -27,11 +29,11 @@ app.get('/products', ProductsController.getAll);
 app.get('/products/:id', ProductsController.getOne);
 app.post('/products', productValidation, ProductsController.addProduct);
 app.delete('/products/:id', ProductsController.remove);
-// app.patch('/products/:id', ProductsController.update);
+app.patch('/products/:id', ProductsController.update);
 
 // Логин
 app.post('/auth/login', loginValidation, UserController.login);
-
+app.get('/auth/me', checkAuth, UserController.authMe);
 app.post('/auth/register', registerValidation, UserController.register);
 
 app.listen(3333, (error) => {

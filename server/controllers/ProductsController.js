@@ -55,8 +55,8 @@ export const remove = async (req, res) => {
       });
     }
     res.json({
-      message: `Продукт удален`
-    })
+      message: `Продукт удален`,
+    });
   } catch (error) {
     console.log(error);
     res.status(500).json({
@@ -72,6 +72,30 @@ export const getAll = async (req, res) => {
     console.log(error);
     res.status(500).json({
       message: 'Ошибка при выводе информации о продуктах',
+    });
+  }
+};
+export const update = async (req, res) => {
+  try {
+    const productId = req.params.id;
+    await ProductsModel.updateOne(
+      {
+        _id: productId,
+      },
+      {
+        fullname: req.body.fullname,
+        productUrl: req.body.productUrl,
+        price: req.body.price,
+        ingredients: req.body.ingredients,
+      }
+    );
+    res.json({
+      message: 'Продукт изменен',
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: 'Не удалось изменить продукт',
     });
   }
 };
