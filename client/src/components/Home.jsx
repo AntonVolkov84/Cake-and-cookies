@@ -14,6 +14,11 @@ function Home() {
           <Login />
           <Registration />
         </header>
+        <div className="productcard">
+          <section className="products"></section>
+          <aside className="basket"></aside>
+          <button className="nextpage"></button>
+        </div>
       </main>
     </>
   );

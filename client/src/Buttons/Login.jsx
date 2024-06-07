@@ -1,8 +1,8 @@
 function Login() {
   return (
-    <div className="login">
+    <button className="login">
       <span className="login_text">Логин</span>
-    </div>
+    </button>
   );
 }
 

@@ -1,8 +1,8 @@
 function Registration() {
   return (
-    <div className="registration">
-      <span>Регистрация</span>
-    </div>
+    <button className="registration">
+      <span className="registration_text">Регистрация</span>
+    </button>
   );
 }
 

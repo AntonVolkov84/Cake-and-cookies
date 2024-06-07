@@ -36,9 +36,12 @@
           align-items: center;
 }
 
-.timantan_text {
+.timantan_text .login_text .registration_text {
   font-size: 16px;
-  margin-left: 16px;
+}
+
+.timantan_text {
+  padding-left: 16px;
 }
 
 .trianglemain {
@@ -66,6 +69,15 @@
   border: solid 2px #0d99ff;
   border-radius: 12px;
   margin: 50px 0 0 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .registration {

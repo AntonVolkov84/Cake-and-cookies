@@ -1,8 +1,8 @@
 function Triangle() {
   return (
-    <div className="trianglemain">
+    <button className="trianglemain">
       <div className="triangle"></div>
-    </div>
+    </button>
   );
 }
 

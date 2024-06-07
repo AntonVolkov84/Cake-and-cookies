@@ -24,9 +24,11 @@
   justify-content: left;
   align-items: center;
 }
-.timantan_text {
+.timantan_text .login_text .registration_text {
   font-size: 16px;
-  margin-left: 16px;
+}
+.timantan_text {
+  padding-left: 16px;
 }
 .trianglemain {
   width: 144px;
@@ -46,8 +48,14 @@
   border: solid 2px #0d99ff;
   border-radius: 12px;
   margin: 50px 0 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .registration {
   @extend .login;
   margin-right: 32px;
+}
+.productcard {
+  
 }
