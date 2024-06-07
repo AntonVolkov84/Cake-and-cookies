@@ -4,6 +4,7 @@ import Timantanshort from '../Buttons/Timantanshort';
 import Login from '../Buttons/Login';
 import Registration from '../Buttons/Registration';
 import Triangle from '../Buttons/Triangle';
+import Productcard from '../Buttons/Productcard';
 function Home() {
   return (
     <>
@@ -17,16 +18,8 @@ function Home() {
         <div className="productsection">
           <div className="productcard">
             <section className="products">
-              <div>rrr</div>
-              <div>ttt</div>
-              <div>fff</div>
-              <div>ggg</div>
-              <div>fff</div>
-              <div>ggg</div>
-              <div>dffd</div>
-              <div>dfdfd</div>
-              <div>ddd</div>
-              <div>ddd</div>
+              <Productcard />
+              <Productcard />
             </section>
             <button className="nextpage">Следующая страница</button>
           </div>

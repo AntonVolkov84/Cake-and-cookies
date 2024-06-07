@@ -96,6 +96,9 @@
   border-radius: 12px;
   background-color: #ffffff;
   margin: 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .basketsum {
   width: 344px;
@@ -127,6 +130,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 10px;
 }
 .nextpage {
   width: 560px;
@@ -138,4 +142,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.card_text {
+  position: relative;
+  color: #26060e;
+}
+.card_img {
+  position: absolute;
+  width: 185px;
+  height: 128px;
+  border-radius: 12px;
 }
