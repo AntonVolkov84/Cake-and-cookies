@@ -1,0 +1,73 @@
+.main_menu {
+  width: 1024px;
+  height: 768px;
+  background-color: #f4f4f4;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 15px 0 15px;
+  border-color: #0d99ff transparent transparent transparent;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.timantan {
+  width: 400px;
+  height: 50px;
+  background-color: #dbf0ff;
+  border: solid 2px #0d99ff;
+  border-radius: 12px;
+  margin: 50px 0 0 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.timantan_text {
+  font-size: 16px;
+  margin-left: 16px;
+}
+
+.trianglemain {
+  width: 144px;
+  height: 50px;
+  background-color: #dbf0ff;
+  border: solid 2px #0d99ff;
+  border-radius: 12px;
+  margin: 50px 0 0 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login, .registration {
+  width: 184px;
+  height: 50px;
+  background-color: #dbf0ff;
+  border: solid 2px #0d99ff;
+  border-radius: 12px;
+  margin: 50px 0 0 16px;
+}
+
+.registration {
+  margin-right: 32px;
+}
