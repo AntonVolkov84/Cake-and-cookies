@@ -31,8 +31,8 @@
 .longbutton {
   @include longbutton();
   margin-left: 32px;
-  margin-bottom: 50px;
-  margin-top: 391px;
+  bottom: 50px;
+  position: absolute;
 }
 .programmquit_block {
   width: 960px;
