@@ -1,5 +1,34 @@
-.loginShort {
+@import '../css/mixin';
+@import '../css/vars';
+
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  box-sizing: border-box;
+}
+.main_menu {
+  width: 1024px;
+  height: 768px;
+  background-color: $greyback;
+}
+
+.exitShort {
+  @include button();
+  @include center();
   width: 176px;
   height: 50px;
-  background-color: ;
+}
+.timantanlong {
+  width: 960px;
+  height: 160px;
+  @include button();
+  display: flex;
+  &_span {
+    @include center();
+  }
+  &_cookies {
+    height: 160px;
+    width: 333px;
+    margin: 8px 8px 8px 0;
+  }
 }
