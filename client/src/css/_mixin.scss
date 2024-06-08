@@ -8,6 +8,8 @@
   background-color: $blueback;
   border: solid 2px $blueborder;
   border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 @mixin bucket {
   background-color: $greyback;
