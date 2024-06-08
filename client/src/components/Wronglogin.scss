@@ -6,7 +6,13 @@
   padding: 0px 0px 0px 0px;
   box-sizing: border-box;
 }
-
+.main_wrongmenu {
+  width: 1024px;
+  height: 768px;
+  background-color: $greyback;
+  position: relative;
+  padding-top: 50px;
+}
 .wrongblocklogin {
   width: 576px;
   height: 272px;

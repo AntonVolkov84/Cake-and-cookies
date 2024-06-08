@@ -1,0 +1,59 @@
+@import '../css/mixin';
+@import '../css/vars';
+
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main_menuprogrammquit {
+  width: 1024px;
+  height: 768px;
+  background-color: $greyback;
+  position: relative;
+}
+
+.headerblock {
+  display: flex;
+}
+.timantan_middle {
+  @include button();
+  width: 768px;
+  height: 50px;
+  margin-top: 50px;
+  margin-left: 32px;
+  padding-left: 16px;
+  padding-top: 13px;
+}
+
+.longbutton {
+  @include longbutton();
+  margin-left: 32px;
+  margin-bottom: 50px;
+  margin-top: 391px;
+}
+.programmquit_block {
+  width: 960px;
+  height: 152px;
+  margin: 25px 32px 0 32px;
+  display: flex;
+}
+.report {
+  @include button();
+  width: 560px;
+  height: 152px;
+}
+.total {
+  width: 384px;
+  height: 152px;
+  background-color: $whiteback;
+  margin-left: 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}

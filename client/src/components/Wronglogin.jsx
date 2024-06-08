@@ -6,7 +6,7 @@ import './Wronglogin.scss';
 function Wronglogin() {
   return (
     <>
-      <main className="main_menu">
+      <main className="main_wrongmenu">
         <TimantanLong />
         <div className="wrongblocklogin">
           <div className="wrongblocklogin_container">

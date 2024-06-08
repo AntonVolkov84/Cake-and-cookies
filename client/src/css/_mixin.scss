@@ -16,3 +16,12 @@
   border: solid 2px $greyborder;
   border-radius: 12px;
 }
+@mixin longbutton {
+  width: 960px;
+  height: 50px;
+  background-color: $blueback;
+  border: solid 2px $blueborder;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}

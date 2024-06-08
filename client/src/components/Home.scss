@@ -45,7 +45,7 @@
   width: 184px;
   height: 50px;
   @include button();
-  margin: 50px 0 0 16px;
+  margin: 50px 32px 0 16px;
   @include center();
 }
 .registration {

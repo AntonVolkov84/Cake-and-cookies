@@ -12,7 +12,7 @@ function Home() {
         <header className="header">
           <Timantanshort />
           <Triangle />
-          <Login />
+          <Login text={'Логин'} />
           <Registration />
         </header>
         <div className="productsection">

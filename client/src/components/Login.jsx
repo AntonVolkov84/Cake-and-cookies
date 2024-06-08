@@ -6,7 +6,7 @@ import './Login.scss';
 function Login() {
   return (
     <>
-      <main className="main_menu">
+      <section className="main_menus">
         <TimantanLong />
         <div className="blocklogin">
           <div className="blocklogin_container">
@@ -17,7 +17,7 @@ function Login() {
           </div>
         </div>
         <ExitShort />
-      </main>
+      </section>
     </>
   );
 }

@@ -6,12 +6,13 @@
   padding: 0px 0px 0px 0px;
   box-sizing: border-box;
 }
-.main_menu {
+.main_menus {
   width: 1024px;
   height: 768px;
   background-color: $greyback;
+  position: relative;
+  padding-top: 50px;
 }
-
 .exitShort {
   @include button();
   @include center();
@@ -24,7 +25,7 @@
   height: 160px;
   @include button();
   display: flex;
-  margin: 50px 32px 0 32px;
+  margin: 0 32px 0 32px;
   &_span {
     @include center();
     width: 619px;
