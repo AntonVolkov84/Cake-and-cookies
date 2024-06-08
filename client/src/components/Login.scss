@@ -49,6 +49,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr;
+    background-color: $whiteback;
   }
   &_entry {
     display: grid;

@@ -1,0 +1,31 @@
+@import '../css/mixin';
+@import '../css/vars';
+
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  box-sizing: border-box;
+}
+
+.wrongblocklogin {
+  width: 576px;
+  height: 272px;
+  margin: 50px auto;
+  background-color: $whiteback;
+  &_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &_text {
+    margin-top: 103px;
+    font-size: 22px;
+    color: #f01111;
+  }
+  &_btn {
+    width: 176px;
+    height: 64px;
+    margin-top: 40px;
+    @include button();
+  }
+}
