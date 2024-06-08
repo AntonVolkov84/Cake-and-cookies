@@ -1,0 +1,16 @@
+@import './vars';
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin button {
+  background-color: $blueback;
+  border: solid 2px $blueborder;
+  border-radius: 12px;
+}
+@mixin bucket {
+  background-color: $greyback;
+  border: solid 2px $greyborder;
+  border-radius: 12px;
+}

@@ -1,3 +1,6 @@
+@import '../css/mixin';
+@import '../css/vars';
+
 * {
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
@@ -6,7 +9,7 @@
 .main_menu {
   width: 1024px;
   height: 768px;
-  background-color: #f4f4f4;
+  background-color: $greyback;
 }
 .triangle {
   width: 0;
@@ -21,13 +24,9 @@
 .timantan {
   width: 400px;
   height: 50px;
-  background-color: #dbf0ff;
-  border: solid 2px #0d99ff;
-  border-radius: 12px;
+  @include button();
   margin: 50px 0 0 32px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
+  @include center();
 }
 .timantan_text .login_text .registration_text {
   font-size: 16px;
@@ -38,24 +37,16 @@
 .trianglemain {
   width: 144px;
   height: 50px;
-  background-color: #dbf0ff;
-  border: solid 2px #0d99ff;
-  border-radius: 12px;
+  @include button();
   margin: 50px 0 0 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center();
 }
 .login {
   width: 184px;
   height: 50px;
-  background-color: #dbf0ff;
-  border: solid 2px #0d99ff;
-  border-radius: 12px;
+  @include button();
   margin: 50px 0 0 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center();
 }
 .registration {
   @extend .login;
@@ -75,9 +66,7 @@
 .basket {
   width: 384px;
   height: 593px;
-  background-color: #dbf0ff;
-  border: solid 2px #0d99ff;
-  border-radius: 12px;
+  @include button();
   margin-left: 32px;
   margin-top: 25px;
 }
@@ -85,16 +74,14 @@
   width: 364px;
   height: 573px;
   margin: 10px;
-  background-color: #f4f4f4;
-  border: solid 2px #b3b3b3;
-  border-radius: 12px;
+  @include bucket();
 }
 .basketmenu {
   width: 344px;
   height: 393px;
-  border: solid 2px #b3b3b3;
+  border: solid 2px $greyborder;
   border-radius: 12px;
-  background-color: #ffffff;
+  background-color: $whiteback;
   margin: 10px;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -103,9 +90,7 @@
 .basketsum {
   width: 344px;
   height: 52px;
-  border: solid 2px #0d99ff;
-  border-radius: 12px;
-  background-color: #dbf0ff;
+  @include button();
   margin: 10px;
   display: flex;
   justify-content: center;
@@ -114,9 +99,7 @@
 .checkout {
   width: 344px;
   height: 88px;
-  border: solid 2px #0d99ff;
-  border-radius: 12px;
-  background-color: #dbf0ff;
+  @include button();
   margin: 0 10px 10px 10px;
   font-size: 24px;
 }
@@ -124,8 +107,8 @@
   width: 560px;
   height: 518px;
   margin: 25px 0 0 32px;
-  background-color: #dbf0ff;
-  border: solid 2px #dbf0ff;
+  background-color: $blueback;
+  border: solid 2px $blueback;
   border-radius: 12px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -136,9 +119,7 @@
   width: 560px;
   height: 50px;
   margin: 25px 0 0 32px;
-  background-color: #dbf0ff;
-  border: solid 2px #0d99ff;
-  border-radius: 12px;
+  @include button();
   display: flex;
   justify-content: center;
   align-items: center;
