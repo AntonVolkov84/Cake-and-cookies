@@ -1,0 +1,38 @@
+@import '../css/mixin';
+@import '../css/vars';
+
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.gweight {
+  width: 1024px;
+  height: 768px;
+  background-color: $greyback;
+  position: relative;
+  padding-top: 50px;
+  &_block {
+    width: 960px;
+    height: 412px;
+    display: flex;
+    margin-left: 32px;
+  }
+  &_info {
+    width: 400px;
+    height: 336px;
+    @include button();
+    margin-top: 25px;
+  }
+  &_entry {
+    width: 544px;
+    height: 412px;
+    @include button();
+    margin-top: 25px;
+    margin-left: 16px;
+  }
+  &__menu {
+  }
+}

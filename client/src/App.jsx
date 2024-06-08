@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Wronglogin from './components/Wronglogin';
 import Programmquit from './components/Programmquit';
 import Quit from './components/Quit';
+import Gweight from './components/Gweight';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/wronglogin" element={<Wronglogin />} />
       <Route path="/programmquit" element={<Programmquit />} />
       <Route path="/quit" element={<Quit />} />
+      <Route path="/gweight" element={<Gweight />} />
     </Routes>
   );
 }
