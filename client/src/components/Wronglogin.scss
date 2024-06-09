@@ -12,12 +12,14 @@
   background-color: $greyback;
   position: relative;
   padding-top: 50px;
+  padding-left: 25px;
 }
 .wrongblocklogin {
   width: 576px;
   height: 272px;
   margin: 50px auto;
   background-color: $whiteback;
+  margin-bottom: 136px;
   &_container {
     display: flex;
     flex-direction: column;

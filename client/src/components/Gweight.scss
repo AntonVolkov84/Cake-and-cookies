@@ -14,11 +14,11 @@
   background-color: $greyback;
   position: relative;
   padding-top: 50px;
+  padding-left: 25px;
   &_block {
     width: 960px;
     height: 412px;
     display: flex;
-    margin-left: 32px;
   }
   &_info {
     width: 400px;
@@ -33,6 +33,66 @@
     margin-top: 25px;
     margin-left: 16px;
   }
-  &__menu {
+
+  &_menu {
+    margin: 10px 10px 0 10px;
+    width: 524px;
+    height: 147px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: $whiteback;
+    border-radius: 12px;
+    &_text {
+      padding: 16px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+    &_input {
+      border: none;
+      padding: 16px;
+    }
+    &_input:focus {
+      outline: none;
+      border: 2px solid $blueborder;
+      border-radius: 12px;
+    }
+    &_input:invalid {
+      border: 2px solid red;
+      border-radius: 12px;
+    }
+  }
+  &_handleadd {
+    width: 330px;
+    height: 90px;
+    @include button();
+    margin-right: 16px;
+  }
+  &_get {
+    width: 490px;
+    height: 90px;
+    @include button();
+    margin: 25px 25px 0 25px;
+  }
+  &_adding {
+    margin: 25px 25px 0 25px;
+    display: flex;
+  }
+  &_add {
+    width: 150px;
+    height: 90px;
+    border-radius: 12px;
+    border: none;
+    padding: 10px;
+    background-color: #14ae5c;
+  }
+  &_card_img {
+    border-radius: 12px;
+    width: 380px;
+    margin: 10px 10px 10px 10px;
+  }
+  &_card_text {
+    margin-left: 10px;
   }
 }

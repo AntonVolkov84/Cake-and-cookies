@@ -13,6 +13,7 @@
   height: 768px;
   background-color: $greyback;
   position: relative;
+  padding-left: 25px;
 }
 
 .headerblock {
@@ -23,21 +24,19 @@
   width: 768px;
   height: 50px;
   margin-top: 50px;
-  margin-left: 32px;
   padding-left: 16px;
   padding-top: 13px;
 }
 
 .longbutton {
   @include longbutton();
-  margin-left: 32px;
   bottom: 50px;
   position: absolute;
 }
 .programmquit_block {
   width: 960px;
   height: 152px;
-  margin: 25px 32px 0 32px;
+  margin: 25px 0 0 0;
   display: flex;
 }
 .report {
