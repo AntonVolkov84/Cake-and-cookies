@@ -1,0 +1,40 @@
+@import '../css/mixin';
+@import '../css/vars';
+
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  box-sizing: border-box;
+}
+.adminmenu {
+  width: 1024px;
+  height: 768px;
+  background-color: $greyback;
+  padding-left: 25px;
+  position: relative;
+  &_header {
+    display: flex;
+  }
+
+  &_footer {
+    width: 960px;
+    height: 50px;
+    @include button();
+    position: absolute;
+    bottom: 50px;
+  }
+  &_card {
+    margin-top: 25px;
+    width: 960px;
+    height: 475px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+  }
+  &_btn {
+    border: none;
+    border-radius: 12px;
+    background-color: $whiteback;
+  }
+}

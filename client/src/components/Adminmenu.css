@@ -1,0 +1,44 @@
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.adminmenu {
+  width: 1024px;
+  height: 768px;
+  background-color: #F4F4F4;
+  padding-left: 25px;
+  position: relative;
+}
+.adminmenu_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.adminmenu_footer {
+  width: 960px;
+  height: 50px;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  bottom: 50px;
+}
+.adminmenu_card {
+  margin-top: 25px;
+  width: 960px;
+  height: 475px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 25px;
+}
+.adminmenu_btn {
+  border: none;
+  border-radius: 12px;
+  background-color: #FBFBFB;
+}

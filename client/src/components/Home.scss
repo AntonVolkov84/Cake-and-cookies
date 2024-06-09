@@ -10,6 +10,7 @@
   width: 1024px;
   height: 768px;
   background-color: $greyback;
+  padding-left: 25px;
 }
 .triangle {
   width: 0;
@@ -25,7 +26,7 @@
   width: 400px;
   height: 50px;
   @include button();
-  margin: 50px 0 0 32px;
+  margin: 50px 0 0 0;
   @include center();
 }
 .timantan_text .login_text .registration_text {
@@ -45,7 +46,7 @@
   width: 184px;
   height: 50px;
   @include button();
-  margin: 50px 32px 0 16px;
+  margin: 50px 0 0 16px;
   @include center();
 }
 .registration {
@@ -67,7 +68,6 @@
   width: 384px;
   height: 593px;
   @include button();
-  margin-left: 32px;
   margin-top: 25px;
 }
 .basketin {
@@ -106,7 +106,7 @@
 .products {
   width: 560px;
   height: 518px;
-  margin: 25px 0 0 32px;
+  margin: 25px 0 0 0;
   background-color: $blueback;
   border: solid 2px $blueback;
   border-radius: 12px;
@@ -118,7 +118,7 @@
 .nextpage {
   width: 560px;
   height: 50px;
-  margin: 25px 0 0 32px;
+  margin: 25px 0 0 0;
   @include button();
   display: flex;
   justify-content: center;
