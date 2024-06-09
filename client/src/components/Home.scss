@@ -125,8 +125,11 @@
   align-items: center;
 }
 .card_text {
+  padding-left: 10px;
+  position: absolute;
+  top: 80px;
   position: relative;
-  color: #26060e;
+  color: #ffffff;
 }
 .card_img {
   position: absolute;

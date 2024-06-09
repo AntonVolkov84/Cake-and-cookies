@@ -62,6 +62,10 @@
       border: 2px solid red;
       border-radius: 12px;
     }
+    &_input:valid {
+      border: 2px solid #14ae5c;
+      border-radius: 12px;
+    }
   }
   &_handleadd {
     width: 330px;
