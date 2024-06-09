@@ -7,6 +7,7 @@ import Programmquit from './components/Programmquit';
 import Quit from './components/Quit';
 import Gweight from './components/Gweight';
 import Handleweight from './components/Handleweight';
+import Bucket from './components/Bucket';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/quit" element={<Quit />} />
       <Route path="/gweight" element={<Gweight />} />
       <Route path="/handleweight" element={<Handleweight />} />
+      <Route path="/bucket" element={<Bucket />} />
     </Routes>
   );
 }

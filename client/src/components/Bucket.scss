@@ -1,0 +1,96 @@
+@import '../css/mixin';
+@import '../css/vars';
+
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.bucket {
+  width: 1024px;
+  height: 768px;
+  background-color: $greyback;
+  position: relative;
+  padding-top: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  &_header {
+    @include longbutton();
+    @include center();
+  }
+  &_menu {
+    height: 368px;
+    width: 960px;
+    border-radius: 12px;
+    margin-top: 25px;
+    display: flex;
+  }
+  &_info {
+    background-color: $whiteback;
+    width: 912px;
+    height: 368px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  &_roll {
+    width: 32px;
+    height: 368px;
+    @include button();
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &_rollup {
+    margin-top: 16px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 20px 10px;
+    border-color: transparent transparent $blueborder transparent;
+  }
+  &_rolldown {
+    margin-top: 295px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 10px 0 10px;
+    border-color: $blueborder transparent transparent transparent;
+  }
+  &_total {
+    @include button();
+    width: 240px;
+    height: 50px;
+    font-size: 24px;
+    @include center();
+    margin-left: 720px;
+    margin-top: 32px;
+    margin-right: 25px;
+  }
+  &_checkout {
+    width: 960px;
+    height: 50px;
+    @include button();
+    margin-top: 32px;
+  }
+  &_footer {
+    margin-top: 25px;
+    width: 960px;
+    height: 50px;
+    display: flex;
+  }
+  &_back {
+    width: 672px;
+    height: 50px;
+    margin-right: 16px;
+    @include button();
+  }
+  &_del {
+    width: 272px;
+    height: 50px;
+    @include button();
+  }
+}

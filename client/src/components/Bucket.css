@@ -1,0 +1,148 @@
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bucket {
+  width: 1024px;
+  height: 768px;
+  background-color: #F4F4F4;
+  position: relative;
+  padding-top: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.bucket_header {
+  width: 960px;
+  height: 50px;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.bucket_menu {
+  height: 368px;
+  width: 960px;
+  border-radius: 12px;
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.bucket_info {
+  background-color: #FBFBFB;
+  width: 912px;
+  height: 368px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.bucket_roll {
+  width: 32px;
+  height: 368px;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.bucket_rollup {
+  margin-top: 16px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 20px 10px;
+  border-color: transparent transparent #0D99FF transparent;
+}
+.bucket_rolldown {
+  margin-top: 295px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 10px 0 10px;
+  border-color: #0D99FF transparent transparent transparent;
+}
+.bucket_total {
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 240px;
+  height: 50px;
+  font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 720px;
+  margin-top: 32px;
+  margin-right: 25px;
+}
+.bucket_checkout {
+  width: 960px;
+  height: 50px;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 32px;
+}
+.bucket_footer {
+  margin-top: 25px;
+  width: 960px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.bucket_back {
+  width: 672px;
+  height: 50px;
+  margin-right: 16px;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.bucket_del {
+  width: 272px;
+  height: 50px;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
