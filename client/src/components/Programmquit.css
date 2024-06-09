@@ -3,10 +3,19 @@
   padding: 0px 0px 0px 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main_menuprogrammquit {
+  width: 1024px;
+  height: 768px;
+  background-color: #F4F4F4;
+  position: relative;
+  padding-left: 25px;
 }
 
 .headerblock {
-  margin: 50px 16px 0 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,6 +30,8 @@
   width: 768px;
   height: 50px;
   margin-top: 50px;
+  padding-left: 16px;
+  padding-top: 13px;
 }
 
 .longbutton {
@@ -31,4 +42,47 @@
   border-radius: 12px;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
+  bottom: 50px;
+  position: absolute;
+}
+
+.programmquit_block {
+  width: 960px;
+  height: 152px;
+  margin: 25px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.report {
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 560px;
+  height: 152px;
+}
+
+.total {
+  width: 384px;
+  height: 152px;
+  background-color: #FBFBFB;
+  margin-left: 16px;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
 }

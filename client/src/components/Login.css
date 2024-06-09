@@ -5,6 +5,15 @@
           box-sizing: border-box;
 }
 
+.main_menus {
+  width: 1024px;
+  height: 768px;
+  background-color: #F4F4F4;
+  position: relative;
+  padding-top: 50px;
+  padding-left: 25px;
+}
+
 .exitShort {
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
@@ -22,7 +31,7 @@
           align-items: center;
   width: 176px;
   height: 50px;
-  margin: 136px 424px 50px 424px;
+  margin: 0 auto;
 }
 
 .timantanlong {
@@ -36,19 +45,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 32px 0 32px;
 }
 .timantanlong_span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 619px;
+  margin: 62px 0 62px 90px;
 }
 .timantanlong_cookies {
   width: 333px;
@@ -62,7 +62,9 @@
   background-color: #F4F4F4;
   border: solid 2px #B3B3B3;
   border-radius: 12px;
-  margin: 50px 224px 0 224px;
+  margin: 0 auto;
+  margin-bottom: 136px;
+  margin-top: 50px;
 }
 .blocklogin_container {
   border-radius: 12px;
