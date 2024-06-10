@@ -12,6 +12,7 @@ import Adminmenu from './components/Adminmenu';
 import Productadding from './components/Productadding';
 import Changingproduct from './components/Changingproduct';
 import Checkdelproduct from './components/Checkdelproduct';
+import Delproduct from './components/Delproduct';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Route path="/productadding" element={<Productadding />} />
       <Route path="/changingproduct" element={<Changingproduct />} />
       <Route path="/checkdelproduct" element={<Checkdelproduct />} />
+      <Route path="/delproduct" element={<Delproduct />} />
     </Routes>
   );
 }
