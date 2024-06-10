@@ -11,6 +11,7 @@ import Bucket from './components/Bucket';
 import Adminmenu from './components/Adminmenu';
 import Productadding from './components/Productadding';
 import Changingproduct from './components/Changingproduct';
+import Checkdelproduct from './components/Checkdelproduct';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Route path="/adminmenu" element={<Adminmenu />} />
       <Route path="/productadding" element={<Productadding />} />
       <Route path="/changingproduct" element={<Changingproduct />} />
+      <Route path="/checkdelproduct" element={<Checkdelproduct />} />
     </Routes>
   );
 }
