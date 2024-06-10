@@ -17,7 +17,7 @@
   }
   &_card {
     width: 960px;
-    height: 256px;
+    height: 280px;
     background-color: $whiteback;
     border-radius: 12px;
     margin-top: 25px;
@@ -30,7 +30,7 @@
     display: flex;
     justify-self: start;
     align-items: center;
-    margin-bottom: 2px;
+    margin-top: 5px;
   }
   &_cardboardtext {
     width: 304px;
