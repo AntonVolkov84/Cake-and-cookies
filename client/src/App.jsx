@@ -10,6 +10,7 @@ import Handleweight from './components/Handleweight';
 import Bucket from './components/Bucket';
 import Adminmenu from './components/Adminmenu';
 import Productadding from './components/Productadding';
+import Changingproduct from './components/Changingproduct';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Route path="/bucket" element={<Bucket />} />
       <Route path="/adminmenu" element={<Adminmenu />} />
       <Route path="/productadding" element={<Productadding />} />
+      <Route path="/changingproduct" element={<Changingproduct />} />
     </Routes>
   );
 }

@@ -1,0 +1,82 @@
+@import '../css/mixin';
+@import '../css/vars';
+
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  box-sizing: border-box;
+}
+.changingproduct {
+  width: 1024px;
+  height: 768px;
+  background-color: $greyback;
+  padding-left: 25px;
+  position: relative;
+  &_header {
+    display: flex;
+  }
+  &_card {
+    width: 960px;
+    height: 256px;
+    background-color: $whiteback;
+    border-radius: 12px;
+    margin-top: 25px;
+    display: grid;
+    grid-template-rows: repeat (1fr);
+  }
+  &_cardboard {
+    height: 64px;
+    width: 960px;
+    display: flex;
+    justify-self: start;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+  &_cardboardtext {
+    width: 304px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid $blueborder;
+    border-right: 1px solid $blueborder;
+    border-radius: 12px;
+    padding-left: 20px;
+  }
+  &_cardboardentry {
+    width: 656px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    position: relative;
+    border: none;
+    outline: none;
+  }
+  &_entryfile {
+    display: none;
+  }
+  &_forentryfile {
+    @include button();
+    width: 176px;
+    height: 32px;
+    position: absolute;
+    right: 20px;
+    @include center();
+  }
+  &_footer {
+    position: absolute;
+    bottom: 50px;
+  }
+
+  &_footer_add {
+    @include button();
+    width: 960px;
+    height: 50px;
+  }
+  &_footer_back {
+    margin-top: 25px;
+    @include button();
+    width: 960px;
+    height: 50px;
+  }
+}
