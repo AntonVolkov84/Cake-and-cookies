@@ -1,8 +1,8 @@
-function Productcard() {
+function Productcard(props) {
   return (
     <div className="card">
-      <img className="card_img" src="img/cookies.jpg"></img>
-      <h2 className="card_text">#1 Печенье с корицей</h2>
+      <img className="card_img" src={props.image}></img>
+      <h2 className="card_text">{props.text}</h2>
     </div>
   );
 }

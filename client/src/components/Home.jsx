@@ -1,12 +1,25 @@
 import React, { useEffect } from 'react';
 import './Home.scss';
+import { useDispatch, useSelector } from 'react-redux';
 import Timantanshort from '../Buttons/Timantanshort';
 import Login from '../Buttons/Login';
 import Registration from '../Buttons/Registration';
 import Triangle from '../Buttons/Triangle';
 import Productcard from '../Buttons/Productcard';
+
+import axios from '../axios';
+import { fetchProducts } from '../redux/slices/products';
+
 function Home() {
-  useEffect(() => {}, [])
+  const dispatch = useDispatch();
+  const { products } = useSelector((state) => state.products);
+
+  const isProductsLoading = products.status === 'loading';
+  const isProductsLoaded = products.status === 'loaded';
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, []);
 
   return (
     <>
@@ -20,8 +33,17 @@ function Home() {
         <div className="productsection">
           <div className="productcard">
             <section className="products">
-              <Productcard />
-              <Productcard />
+              {isProductsLoading ? (
+                <span>Подождите!</span>
+              ) : (
+                products.items.map((e, index) => (
+                  <Productcard
+                    key={index}
+                    text={e.fullname}
+                    image={'img/cookies.jpg'}
+                  />
+                ))
+              )}
             </section>
             <button className="nextpage">Следующая страница</button>
           </div>
