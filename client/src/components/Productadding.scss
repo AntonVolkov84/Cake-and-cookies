@@ -30,6 +30,7 @@
     display: flex;
     justify-self: start;
     align-items: center;
+    margin-bottom: 2px;
   }
   &_cardboardtext {
     width: 304px;
@@ -48,6 +49,8 @@
     align-items: center;
     padding-left: 20px;
     position: relative;
+    border: none;
+    outline: none;
   }
   &_entryfile {
     display: none;

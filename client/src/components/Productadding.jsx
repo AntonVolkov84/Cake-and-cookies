@@ -17,15 +17,15 @@ function Productadding() {
       <div className="productadding_card">
         <div className="productadding_cardboard">
           <div className="productadding_cardboardtext">Название товара:</div>
-          <div className="productadding_cardboardentry">123</div>
+          <input type="text" className="productadding_cardboardentry"></input>
         </div>
         <div className="productadding_cardboard">
           <div className="productadding_cardboardtext">Цена товара:</div>
-          <div className="productadding_cardboardentry">123</div>
+          <input type="text" className="productadding_cardboardentry"></input>
         </div>
         <div className="productadding_cardboard">
           <div className="productadding_cardboardtext">Ингридиенты:</div>
-          <div className="productadding_cardboardentry">123</div>
+          <input type="textfield" className="productadding_cardboardentry"></input>
         </div>
         <div className="productadding_cardboard">
           <div className="productadding_cardboardtext">Фото или аватарка</div>
