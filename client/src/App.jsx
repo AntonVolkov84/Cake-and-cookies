@@ -29,7 +29,7 @@ function App() {
       <Route path="/productadding" element={<Productadding />} />
       <Route path="/changingproduct" element={<Changingproduct />} />
       <Route path="/checkdelproduct" element={<Checkdelproduct />} />
-      <Route path="/delproduct" element={<Delproduct />} />
+      <Route path="/delproduct" element={<Delproduct  />} />
     </Routes>
   );
 }

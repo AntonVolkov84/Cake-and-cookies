@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Home.scss';
 import Timantanshort from '../Buttons/Timantanshort';
 import Login from '../Buttons/Login';
@@ -6,6 +6,8 @@ import Registration from '../Buttons/Registration';
 import Triangle from '../Buttons/Triangle';
 import Productcard from '../Buttons/Productcard';
 function Home() {
+  useEffect(() => {}, [])
+
   return (
     <>
       <main className="main_menu">
