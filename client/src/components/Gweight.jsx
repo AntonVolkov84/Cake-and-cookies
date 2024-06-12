@@ -3,12 +3,20 @@ import Longbutton from '../Buttons/Longbutton';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import './Gweight.scss';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 function Gweight() {
   const products = useSelector((state) => state.products.products.items);
   const { id } = useParams();
-  
+  const [data, setData] = useState();
+
   const currentProduct = products.find((e) => e._id === id);
+
+  function inputChange(event) {
+    setData(event.target.value);
+  }
+  function addToBusket() {}
 
   return (
     <main className="gweight">
@@ -42,12 +50,15 @@ function Gweight() {
               max="999.999"
               step="0.001"
               required
+              onChange={inputChange}
             />
           </div>
           <button className="gweight_get">Получить вес</button>
           <div className="gweight_adding">
             <button className="gweight_handleadd">Ручной ввод данных</button>
-            <button className="gweight_add">Добавить в корзину</button>
+            <button onClick={addToBusket} className="gweight_add">
+              Добавить в корзину
+            </button>
           </div>
         </div>
         <Longbutton text={'Отмена'} />
