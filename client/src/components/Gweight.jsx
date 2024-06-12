@@ -5,18 +5,33 @@ import { useParams } from 'react-router-dom';
 import './Gweight.scss';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { innerAction } from '../redux/slices/busket';
+import { useNavigate } from 'react-router-dom';
 
 function Gweight() {
   const products = useSelector((state) => state.products.products.items);
   const { id } = useParams();
-  const [data, setData] = useState();
+  const [weight, setWeight] = useState();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const currentProduct = products.find((e) => e._id === id);
 
   function inputChange(event) {
-    setData(event.target.value);
+    setWeight(event.target.value);
   }
-  function addToBusket() {}
+  function addToBusket() {
+    dispatch(
+      innerAction({
+        fullname: currentProduct.fullname,
+        price: currentProduct.price,
+        weight: weight,
+        total: currentProduct.price * weight,
+      })
+    );
+    setWeight('');
+    navigate('/');
+  }
 
   return (
     <main className="gweight">
@@ -40,7 +55,7 @@ function Gweight() {
         <div className="gweight_entry">
           <div className="gweight_menu">
             <span className="gweight_menu_text">Цена:</span>
-            <div className="gweight_menu_text">120.00</div>
+            <div className="gweight_menu_text">{currentProduct.price}</div>
             <span className="gweight_menu_text">Вес, кол-во:</span>
             <input
               className="gweight_menu_input"
