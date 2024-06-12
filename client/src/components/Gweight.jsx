@@ -2,15 +2,14 @@ import TimantanLong from '../Buttons/TimantanLong';
 import Longbutton from '../Buttons/Longbutton';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-
 import './Gweight.scss';
 
 function Gweight() {
-  const products = useSelector((state) => state.products);
-  const productId = useParams();
-  const currentProduct = products.products.items.find(
-    (e) => e._id === productId.id.slice(1)
-  );
+  const products = useSelector((state) => state.products.products.items);
+  const { id } = useParams();
+  
+  const currentProduct = products.find((e) => e._id === id);
+
   return (
     <main className="gweight">
       <div className="gweight_timantanlong">

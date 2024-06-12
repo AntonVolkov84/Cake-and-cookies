@@ -109,12 +109,12 @@
   }
   &_card_img {
     border-radius: 12px;
-    width: 380px;
-    height: 380px;
-    object-fit: contain;
-    margin: 10px 10px 10px 10px;
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+    margin: 10px 25px;
   }
   &_card_text {
-    margin-left: 10px;
+    margin-left: 25px;
   }
 }

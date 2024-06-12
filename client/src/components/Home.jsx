@@ -15,12 +15,12 @@ function Home() {
   const { products } = useSelector((state) => state.products);
 
   const isProductsLoading = products.status === 'loading';
-
+  
   useEffect(() => {
     dispatch(fetchProducts());
   }, []);
   function handleClick(event) {
-    navigate(`/gweight/:${event.target.parentNode.id}`);
+    navigate(`/gweight/${event.target.parentNode.id}`);
   }
 
   return (
