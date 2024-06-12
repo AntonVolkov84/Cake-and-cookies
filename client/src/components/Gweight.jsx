@@ -21,6 +21,9 @@ function Gweight() {
     setWeight(event.target.value);
   }
   function addToBusket() {
+    if (weight === undefined) {
+      return alert('Вы не выбрали вес или количество товара');
+    }
     dispatch(
       innerAction({
         fullname: currentProduct.fullname,
