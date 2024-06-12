@@ -16,8 +16,6 @@ function Home() {
 
   const isProductsLoading = products.status === 'loading';
 
-  console.log(busket);
-
   useEffect(() => {
     dispatch(fetchProducts());
   }, []);

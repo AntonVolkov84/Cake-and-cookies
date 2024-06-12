@@ -73,7 +73,12 @@ function Gweight() {
           </div>
           <button className="gweight_get">Получить вес</button>
           <div className="gweight_adding">
-            <button className="gweight_handleadd">Ручной ввод данных</button>
+            <button
+              onClick={() => navigate(`/handleweight/${id}`)}
+              className="gweight_handleadd"
+            >
+              Ручной ввод данных
+            </button>
             <button onClick={addToBusket} className="gweight_add">
               Добавить в корзину
             </button>

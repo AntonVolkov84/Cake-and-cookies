@@ -23,7 +23,7 @@ function App() {
       <Route path="/programmquit" element={<Programmquit />} />
       <Route path="/quit" element={<Quit />} />
       <Route path="/gweight/:id" element={<Gweight />} />
-      <Route path="/handleweight" element={<Handleweight />} />
+      <Route path="/handleweight/:id" element={<Handleweight />} />
       <Route path="/bucket" element={<Bucket />} />
       <Route path="/adminmenu" element={<Adminmenu />} />
       <Route path="/productadding" element={<Productadding />} />
