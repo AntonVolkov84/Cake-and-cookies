@@ -15,6 +15,22 @@
   position: relative;
   padding-top: 50px;
   padding-left: 25px;
+  &_timantanlong {
+    width: 960px;
+    height: 160px;
+    @include button();
+    display: flex;
+    &_span {
+      width: 619px;
+      margin: 62px 0 62px 90px;
+    }
+    &_cookies {
+      width: 333px;
+      margin: 8px 8px 8px 0;
+      border-radius: 12px;
+    }
+  }
+
   &_block {
     width: 960px;
     height: 412px;
@@ -22,7 +38,7 @@
   }
   &_info {
     width: 400px;
-    height: 336px;
+    height: 400px;
     @include button();
     margin-top: 25px;
   }
@@ -94,6 +110,8 @@
   &_card_img {
     border-radius: 12px;
     width: 380px;
+    height: 380px;
+    object-fit: contain;
     margin: 10px 10px 10px 10px;
   }
   &_card_text {

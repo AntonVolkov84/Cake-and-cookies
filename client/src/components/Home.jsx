@@ -6,20 +6,22 @@ import Login from '../Buttons/Login';
 import Registration from '../Buttons/Registration';
 import Triangle from '../Buttons/Triangle';
 import Productcard from '../Buttons/Productcard';
-
-import axios from '../axios';
 import { fetchProducts } from '../redux/slices/products';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { products } = useSelector((state) => state.products);
 
   const isProductsLoading = products.status === 'loading';
-  const isProductsLoaded = products.status === 'loaded';
 
   useEffect(() => {
     dispatch(fetchProducts());
   }, []);
+  function handleClick(event) {
+    navigate(`/gweight/:${event.target.parentNode.id}`);
+  }
 
   return (
     <>
@@ -37,11 +39,15 @@ function Home() {
                 <span>Подождите!</span>
               ) : (
                 products.items.map((e, index) => (
-                  <Productcard
+                  <div
+                    id={e._id}
                     key={index}
-                    text={e.fullname}
-                    image={'img/cookies.jpg'}
-                  />
+                    className="card"
+                    onClick={handleClick}
+                  >
+                    <img className="card_img" src={e.productUrl}></img>
+                    <h2 className="card_text">{e.fullname}</h2>
+                  </div>
                 ))
               )}
             </section>
