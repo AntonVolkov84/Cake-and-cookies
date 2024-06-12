@@ -94,3 +94,20 @@
     @include button();
   }
 }
+.bucket_productinbucket {
+  display: grid;
+  grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  border-top: 1px solid $blueborder;
+  border-bottom: 1px solid $blueborder;
+  border-radius: 12px;
+  margin-bottom: 1px;
+  &_btn {
+    background-color: red;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+  }
+}
