@@ -75,6 +75,11 @@
   height: 573px;
   margin: 10px;
   @include bucket();
+  position: relative;
+  &_btn {
+    position: absolute;
+    bottom: 0px;
+  }
 }
 .basketmenu {
   width: 344px;
@@ -83,9 +88,32 @@
   border-radius: 12px;
   background-color: $whiteback;
   margin: 10px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 100vh;
+
+  &_line {
+    display: grid;
+    grid-template-rows: 1fr repeat(6);
+    grid-template-columns: 2fr 1fr;
+    width: 340px;
+    height: 50px;
+  }
+
+  &_name {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 10px;
+    border-bottom: $greyborder solid 1px;
+  }
+  &_totalprice {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 10px;
+    border-bottom: $greyborder solid 1px;
+  }
 }
 .basketsum {
   width: 344px;
@@ -95,6 +123,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
 }
 .checkout {
   width: 344px;

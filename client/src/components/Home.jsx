@@ -5,7 +5,6 @@ import Timantanshort from '../Buttons/Timantanshort';
 import Login from '../Buttons/Login';
 import Registration from '../Buttons/Registration';
 import Triangle from '../Buttons/Triangle';
-import Productcard from '../Buttons/Productcard';
 import { fetchProducts } from '../redux/slices/products';
 import { useNavigate } from 'react-router-dom';
 
@@ -13,9 +12,12 @@ function Home() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { products } = useSelector((state) => state.products);
+  const { busket } = useSelector((state) => state.busket);
 
   const isProductsLoading = products.status === 'loading';
-  
+
+  console.log(busket);
+
   useEffect(() => {
     dispatch(fetchProducts());
   }, []);
@@ -55,9 +57,23 @@ function Home() {
           </div>
           <aside className="basket">
             <section className="basketin">
-              <div className="basketmenu"></div>
-              <div className="basketsum">Сумма</div>
-              <button className="checkout">Оформить покупку</button>
+              <div onClick={() => navigate('/bucket')} className="basketmenu">
+                {busket.items.map((e, index) => (
+                  <div key={index} className="basketmenu_line">
+                    <div className="basketmenu_name">{e.fullname}</div>
+                    <div className="basketmenu_name">{e.total}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="basketin_btn">
+                <div className="basketsum">
+                  Итого:{' '}
+                  {busket.items.reduce((acc, e) => {
+                    return acc + e.total;
+                  }, 0)}
+                </div>
+                <button className="checkout">Оформить покупку</button>
+              </div>
             </section>
           </aside>
         </div>
