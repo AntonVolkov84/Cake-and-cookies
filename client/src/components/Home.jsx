@@ -16,7 +16,6 @@ function Home() {
   const navigate = useNavigate();
   const { products } = useSelector((state) => state.products);
   const { busket } = useSelector((state) => state.busket);
-
   const isProductsLoading = products.status === 'loading';
 
   useEffect(() => {
@@ -34,7 +33,7 @@ function Home() {
       <main className="main_menu">
         <header className="header">
           <Timantanshort />
-          <Triangle />
+          <Triangle hidden />
           <Login text={'Логин'} />
           <Registration />
         </header>

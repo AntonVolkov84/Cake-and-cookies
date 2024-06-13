@@ -32,6 +32,6 @@ const authSlice = createSlice({
 
 export const selectIsAuth = (state) => Boolean(state.auth.data);
 
-export const selectIsAdmin = (state) => state.auth.data.isAdmin;
+export const selectIsAdmin = (state) => Boolean(state.auth.data?.isAdmin);
 
 export const authReducer = authSlice.reducer;
