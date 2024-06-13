@@ -1,11 +1,14 @@
 import ExitShort from '../Buttons/ExitShort';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { selectIsAuth } from '../redux/slices/auth';
 import './Login.scss';
 import { fetchAuth } from '../redux/slices/auth';
 
 function Login() {
+  const isAuth = useSelector(selectIsAuth);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const {
     register,
@@ -24,6 +27,10 @@ function Login() {
     console.log(values);
     dispatch(fetchAuth(values));
   };
+
+  if (isAuth) {
+    return navigate('/');
+  }
 
   return (
     <>
