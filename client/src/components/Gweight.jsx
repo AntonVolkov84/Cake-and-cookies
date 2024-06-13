@@ -31,6 +31,7 @@ function Gweight() {
     }
     dispatch(
       innerAction({
+        id: currentProduct._id,
         fullname: currentProduct.fullname,
         price: currentProduct.price,
         weight: weight,

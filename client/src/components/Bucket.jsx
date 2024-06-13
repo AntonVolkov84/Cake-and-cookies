@@ -2,10 +2,15 @@ import { useSelector } from 'react-redux';
 import './Bucket.scss';
 import { cleanBucket } from '../redux/slices/busket';
 import { useDispatch } from 'react-redux';
+import { delProduct } from '../redux/slices/busket';
 
 function Bucket() {
   const { busket } = useSelector((state) => state.busket);
   const dispatch = useDispatch();
+
+  function delProductFromBucket(event) {
+    dispatch(delProduct(event.target.parentNode.id));
+  }
 
   function cleanBasket() {
     dispatch(cleanBucket());
@@ -17,9 +22,12 @@ function Bucket() {
       <div className="bucket_menu">
         <div className="bucket_info">
           {busket.items.map((e, index) => (
-            <div key={index} className="bucket_productinbucket">
+            <div key={index} className="bucket_productinbucket" id={e.id}>
               <div className="bucket_productinbucket_names">{e.fullname}</div>
-              <button className="bucket_productinbucket_btn"></button>
+              <button
+                onClick={delProductFromBucket}
+                className="bucket_productinbucket_btn"
+              ></button>
               <div className="bucket_productinbucket_prices">{e.price}</div>
               <div className="bucket_productinbucket_prices">{e.weight}</div>
               <div className="bucket_productinbucket_prices">{e.total}</div>

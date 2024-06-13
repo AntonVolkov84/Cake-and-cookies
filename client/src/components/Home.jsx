@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import './Home.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import Timantanshort from '../Buttons/Timantanshort';
-import Login from '../Buttons/Login';
 import Registration from '../Buttons/Registration';
 import Triangle from '../Buttons/Triangle';
 import { fetchProducts } from '../redux/slices/products';
@@ -33,9 +32,15 @@ function Home() {
       <main className="main_menu">
         <header className="header">
           <Timantanshort />
-          <Triangle hidden />
-          <Login text={'Логин'} />
-          <Registration />
+          {isAdmin ? <Triangle /> : <></>}
+          {isAdmin ? <Registration /> : <></>}
+          {isAuth ? (
+            <></>
+          ) : (
+            <button onClick={() => navigate('/login')} className="login">
+              Логин
+            </button>
+          )}
         </header>
         <div className="productsection">
           <div className="productcard">

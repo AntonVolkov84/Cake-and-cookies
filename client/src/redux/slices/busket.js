@@ -16,8 +16,13 @@ const busketSlice = createSlice({
     cleanBucket(state) {
       state.busket.items = [];
     },
+    delProduct(state, action) {
+      state.busket.items.forEach(function (e, i) {
+        if (e.id === action.payload) state.busket.items.splice(i, 1);
+      });
+    },
   },
 });
 
 export const busketReducer = busketSlice.reducer;
-export const { innerAction, cleanBucket } = busketSlice.actions;
+export const { innerAction, cleanBucket, delProduct } = busketSlice.actions;
