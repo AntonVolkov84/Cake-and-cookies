@@ -158,7 +158,6 @@ function Handleweight() {
         >
           Назад
         </button>
-        ;
       </div>
     </main>
   );

@@ -93,7 +93,6 @@ function Gweight() {
         <button onClick={() => navigate('/')} className="longbutton">
           Отмена
         </button>
-        ;
       </div>
     </main>
   );
