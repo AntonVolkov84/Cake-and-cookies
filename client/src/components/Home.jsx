@@ -22,6 +22,9 @@ function Home() {
   function handleClick(event) {
     navigate(`/gweight/${event.target.parentNode.id}`);
   }
+  function makeReport() {
+    console.log(busket.items);
+  }
 
   return (
     <>
@@ -70,7 +73,9 @@ function Home() {
                     return acc + e.total;
                   }, 0)}
                 </div>
-                <button className="checkout">Оформить покупку</button>
+                <button onClick={makeReport} className="checkout">
+                  Оформить покупку
+                </button>
               </div>
             </section>
           </aside>

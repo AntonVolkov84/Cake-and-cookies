@@ -2,6 +2,13 @@ import Longbutton from '../Buttons/Longbutton';
 import Login from '../Buttons/Login';
 
 import './Programmquit.scss';
+import axios from '../axios';
+
+async function getAllReports() {
+  const { data } = await axios.get('/report');
+  console.log(data);
+  return data;
+}
 
 function Programmquit() {
   return (
@@ -11,7 +18,9 @@ function Programmquit() {
         <Login text={'Выйти'} />
       </div>
       <div className="programmquit_block">
-        <button className="report">Сформировать отчет</button>
+        <button onClick={getAllReports} className="report">
+          Сформировать отчет
+        </button>
         <div className="total">
           <div className="totaltext">Итоговая сумма продаж:</div>
           <div className="totalsum">120.00</div>

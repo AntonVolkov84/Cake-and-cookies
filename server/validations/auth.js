@@ -14,5 +14,3 @@ export const loginValidation = [
     min: 5,
   }),
 ];
-
-
