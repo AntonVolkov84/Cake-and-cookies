@@ -1,5 +1,4 @@
-import TimantanLong from '../Buttons/TimantanLong';
-import Longbutton from '../Buttons/Longbutton';
+import { cleanWeight } from '../redux/slices/weight';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import './Gweight.scss';
@@ -7,15 +6,20 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { innerAction } from '../redux/slices/busket';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function Gweight() {
   const products = useSelector((state) => state.products.products.items);
+  const isAddingWeight = useSelector((state) => state.weight.weight.items);
   const { id } = useParams();
   const [weight, setWeight] = useState();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const currentProduct = products.find((e) => e._id === id);
+  useEffect(() => {
+    setWeight(isAddingWeight[isAddingWeight.length - 1]);
+  }, [isAddingWeight]);
 
   function inputChange(event) {
     setWeight(event.target.value);
@@ -32,6 +36,7 @@ function Gweight() {
         total: currentProduct.price * weight,
       })
     );
+    dispatch(cleanWeight());
     setWeight('');
     navigate('/');
   }
@@ -61,6 +66,7 @@ function Gweight() {
             <div className="gweight_menu_text">{currentProduct.price}</div>
             <span className="gweight_menu_text">Вес, кол-во:</span>
             <input
+              value={weight}
               className="gweight_menu_input"
               placeholder="Введите вес или количество товара"
               type="number"
@@ -84,7 +90,10 @@ function Gweight() {
             </button>
           </div>
         </div>
-        <Longbutton text={'Отмена'} />
+        <button onClick={() => navigate('/')} className="longbutton">
+          Отмена
+        </button>
+        ;
       </div>
     </main>
   );

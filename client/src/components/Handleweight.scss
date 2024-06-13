@@ -28,6 +28,7 @@
       width: 333px;
       margin: 8px 8px 8px 0;
       border-radius: 12px;
+      object-fit: cover;
     }
   }
   &_block {
@@ -45,6 +46,7 @@
     border-radius: 12px;
     width: 380px;
     margin: 10px 10px 10px 10px;
+    object-fit: contain;
   }
   &_card_text {
     margin-left: 10px;

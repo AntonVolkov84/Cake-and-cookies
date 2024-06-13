@@ -152,7 +152,13 @@ function Handleweight() {
             </button>
           </div>
         </div>
-        <Longbutton text={'Назад'} />
+        <button
+          onClick={() => navigate(`/gweight/${id}`)}
+          className="longbutton"
+        >
+          Назад
+        </button>
+        ;
       </div>
     </main>
   );

@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   weight: {
-    items: 0,
+    items: [],
   },
 };
 
@@ -11,7 +11,7 @@ const weightSlice = createSlice({
   initialState,
   reducers: {
     innerWeight(state, action) {
-      state.weight.items = action.payload;
+      state.weight.items.push(action.payload);
     },
     cleanWeight(state) {
       state.weight.items = [];
