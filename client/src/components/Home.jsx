@@ -7,8 +7,11 @@ import Registration from '../Buttons/Registration';
 import Triangle from '../Buttons/Triangle';
 import { fetchProducts } from '../redux/slices/products';
 import { useNavigate } from 'react-router-dom';
+import { selectIsAuth, selectIsAdmin } from '../redux/slices/auth';
 
 function Home() {
+  const isAuth = useSelector(selectIsAuth);
+  const isAdmin = useSelector(selectIsAdmin);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { products } = useSelector((state) => state.products);

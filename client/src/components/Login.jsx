@@ -24,7 +24,6 @@ function Login() {
   });
 
   const onSubmit = (values) => {
-    console.log(values);
     dispatch(fetchAuth(values));
   };
 
