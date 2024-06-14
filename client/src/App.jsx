@@ -13,12 +13,14 @@ import Productadding from './components/Productadding';
 import Changingproduct from './components/Changingproduct';
 import Checkdelproduct from './components/Checkdelproduct';
 import Delproduct from './components/Delproduct';
+import Registration from './components/Registration';
 
 function App() {
   return (
     <Routes>
       <Route path="" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/registration" element={<Registration />} />
       <Route path="/wronglogin" element={<Wronglogin />} />
       <Route path="/programmquit" element={<Programmquit />} />
       <Route path="/quit" element={<Quit />} />

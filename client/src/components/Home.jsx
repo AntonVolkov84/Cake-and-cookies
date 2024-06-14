@@ -29,65 +29,98 @@ function Home() {
 
   return (
     <>
-      <main className="main_menu">
-        <header className="header">
-          <Timantanshort />
-          {isAdmin ? <Triangle /> : <></>}
-          {isAdmin ? <Registration /> : <></>}
-          {isAuth ? (
-            <></>
-          ) : (
+      {isAuth ? (
+        <main className="main_menu">
+          <header className="header">
+            <Timantanshort />
+            {isAdmin ? <Triangle /> : <></>}
+            {isAdmin ? (
+              <button
+                onClick={() => navigate('/registration')}
+                className="registration"
+              >
+                <span className="registration_text">Регистрация</span>
+              </button>
+            ) : (
+              <></>
+            )}
+            {isAuth ? (
+              <></>
+            ) : (
+              <button onClick={() => navigate('/login')} className="login">
+                Логин
+              </button>
+            )}
+          </header>
+          <div className="productsection">
+            <div className="productcard">
+              <section className="products">
+                {isProductsLoading ? (
+                  <span>Подождите!</span>
+                ) : (
+                  products.items.map((e, index) => (
+                    <div
+                      id={e._id}
+                      key={index}
+                      className="card"
+                      onClick={handleClick}
+                    >
+                      <img className="card_img" src={e.productUrl}></img>
+                      <h2 className="card_text">{e.fullname}</h2>
+                    </div>
+                  ))
+                )}
+              </section>
+            </div>
+            <aside className="basket">
+              <section className="basketin">
+                <div onClick={() => navigate('/bucket')} className="basketmenu">
+                  {busket.items.map((e, index) => (
+                    <div key={index} className="basketmenu_line">
+                      <div className="basketmenu_name">{e.fullname}</div>
+                      <div className="basketmenu_name">{e.total}</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="basketin_btn">
+                  <div className="basketsum">
+                    Итого:{' '}
+                    {busket.items.reduce((acc, e) => {
+                      return acc + e.total;
+                    }, 0)}
+                  </div>
+                  <button onClick={makeReport} className="checkout">
+                    Оформить покупку
+                  </button>
+                </div>
+              </section>
+            </aside>
+          </div>
+        </main>
+      ) : (
+        <main className="main_menu">
+          <header className="header">
+            <Timantanshort />
             <button onClick={() => navigate('/login')} className="login">
               Логин
             </button>
-          )}
-        </header>
-        <div className="productsection">
+          </header>
           <div className="productcard">
             <section className="products">
               {isProductsLoading ? (
                 <span>Подождите!</span>
               ) : (
                 products.items.map((e, index) => (
-                  <div
-                    id={e._id}
-                    key={index}
-                    className="card"
-                    onClick={handleClick}
-                  >
+                  <div id={e._id} key={index} className="card">
                     <img className="card_img" src={e.productUrl}></img>
                     <h2 className="card_text">{e.fullname}</h2>
                   </div>
                 ))
               )}
             </section>
-            <button className="nextpage">Следующая страница</button>
           </div>
-          <aside className="basket">
-            <section className="basketin">
-              <div onClick={() => navigate('/bucket')} className="basketmenu">
-                {busket.items.map((e, index) => (
-                  <div key={index} className="basketmenu_line">
-                    <div className="basketmenu_name">{e.fullname}</div>
-                    <div className="basketmenu_name">{e.total}</div>
-                  </div>
-                ))}
-              </div>
-              <div className="basketin_btn">
-                <div className="basketsum">
-                  Итого:{' '}
-                  {busket.items.reduce((acc, e) => {
-                    return acc + e.total;
-                  }, 0)}
-                </div>
-                <button onClick={makeReport} className="checkout">
-                  Оформить покупку
-                </button>
-              </div>
-            </section>
-          </aside>
-        </div>
-      </main>
+        </main>
+      )}
     </>
   );
 }

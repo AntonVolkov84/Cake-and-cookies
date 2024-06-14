@@ -17,7 +17,7 @@ function Login() {
     formState: { errors, isValid },
   } = useForm({
     defaultValues: {
-      email: 'ant_volkov@mail.ru',
+      email: 'antvolkov84@gmail.com',
       password: '12345',
     },
     mode: 'onChange',

@@ -15,6 +15,29 @@
   padding-top: 50px;
   padding-left: 25px;
 }
+.gweight_timantanlong {
+  width: 960px;
+  height: 160px;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.gweight_timantanlong_span {
+  width: 619px;
+  margin: 62px 0 62px 90px;
+}
+.gweight_timantanlong_cookies {
+  width: 333px;
+  margin: 8px 8px 8px 0;
+  border-radius: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .gweight_block {
   width: 960px;
   height: 412px;
@@ -24,7 +47,7 @@
 }
 .gweight_info {
   width: 400px;
-  height: 336px;
+  height: 400px;
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
   border-radius: 12px;
@@ -118,9 +141,12 @@
 }
 .gweight_card_img {
   border-radius: 12px;
-  width: 380px;
-  margin: 10px 10px 10px 10px;
+  width: 340px;
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 10px 25px;
 }
 .gweight_card_text {
-  margin-left: 10px;
+  margin-left: 25px;
 }

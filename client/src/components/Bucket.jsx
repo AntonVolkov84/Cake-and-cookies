@@ -3,8 +3,10 @@ import './Bucket.scss';
 import { cleanBucket } from '../redux/slices/busket';
 import { useDispatch } from 'react-redux';
 import { delProduct } from '../redux/slices/busket';
+import { useNavigate } from 'react-router-dom';
 
 function Bucket() {
+  const navigate = useNavigate();
   const { busket } = useSelector((state) => state.busket);
   const dispatch = useDispatch();
 
@@ -47,7 +49,9 @@ function Bucket() {
       </div>
       <button className="bucket_checkout">Оформить покупку</button>
       <div className="bucket_footer">
-        <button className="bucket_back">Назад</button>
+        <button onClick={() => navigate('/')} className="bucket_back">
+          Назад
+        </button>
         <button onClick={cleanBasket} className="bucket_del">
           Сброс
         </button>

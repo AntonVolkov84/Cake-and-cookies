@@ -1,0 +1,121 @@
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.checkdelproduct {
+  width: 1024px;
+  height: 768px;
+  background-color: #F4F4F4;
+  padding-left: 25px;
+}
+.checkdelproduct_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.checkdelproduct_productcard {
+  display: grid;
+}
+.checkdelproduct_productsection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.checkdelproduct_productcard {
+  width: 560px;
+  height: 593px;
+  margin-right: 16px;
+}
+.checkdelproduct_basket {
+  width: 384px;
+  height: 518px;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 25px;
+}
+.checkdelproduct_basketin {
+  width: 364px;
+  height: 498px;
+  margin: 10px;
+  background-color: #F4F4F4;
+  border: solid 2px #B3B3B3;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  color: red;
+}
+.checkdelproduct_checkout {
+  width: 344px;
+  height: 88px;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 10px 10px 10px;
+  font-size: 24px;
+}
+.checkdelproduct_products {
+  width: 560px;
+  height: 518px;
+  margin: 25px 0 0 0;
+  background-color: #DBF0FF;
+  border: solid 2px #DBF0FF;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+.checkdelproduct_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.checkdelproduct_nextpage {
+  width: 476px;
+  height: 50px;
+  margin: 25px 0 0 0;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+.checkdelproduct_card_text {
+  padding-left: 10px;
+  position: absolute;
+  top: 80px;
+  position: relative;
+  color: #ffffff;
+}
+.checkdelproduct_card_img {
+  position: absolute;
+  width: 185px;
+  height: 128px;
+  border-radius: 12px;
+}

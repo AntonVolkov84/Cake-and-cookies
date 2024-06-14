@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-.main_menus {
+.registrationblock_main_menus {
   width: 1024px;
   height: 768px;
   background-color: #F4F4F4;
@@ -13,8 +13,7 @@
   padding-top: 50px;
   padding-left: 25px;
 }
-
-.exitShort {
+.registrationblock_exitShort {
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
   border-radius: 12px;
@@ -33,8 +32,7 @@
   height: 50px;
   margin: 0 auto;
 }
-
-.timantanlong {
+.registrationblock_timantanlong {
   width: 960px;
   height: 160px;
   background-color: #DBF0FF;
@@ -46,19 +44,18 @@
   display: -ms-flexbox;
   display: flex;
 }
-.timantanlong_span {
+.registrationblock_timantanlong_span {
   width: 619px;
   margin: 62px 0 62px 90px;
 }
-.timantanlong_cookies {
+.registrationblock_timantanlong_cookies {
   width: 333px;
   margin: 8px 8px 8px 0;
   border-radius: 12px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.blocklogin {
+.registrationblock_blocklogin {
   width: 576px;
   height: 272px;
   background-color: #F4F4F4;
@@ -68,37 +65,37 @@
   margin-bottom: 136px;
   margin-top: 50px;
 }
-.blocklogin_container {
+.registrationblock_blocklogin_container {
   border-radius: 12px;
   background-color: #FBFBFB;
   width: 432px;
-  height: 128px;
-  margin: 64px;
+  height: 228px;
+  margin: 20px auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   background-color: #FBFBFB;
 }
-.blocklogin_entry {
+.registrationblock_blocklogin_entry {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
 }
-.blocklogin_text {
+.registrationblock_blocklogin_text {
   text-align: center;
   justify-items: center;
   margin-top: 22px;
 }
-.blocklogin_input {
+.registrationblock_blocklogin_input {
   border: none;
   padding: 16px;
 }
-.blocklogin_input:focus {
+.registrationblock_blocklogin_input:focus {
   outline: none;
   border: 2px solid #0D99FF;
   border-radius: 12px;
 }
-.blocklogin_btn {
+.registrationblock_blocklogin_btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
