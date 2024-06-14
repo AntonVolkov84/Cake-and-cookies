@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import './Home.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import Timantanshort from '../Buttons/Timantanshort';
-import Registration from '../Buttons/Registration';
 import Triangle from '../Buttons/Triangle';
 import { fetchProducts } from '../redux/slices/products';
 import { useNavigate } from 'react-router-dom';
@@ -45,7 +44,12 @@ function Home() {
               <></>
             )}
             {isAuth ? (
-              <></>
+              <button
+                onClick={() => navigate('/programmquit')}
+                className="toreport"
+              >
+                Отчет
+              </button>
             ) : (
               <button onClick={() => navigate('/login')} className="login">
                 Логин

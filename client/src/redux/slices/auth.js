@@ -14,6 +14,11 @@ const initialState = {
 const authSlice = createSlice({
   name: 'Auth',
   initialState,
+  reducers: {
+    logout(state) {
+      state.data = null;
+    },
+  },
   extraReducers: {
     [fetchAuth.pending]: (state) => {
       state.data = null;
@@ -35,3 +40,5 @@ export const selectIsAuth = (state) => Boolean(state.auth.data);
 export const selectIsAdmin = (state) => Boolean(state.auth.data?.isAdmin);
 
 export const authReducer = authSlice.reducer;
+
+export const { logout } = authSlice.actions;

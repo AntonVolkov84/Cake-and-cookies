@@ -51,7 +51,7 @@
 }
 .registration {
   @extend .login;
-  margin-right: 32px;
+  margin-right: 16px;
 }
 .productcard {
   display: grid;
@@ -177,4 +177,10 @@
 .products::-webkit-scrollbar-thumb {
   background: $blueborder;
   border-radius: 12px;
+}
+.toreport {
+  @include button();
+  height: 50px;
+  width: 195px;
+  margin-top: 50px;
 }
