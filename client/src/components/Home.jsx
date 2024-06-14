@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import './Home.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import Timantanshort from '../Buttons/Timantanshort';
-import Triangle from '../Buttons/Triangle';
 import { fetchProducts } from '../redux/slices/products';
 import { useNavigate } from 'react-router-dom';
 import { selectIsAuth, selectIsAdmin } from '../redux/slices/auth';
@@ -32,7 +31,16 @@ function Home() {
         <main className="main_menu">
           <header className="header">
             <Timantanshort />
-            {isAdmin ? <Triangle /> : <></>}
+            {isAdmin ? (
+              <button
+                onClick={() => navigate('/adminmenu')}
+                className="trianglemain"
+              >
+                <div className="triangle"></div>
+              </button>
+            ) : (
+              <></>
+            )}
             {isAdmin ? (
               <button
                 onClick={() => navigate('/registration')}

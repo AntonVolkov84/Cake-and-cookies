@@ -11,7 +11,7 @@ function Registration() {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { register, handleSubmit } = useForm({
+  const { register, handleSubmit, setError } = useForm({
     defaultValues: {
       fullname: '',
       email: '',
@@ -25,7 +25,7 @@ function Registration() {
     const data = await dispatch(fetchRegistration(values));
 
     if (!data.payload) {
-      return alert('Не удалась регистрация пользователя');
+      return alert('не удалось зарегистрировать пользователя');
     }
     if ('token' in data.payload) {
       navigate('/');

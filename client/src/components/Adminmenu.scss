@@ -36,5 +36,14 @@
     border: none;
     border-radius: 12px;
     background-color: $whiteback;
+    @include center();
+    text-decoration: none;
+  }
+  &_registration {
+    @include button();
+    height: 50px;
+    width: 144px;
+    margin-left: 16px;
+    margin-top: 50px;
   }
 }
