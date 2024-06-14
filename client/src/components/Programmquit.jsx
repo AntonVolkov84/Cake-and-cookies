@@ -1,9 +1,7 @@
 import Longbutton from '../Buttons/Longbutton';
-import Login from '../Buttons/Login';
 import { useNavigate } from 'react-router-dom';
 
 import './Programmquit.scss';
-import axios from '../axios';
 
 function Programmquit() {
   const navigate = useNavigate();

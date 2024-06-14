@@ -51,7 +51,6 @@
 }
 .registration {
   @extend .login;
-  margin-right: 16px;
 }
 .productcard {
   display: grid;
@@ -183,4 +182,5 @@
   height: 50px;
   width: 195px;
   margin-top: 50px;
+  margin-left: 16px;
 }

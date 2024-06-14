@@ -21,9 +21,16 @@ function Registration() {
     mode: 'onChange',
   });
 
-  const onSubmit = (values) => {
-    console.log(values);
-    dispatch(fetchRegistration(values));
+  const onSubmit = async (values) => {
+    const data = await dispatch(fetchRegistration(values));
+
+    if (!data.payload) {
+      return alert('Не удалась регистрация пользователя');
+    }
+    if ('token' in data.payload) {
+      navigate('/');
+      alert('Пользователь добавлен!');
+    }
   };
 
   if (!isAdmin) {
