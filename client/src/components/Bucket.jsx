@@ -36,10 +36,6 @@ function Bucket() {
             </div>
           ))}
         </div>
-        <div className="bucket_roll">
-          <button className="bucket_rollup"></button>
-          <button className="bucket_rolldown"></button>
-        </div>
       </div>
       <div className="bucket_total">
         Итого:{' '}

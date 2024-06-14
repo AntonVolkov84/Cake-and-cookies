@@ -29,11 +29,20 @@
   }
   &_info {
     background-color: $whiteback;
-    width: 912px;
+    width: 960px;
     height: 368px;
     border-radius: 12px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    overflow-y: auto;
+  }
+  &_info::-webkit-scrollbar {
+    @include button();
+    width: 20px;
+  }
+  &_info::-webkit-scrollbar-thumb {
+    background: $blueborder;
+    border-radius: 12px;
   }
   &_roll {
     width: 32px;
