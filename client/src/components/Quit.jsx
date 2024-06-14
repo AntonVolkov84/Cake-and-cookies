@@ -18,6 +18,7 @@ function Quit() {
       <button
         onClick={() => {
           dispatch(logout());
+          localStorage.removeItem('token', '');
           navigate('/');
         }}
         className="longbutton"

@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Home from './components/Home';
 import Login from './components/Login';
@@ -14,8 +15,17 @@ import Changingproduct from './components/Changingproduct';
 import Checkdelproduct from './components/Checkdelproduct';
 import Delproduct from './components/Delproduct';
 import Registration from './components/Registration';
+import { useEffect } from 'react';
+import { fetchAuthMe, selectIsAuth } from './redux/slices/auth';
 
 function App() {
+  const dispatch = useDispatch();
+  const isAuth = useSelector(selectIsAuth);
+
+  useEffect(() => {
+    dispatch(fetchAuthMe());
+  }, []);
+
   return (
     <Routes>
       <Route path="" element={<Home />} />
