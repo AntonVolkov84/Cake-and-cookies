@@ -20,7 +20,7 @@ const ReportSchema = new mongoose.Schema(
     },
     total: {
       type: Number,
-      required: true,
+      required: false,
     },
   },
   {

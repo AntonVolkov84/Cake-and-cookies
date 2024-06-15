@@ -1,16 +1,17 @@
 import Longbutton from '../Buttons/Longbutton';
 import { useNavigate } from 'react-router-dom';
 
+
 import './Programmquit.scss';
 
 function Programmquit() {
   const navigate = useNavigate();
 
-  function getAllReports() {
+  async function getAllReports() {
     navigate('/quit');
+
     // const { data } = await axios.get('/report');
-    // console.log(data);
-    // return data;
+    // console.log(busket);
   }
 
   return (

@@ -4,6 +4,7 @@ import { cleanBucket } from '../redux/slices/busket';
 import { useDispatch } from 'react-redux';
 import { delProduct } from '../redux/slices/busket';
 import { useNavigate } from 'react-router-dom';
+import axios from '../axios';
 
 function Bucket() {
   const navigate = useNavigate();
@@ -16,6 +17,27 @@ function Bucket() {
 
   function cleanBasket() {
     dispatch(cleanBucket());
+  }
+
+  async function handleCheckout() {
+    try {
+      await busket.items.forEach((e) => {
+        axios.post('/report', {
+          fullname: e.fullname,
+          price: e.price,
+          weight: e.weight,
+          totalPerProduct: e.total,
+          total: busket.items.reduce((acc, e) => {
+            return acc + e.total;
+          }, 0),
+        });
+      });
+    } catch (error) {
+      console.warn(error);
+    }
+
+    dispatch(cleanBucket());
+    navigate('/');
   }
 
   return (
@@ -43,7 +65,9 @@ function Bucket() {
           return acc + e.total;
         }, 0)}
       </div>
-      <button className="bucket_checkout">Оформить покупку</button>
+      <button onClick={handleCheckout} className="bucket_checkout">
+        Оформить покупку
+      </button>
       <div className="bucket_footer">
         <button onClick={() => navigate('/')} className="bucket_back">
           Назад
