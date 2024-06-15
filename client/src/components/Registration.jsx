@@ -11,7 +11,7 @@ function Registration() {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { register, handleSubmit, setError } = useForm({
+  const { register, handleSubmit } = useForm({
     defaultValues: {
       fullname: '',
       email: '',
@@ -41,7 +41,9 @@ function Registration() {
     <main className="registrationblock">
       <section className="registrationblock_main_menus">
         <div className="registrationblock_timantanlong">
-          <span className="registrationblock_timantanlong_span">Тимантан</span>
+          <span className="registrationblock_timantanlong_span">
+            Регистрация нового пользователя
+          </span>
           <img
             className="registrationblock_timantanlong_cookies"
             src="img/crol.png"

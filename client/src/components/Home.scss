@@ -51,7 +51,6 @@
 }
 .registration {
   @extend .login;
-  
 }
 .productcard {
   display: grid;
@@ -60,7 +59,7 @@
   display: flex;
 }
 .productcard {
-  width: 560px;
+  width: 654px;
   height: 593px;
   margin-right: 16px;
 }
@@ -69,7 +68,6 @@
   height: 593px;
   @include button();
   margin-top: 25px;
-  margin-left: 92px;
 }
 .basketin {
   width: 284px;
@@ -134,7 +132,7 @@
   font-size: 24px;
 }
 .products {
-  width: 660px;
+  width: 654px;
   height: 593px;
   margin: 25px 0 0 0;
   background-color: $blueback;
@@ -144,7 +142,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 10px;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 .nextpage {
   width: 560px;
@@ -156,6 +154,7 @@
   align-items: center;
 }
 .card {
+  width: 200px;
 }
 .card_text {
   padding-left: 10px;
@@ -166,7 +165,7 @@
 }
 .card_img {
   position: absolute;
-  width: 200px;
+  width: 195px;
   height: 128px;
   border-radius: 12px;
 }

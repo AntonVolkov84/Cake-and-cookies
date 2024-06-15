@@ -9,6 +9,14 @@ export const fetchProducts = createAsyncThunk(
   }
 );
 
+export const fetchAddProducts = createAsyncThunk(
+  'products/fetchAddProducts',
+  async (params) => {
+    const { data } = await axios.post('/products', params);
+    return data;
+  }
+);
+
 const initialState = {
   products: {
     items: [],
@@ -19,7 +27,9 @@ const initialState = {
 const productsSlice = createSlice({
   name: 'products',
   initialState,
-  reducers: {},
+  reducers: {
+    
+  },
   extraReducers: {
     [fetchProducts.pending]: (state, action) => {
       state.products.items = [];

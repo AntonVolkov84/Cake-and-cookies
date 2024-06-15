@@ -55,6 +55,9 @@
   &_entryfile {
     display: none;
   }
+  &_entrytext {
+    border: none;
+  }
   &_forentryfile {
     @include button();
     width: 176px;

@@ -1,49 +1,117 @@
 import Timantanshort from '../Buttons/Timantanshort';
-import Login from '../Buttons/Login';
 import Registration from '../Buttons/Registration';
 import Triangle from '../Buttons/Triangle';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 import './Productadding.scss';
+import axios from '../axios';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchAddProducts } from '../redux/slices/products';
 
 function Productadding() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [imageUrl, setImageUrl] = useState('');
+
+  const { register, handleSubmit } = useForm({
+    defaultValues: {
+      fullname: '',
+      price: '',
+      ingredients: '',
+      productUrl: '',
+    },
+    mode: 'onChange',
+  });
+
+  const onSubmit = async (values) => {
+    const data = await dispatch(fetchAddProducts(values));
+    if (data.payload.product._id) {
+      alert('Продукт добавлен');
+      navigate('/');
+    } else {
+      alert('Неудачная попытка добавить товар');
+    }
+  };
+
+  const handleChangeFile = async (event) => {
+    try {
+      const formData = new FormData();
+      const file = event.target.files[0];
+      formData.append('image', file);
+      const { data } = await axios.post('/upload', formData);
+      setImageUrl(`http://localhost:3333${data.url}`);
+    } catch (error) {
+      console.warn(error);
+      alert('Ошибка при загрузке файла');
+    }
+  };
+
   return (
     <main className="productadding">
       <div className="productadding_header">
         <Timantanshort />
         <Triangle />
-        <Login text={'Логин'} />
         <Registration />
       </div>
-      <div className="productadding_card">
+      <form onSubmit={handleSubmit(onSubmit)} className="productadding_card">
         <div className="productadding_cardboard">
           <div className="productadding_cardboardtext">Название товара:</div>
-          <input type="text" className="productadding_cardboardentry"></input>
+          <input
+            {...register('fullname', { required: 'Укажите название товара' })}
+            type="text"
+            className="productadding_cardboardentry"
+          ></input>
         </div>
         <div className="productadding_cardboard">
           <div className="productadding_cardboardtext">Цена товара:</div>
-          <input type="text" className="productadding_cardboardentry"></input>
+          <input
+            {...register('price', { required: 'Укажите цену товара' })}
+            type="text"
+            className="productadding_cardboardentry"
+          ></input>
         </div>
         <div className="productadding_cardboard">
           <div className="productadding_cardboardtext">Ингридиенты:</div>
-          <input type="textfield" className="productadding_cardboardentry"></input>
+          <input
+            {...register('ingredients', {
+              required: 'Укажите ингридиенты товара',
+            })}
+            type="textfield"
+            className="productadding_cardboardentry"
+          ></input>
         </div>
         <div className="productadding_cardboard">
           <div className="productadding_cardboardtext">Фото или аватарка</div>
           <div className="productadding_cardboardentry">
-            <div className="productadding_entrytext">C:\\file.........</div>
+            <div>
+              <input
+                value={imageUrl}
+                {...register('productUrl', {
+                  required: 'Укажите путь к аватарке',
+                })}
+                className="productadding_entrytext"
+              ></input>
+            </div>
             <label className="productadding_forentryfile">
               Вставить файл
-              <input type="file" className="productadding_entryfile"></input>
+              <input
+                onChange={handleChangeFile}
+                type="file"
+                className="productadding_entryfile"
+              ></input>
             </label>
           </div>
         </div>
-      </div>
-      <div className="productadding_footer">
-        <button className="productadding_footer_add">
-          Добавить новый товар
-        </button>
-        <button className="productadding_footer_back">Назад</button>
-      </div>
+
+        <div className="productadding_footer">
+          <button type="submit" className="productadding_footer_add">
+            Добавить новый товар
+          </button>
+          <button className="productadding_footer_back">Назад</button>
+        </div>
+      </form>
     </main>
   );
 }
