@@ -1,0 +1,72 @@
+@import '../css/mixin';
+@import '../css/vars';
+
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  box-sizing: border-box;
+}
+.reportblock {
+  width: 1024px;
+  height: 768px;
+  background-color: $greyback;
+  position: relative;
+  padding-top: 50px;
+  padding-left: 25px;
+  &_timantan {
+    width: 960px;
+    height: 50px;
+    @include button();
+    @include center();
+  }
+  &_infofield {
+    width: 960px;
+    height: 412px;
+    margin-top: 25px;
+    border: 2px solid $blueborder;
+    border-radius: 12px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: $whiteback;
+  }
+  &_infofield::-webkit-scrollbar {
+    @include button();
+    width: 20px;
+  }
+  &_infofield::-webkit-scrollbar-thumb {
+    background: $blueborder;
+    border-radius: 12px;
+  }
+  &_timeAndSalesman {
+    width: 910px;
+    height: 50px;
+    margin: 25px 25px 0 25px;
+    background-color: $greyback;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+  }
+  &_salesman {
+    font-size: 16px;
+    margin-right: 25px;
+    @include center();
+  }
+  &_date {
+    @include center();
+    font-size: 16px;
+  }
+  &_info {
+    width: 930px;
+    height: 50px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+  }
+  &_text {
+    margin: 25px 35px 0 35px;
+  }
+  &_wait {
+    font-size: 40px;
+    @include center();
+  }
+}

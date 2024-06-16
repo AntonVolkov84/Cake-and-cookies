@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-
+import Report from './components/Report';
 import Home from './components/Home';
 import Login from './components/Login';
 import Wronglogin from './components/Wronglogin';
@@ -42,6 +42,7 @@ function App() {
       <Route path="/changingproduct" element={<Changingproduct />} />
       <Route path="/checkdelproduct" element={<Checkdelproduct />} />
       <Route path="/delproduct" element={<Delproduct />} />
+      <Route path="/report" element={<Report />} />
     </Routes>
   );
 }

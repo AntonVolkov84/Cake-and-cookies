@@ -1,4 +1,3 @@
-import ExitShort from '../Buttons/ExitShort';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -84,10 +83,17 @@ function Registration() {
             ></input>
           </div>
           <button type="submit" className="registrationblock_blocklogin_btn">
-            Войти
+            Зарегистрировать пользователя
           </button>
         </form>
-        <ExitShort />
+        <button
+          onClick={() => {
+            navigate('/');
+          }}
+          className="exitShort"
+        >
+          Назад
+        </button>
       </section>
     </main>
   );
