@@ -5,6 +5,8 @@ import Timantanshort from '../Buttons/Timantanshort';
 import { fetchProducts } from '../redux/slices/products';
 import { useNavigate } from 'react-router-dom';
 import { selectIsAuth, selectIsAdmin } from '../redux/slices/auth';
+import axios from '../axios';
+import { cleanBucket } from '../redux/slices/busket';
 
 function Home() {
   const isAuth = useSelector(selectIsAuth);
@@ -21,8 +23,29 @@ function Home() {
   function handleClick(event) {
     navigate(`/gweight/${event.target.parentNode.id}`);
   }
-  function makeReport() {
-    console.log(busket.items);
+
+  async function handleCheckout() {
+    const time = new Date();
+    const idReport = time.getTime();
+    try {
+      await busket.items.forEach((e) => {
+        axios.post('/report', {
+          idReport: idReport,
+          fullname: e.fullname,
+          price: e.price,
+          weight: e.weight,
+          totalPerProduct: e.total,
+          total: busket.items.reduce((acc, e) => {
+            return acc + e.total;
+          }, 0),
+        });
+      });
+    } catch (error) {
+      console.warn(error);
+    }
+
+    dispatch(cleanBucket());
+    navigate('/');
   }
 
   return (
@@ -101,7 +124,7 @@ function Home() {
                       return acc + e.total;
                     }, 0)}
                   </div>
-                  <button onClick={makeReport} className="checkout">
+                  <button onClick={handleCheckout} className="checkout">
                     Оформить покупку
                   </button>
                 </div>

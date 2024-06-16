@@ -2,6 +2,10 @@ import mongoose from 'mongoose';
 
 const ReportSchema = new mongoose.Schema(
   {
+    idReport: {
+      type: Number,
+      required: true,
+    },
     fullname: {
       type: String,
       required: true,

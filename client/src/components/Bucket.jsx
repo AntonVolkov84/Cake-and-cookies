@@ -20,9 +20,12 @@ function Bucket() {
   }
 
   async function handleCheckout() {
+    const time = new Date();
+    const idReport = time.getTime();
     try {
       await busket.items.forEach((e) => {
         axios.post('/report', {
+          idReport: idReport,
           fullname: e.fullname,
           price: e.price,
           weight: e.weight,

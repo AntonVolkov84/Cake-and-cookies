@@ -3,6 +3,7 @@ import reportModel from '../models/report.js';
 export const addReport = async (req, res) => {
   try {
     const doc = new reportModel({
+      idReport: req.body.idReport,
       fullname: req.body.fullname,
       price: req.body.price,
       weight: req.body.weight,

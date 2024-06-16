@@ -10,12 +10,7 @@ function Login() {
   const isAuth = useSelector(selectIsAuth);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const {
-    register,
-    handleSubmit,
-    setError,
-    formState: { errors, isValid },
-  } = useForm({
+  const { register, handleSubmit } = useForm({
     defaultValues: {
       email: 'antvolkov84@gmail.com',
       password: '12345',
