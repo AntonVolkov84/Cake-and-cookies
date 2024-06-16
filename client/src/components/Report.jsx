@@ -2,10 +2,11 @@ import { useEffect } from 'react';
 import './Report.scss';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { cleanBucket } from '../redux/slices/busket';
-import { fetchReport } from '../redux/slices/report';
+import { fetchReport, cleanReport } from '../redux/slices/report';
+import { useNavigate } from 'react-router-dom';
 
 function Report() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const salesman = useSelector((state) => state.auth.data.fullname);
   const time = new Date();
@@ -15,7 +16,12 @@ function Report() {
   useEffect(() => {
     dispatch(fetchReport());
   }, []);
-  console.log(report);
+
+  function saveAndQuit() {
+    dispatch(cleanReport());
+    navigate('/quit');
+  }
+
   return (
     <section className="reportblock">
       <div className="reportblock_timantan">Тимантан, сохранение отчета</div>
@@ -32,12 +38,17 @@ function Report() {
               <div className="reportblock_text">{e.price}</div>
               <div className="reportblock_text">{e.weight}</div>
               <div className="reportblock_text">{e.totalPerProduct}</div>
+              <div className="reportblock_text">{e.total}</div>
             </div>
           ))
         ) : (
           <div className="reportblock_wait">Подождите пожалуйста</div>
         )}
       </div>
+      <div className="reportblock_total"></div>
+      <button onClick={saveAndQuit} className="reportblock_save">
+        Сохранить изменения и выйти
+      </button>
     </section>
   );
 }

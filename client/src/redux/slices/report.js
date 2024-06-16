@@ -38,3 +38,4 @@ const reportSlice = createSlice({
 });
 
 export const reportReducer = reportSlice.reducer;
+export const { cleanReport } = reportSlice.actions;

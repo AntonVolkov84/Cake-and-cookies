@@ -60,7 +60,7 @@
     height: 50px;
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr;
   }
   &_text {
     margin: 25px 35px 0 35px;
@@ -68,5 +68,13 @@
   &_wait {
     font-size: 40px;
     @include center();
+    margin-top: 100px;
+  }
+  &_save {
+    width: 960px;
+    height: 50px;
+    position: absolute;
+    bottom: 50px;
+    @include button();
   }
 }
