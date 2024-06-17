@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import './DateReport.scss';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
@@ -6,8 +6,20 @@ import { fetchReport, cleanReport } from '../redux/slices/report';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import { useReactToPrint } from 'react-to-print';
 
 function Report() {
+  const contentToPrint = useRef(null);
+  const handlePrint = useReactToPrint({
+    documentTitle: 'Отчет о продажах',
+    onBeforePrint: () => {
+      dispatch(cleanReport());
+      navigate('/quit');
+    },
+    onAfterPrint: () => console.log('after printing...'),
+    removeAfterPrint: true,
+  });
+
   const [timeForReport, setTimeForReport] = useState(new Date());
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -35,11 +47,6 @@ function Report() {
     dispatch(fetchReport());
   }, []);
 
-  function saveAndQuit() {
-    dispatch(cleanReport());
-    navigate('/');
-  }
-
   function filterByDate(item) {
     const parse = new Date(Date.parse(item));
     return (
@@ -48,7 +55,7 @@ function Report() {
   }
 
   return (
-    <section className="datereport">
+    <section ref={contentToPrint} className="datereport">
       <div className="datereport_timantan">Тимантан, отчет за дату</div>
       <div className="datereport_infofield">
         <form
@@ -89,7 +96,12 @@ function Report() {
             }, 0)}
         </div>
       </div>
-      <button onClick={saveAndQuit} className="datereport_save">
+      <button
+        onClick={() => {
+          handlePrint(null, () => contentToPrint.current);
+        }}
+        className="datereport_save"
+      >
         Сохранить изменения и выйти
       </button>
     </section>
