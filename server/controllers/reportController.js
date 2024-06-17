@@ -9,6 +9,7 @@ export const addReport = async (req, res) => {
       weight: req.body.weight,
       totalPerProduct: req.body.totalPerProduct,
       total: req.body.total,
+      dateCreated: req.body.dateCreated,
     });
 
     const report = await doc.save();

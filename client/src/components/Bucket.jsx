@@ -10,6 +10,7 @@ function Bucket() {
   const navigate = useNavigate();
   const { busket } = useSelector((state) => state.busket);
   const dispatch = useDispatch();
+  const dateParse = Date.parse(new Date()) + 10800000;
 
   function delProductFromBucket(event) {
     dispatch(delProduct(event.target.parentNode.id));
@@ -26,6 +27,7 @@ function Bucket() {
       await busket.items.forEach((e) => {
         axios.post('/report', {
           idReport: idReport,
+          dateCreated: dateParse,
           fullname: e.fullname,
           price: e.price,
           weight: e.weight,

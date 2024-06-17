@@ -26,6 +26,10 @@ const ReportSchema = new mongoose.Schema(
       type: Number,
       required: false,
     },
+    dateCreated: {
+      type: Date,
+      required: false,
+    },
   },
   {
     timestamps: true,

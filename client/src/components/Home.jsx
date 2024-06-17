@@ -16,6 +16,7 @@ function Home() {
   const { products } = useSelector((state) => state.products);
   const { busket } = useSelector((state) => state.busket);
   const isProductsLoading = products.status === 'loading';
+  const dateParse = Date.parse(new Date()) + 10800000;
 
   useEffect(() => {
     dispatch(fetchProducts());
@@ -31,6 +32,7 @@ function Home() {
       await busket.items.forEach((e) => {
         axios.post('/report', {
           idReport: idReport,
+          dateCreated: dateParse,
           fullname: e.fullname,
           price: e.price,
           weight: e.weight,
