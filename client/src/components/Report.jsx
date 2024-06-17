@@ -12,6 +12,8 @@ function Report() {
   const time = new Date();
   const report = useSelector((state) => state.report.report.items);
   const isReportLoaded = useSelector((state) => state.report.report.status);
+  const timeForReport =
+    time.getDate() + ' ' + (time.getMonth() + 1) + ' ' + time.getFullYear();
 
   useEffect(() => {
     dispatch(fetchReport());
@@ -20,6 +22,13 @@ function Report() {
   function saveAndQuit() {
     dispatch(cleanReport());
     navigate('/quit');
+  }
+
+  function filterByDate(item) {
+    const parse = new Date(Date.parse(item));
+    return (
+      parse.getDate() + ' ' + (parse.getMonth() + 1) + ' ' + parse.getFullYear()
+    );
   }
 
   return (
@@ -31,16 +40,18 @@ function Report() {
           <div className="reportblock_date">{'Дата ' + time}</div>
         </div>
         {isReportLoaded === 'loaded' ? (
-          report.map((e) => (
-            <div className="reportblock_info">
-              <div className="reportblock_text">{e.dateCreated}</div>
-              <div className="reportblock_text">{e.fullname}</div>
-              <div className="reportblock_text">{e.price}</div>
-              <div className="reportblock_text">{e.weight}</div>
-              <div className="reportblock_text">{e.totalPerProduct}</div>
-              <div className="reportblock_text">{e.total}</div>
-            </div>
-          ))
+          report
+            .filter((e) => filterByDate(e.dateCreated) === timeForReport)
+            .map((e) => (
+              <div className="reportblock_info">
+                <div className="reportblock_text">{e.dateCreated}</div>
+                <div className="reportblock_text">{e.fullname}</div>
+                <div className="reportblock_text">{e.price}</div>
+                <div className="reportblock_text">{e.weight}</div>
+                <div className="reportblock_text">{e.totalPerProduct}</div>
+                <div className="reportblock_text">{e.total}</div>
+              </div>
+            ))
         ) : (
           <div className="reportblock_wait">Подождите пожалуйста</div>
         )}
