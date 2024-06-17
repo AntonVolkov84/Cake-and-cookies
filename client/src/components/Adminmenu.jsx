@@ -37,8 +37,9 @@ function Adminmenu() {
         <Link className="adminmenu_btn" to="/checkdelproduct">
           <button className="adminmenu_btn">Удалить товар</button>
         </Link>
-        <button className="adminmenu_btn">Просмотр отчета о продажах</button>
-
+        <Link className="adminmenu_btn" to="/datereport">
+          <button className="adminmenu_btn">Просмотр отчета о продажах</button>
+        </Link>
         <button className="adminmenu_btn"></button>
         <button className="adminmenu_btn"></button>
         <button className="adminmenu_btn"></button>

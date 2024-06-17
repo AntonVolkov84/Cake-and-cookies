@@ -15,6 +15,7 @@ import Changingproduct from './components/Changingproduct';
 import Checkdelproduct from './components/Checkdelproduct';
 import Delproduct from './components/Delproduct';
 import Registration from './components/Registration';
+import DateReport from './components/DateReport';
 import { useEffect } from 'react';
 import { fetchAuthMe, selectIsAuth } from './redux/slices/auth';
 
@@ -43,6 +44,7 @@ function App() {
       <Route path="/checkdelproduct" element={<Checkdelproduct />} />
       <Route path="/delproduct" element={<Delproduct />} />
       <Route path="/report" element={<Report />} />
+      <Route path="/datereport" element={<DateReport />} />
     </Routes>
   );
 }

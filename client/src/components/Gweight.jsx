@@ -7,7 +7,6 @@ import { useDispatch } from 'react-redux';
 import { innerAction } from '../redux/slices/busket';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import { fetchProducts } from '../redux/slices/products';
 
 function Gweight() {
   const products = useSelector((state) => state.products.products.items);
