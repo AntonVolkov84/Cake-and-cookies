@@ -12,11 +12,11 @@ function Report() {
   const contentToPrint = useRef(null);
   const handlePrint = useReactToPrint({
     documentTitle: 'Отчет о продажах',
-    onBeforePrint: () => {
+    onBeforePrint: () => console.log('Ожидаем печать документа'),
+    onAfterPrint: () => {
       dispatch(cleanReport());
-      navigate('/quit');
+      navigate('/adminmenu');
     },
-    onAfterPrint: () => console.log('after printing...'),
     removeAfterPrint: true,
   });
 
