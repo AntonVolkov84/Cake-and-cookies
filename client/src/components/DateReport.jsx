@@ -58,9 +58,9 @@ function Report() {
           <input
             {...register('addingDate', { required: 'Дата не выбрана' })}
             type="date"
-            className="datereport_salesman"
+            className="datereport_input"
           ></input>
-          <button type="submit" className="datereport_date">
+          <button type="submit" className="datereport_btn">
             Выбрать
           </button>
         </form>

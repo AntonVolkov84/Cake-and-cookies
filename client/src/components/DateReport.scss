@@ -47,15 +47,7 @@
     padding: 10px;
     display: flex;
   }
-  &_salesman {
-    font-size: 16px;
-    margin-right: 25px;
-    @include center();
-  }
-  &_date {
-    @include center();
-    font-size: 16px;
-  }
+
   &_info {
     width: 930px;
     height: 50px;
@@ -86,5 +78,16 @@
     bottom: 25px;
     right: 25px;
     @include center();
+  }
+  &_input {
+    margin-right: 16px;
+    border: none;
+    @include button();
+    padding: 10px;
+  }
+  &_btn {
+    border: none;
+    @include button();
+    width: 100px;
   }
 }
