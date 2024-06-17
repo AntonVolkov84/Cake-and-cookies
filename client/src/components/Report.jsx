@@ -55,8 +55,15 @@ function Report() {
         ) : (
           <div className="reportblock_wait">Подождите пожалуйста</div>
         )}
+        <div className="reportblock_total">
+          Сумма по отчету:{' '}
+          {report
+            .filter((e) => filterByDate(e.dateCreated) === timeForReport)
+            .reduce((acc, e) => {
+              return (acc += e.totalPerProduct);
+            }, 0)}
+        </div>
       </div>
-      <div className="reportblock_total"></div>
       <button onClick={saveAndQuit} className="reportblock_save">
         Сохранить изменения и выйти
       </button>

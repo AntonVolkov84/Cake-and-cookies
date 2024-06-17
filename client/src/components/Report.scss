@@ -28,6 +28,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     background-color: $whiteback;
+    position: relative;
   }
   &_infofield::-webkit-scrollbar {
     @include button();
@@ -76,5 +77,14 @@
     position: absolute;
     bottom: 50px;
     @include button();
+  }
+  &_total {
+    @include button();
+    height: 50px;
+    width: 250px;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    @include center();
   }
 }
