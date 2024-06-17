@@ -33,7 +33,7 @@ function Report() {
         {isReportLoaded === 'loaded' ? (
           report.map((e) => (
             <div className="reportblock_info">
-              <div className="reportblock_text">{e.createdAt}</div>
+              <div className="reportblock_text">{e.dateCreated}</div>
               <div className="reportblock_text">{e.fullname}</div>
               <div className="reportblock_text">{e.price}</div>
               <div className="reportblock_text">{e.weight}</div>
