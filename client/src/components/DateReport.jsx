@@ -56,7 +56,9 @@ function Report() {
 
   return (
     <section ref={contentToPrint} className="datereport">
-      <div className="datereport_timantan">Тимантан, отчет за дату</div>
+      <div className="datereport_timantan">
+        Тимантан, отчет за дату {AddtimeForReport}
+      </div>
       <div className="datereport_infofield">
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -74,8 +76,8 @@ function Report() {
         {isReportLoaded === 'loaded' ? (
           report
             .filter((e) => filterByDate(e.dateCreated) === AddtimeForReport)
-            .map((e) => (
-              <div className="datereport_info">
+            .map((e, index) => (
+              <div key={index} className="datereport_info">
                 <div className="datereport_text">{e.dateCreated}</div>
                 <div className="datereport_text">{e.fullname}</div>
                 <div className="datereport_text">{e.price}</div>

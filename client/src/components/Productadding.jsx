@@ -1,8 +1,7 @@
 import Timantanshort from '../Buttons/Timantanshort';
-import Registration from '../Buttons/Registration';
-import Triangle from '../Buttons/Triangle';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './Productadding.scss';
 import axios from '../axios';
@@ -52,8 +51,16 @@ function Productadding() {
     <main className="productadding">
       <div className="productadding_header">
         <Timantanshort />
-        <Triangle />
-        <Registration />
+        <Link to="/adminmenu">
+          <button className="trianglemain">
+            <div className="triangle"></div>
+          </button>
+        </Link>
+        <Link to="/registration">
+          <button className="registration">
+            <span className="registration_text">Регистрация</span>
+          </button>
+        </Link>
       </div>
       <form onSubmit={handleSubmit(onSubmit)} className="productadding_card">
         <div className="productadding_cardboard">

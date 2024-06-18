@@ -57,6 +57,7 @@
   }
   &_entrytext {
     border: none;
+    width: 350px;
   }
   &_forentryfile {
     @include button();
