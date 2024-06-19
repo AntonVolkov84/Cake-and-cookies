@@ -28,7 +28,7 @@ function BeforChangingProduct() {
       <div className="beforchangingproduct_productcard">
         <section className="beforchangingproduct_products">
           {isProductsLoading ? (
-            <span>Подождите!</span>
+            <span className='beforchangingproduct_await'>Подождите!</span>
           ) : (
             products.items.map((e, index) => (
               <div
