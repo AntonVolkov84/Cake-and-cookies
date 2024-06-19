@@ -1,39 +1,69 @@
-import Timantanshort from '../Buttons/Timantanshort';
-import Login from '../Buttons/Login';
-import Registration from '../Buttons/Registration';
-import Triangle from '../Buttons/Triangle';
-import Productcard from '../Buttons/Productcard';
+import { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProducts } from '../redux/slices/products';
 
 import './Checkdelproduct.scss';
 
 function Checkdelproduct() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { products } = useSelector((state) => state.products);
+  const isProductsLoading = products.status === 'loading';
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, []);
+
+  function handleClick(event) {
+    navigate(`/delproduct/${event.target.parentNode.id}`);
+  }
+
   return (
     <>
       <main className="checkdelproduct">
         <header className="checkdelproduct_header">
-          <Timantanshort />
-          <Triangle />
-          <Login text={'Логин'} />
-          <Registration />
+          <div className="checkdelproduct_timantan">
+            <span className="checkdelproduct_timantan_text">
+              Удаление товара!!!
+            </span>
+          </div>
+          <Link to="/adminmenu">
+            <button className="trianglemain">
+              <div className="triangle"></div>
+            </button>
+          </Link>
+          <Link to="/registration">
+            <button className="checkdelproduct_registration">
+              <span className="registration_text">Регистрация</span>
+            </button>
+          </Link>
         </header>
         <div className="checkdelproduct_productsection">
           <div className="checkdelproduct_productcard">
             <section className="checkdelproduct_products">
-              <Productcard />
-              <Productcard />
+              {isProductsLoading ? (
+                <h1>Подождите</h1>
+              ) : (
+                products.items.map((e, index) => (
+                  <div
+                    id={e._id}
+                    key={index}
+                    className="card"
+                    onClick={handleClick}
+                  >
+                    <img className="card_img" src={e.productUrl}></img>
+                    <h2 className="card_text">{e.fullname}</h2>
+                  </div>
+                ))
+              )}
             </section>
             <div className="checkdelproduct_btn">
-              <button className="checkdelproduct_nextpage">Назад</button>
-              <button className="checkdelproduct_nextpage">
-                Следующая страница
-              </button>
+              <Link to="/adminmenu">
+                <button className="checkdelproduct_back">Назад</button>
+              </Link>
             </div>
           </div>
-          <aside className="checkdelproduct_basket">
-            <section className="checkdelproduct_basketin">
-              Удаление товара!!!
-            </section>
-          </aside>
         </div>
       </main>
     </>

@@ -43,7 +43,7 @@ function App() {
       <Route path="/productadding" element={<Productadding />} />
       <Route path="/changingproduct/:id" element={<Changingproduct />} />
       <Route path="/checkdelproduct" element={<Checkdelproduct />} />
-      <Route path="/delproduct" element={<Delproduct />} />
+      <Route path="/delproduct/:id" element={<Delproduct />} />
       <Route path="/report" element={<Report />} />
       <Route path="/datereport" element={<DateReport />} />
       <Route path="/beforchangingproduct" element={<BeforChangingProduct />} />

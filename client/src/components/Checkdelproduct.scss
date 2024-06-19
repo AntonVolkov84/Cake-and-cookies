@@ -16,31 +16,21 @@
   &_header {
     display: flex;
   }
+  &_timantan {
+    @include button();
+    @include center();
+    height: 50px;
+    margin-top: 50px;
+    width: 400px;
+  }
+  &_timantan_text {
+    color: red;
+    font-size: 20px;
+  }
   &_productcard {
     display: grid;
-  }
-  &_productsection {
-    display: flex;
-  }
-  &_productcard {
-    width: 560px;
-    height: 593px;
-    margin-right: 16px;
-  }
-  &_basket {
-    width: 384px;
+    width: 960px;
     height: 518px;
-    @include button();
-    margin-top: 25px;
-  }
-  &_basketin {
-    width: 364px;
-    height: 498px;
-    margin: 10px;
-    @include bucket();
-    @include center();
-    font-size: 24px;
-    color: red;
   }
 
   &_checkout {
@@ -51,22 +41,31 @@
     font-size: 24px;
   }
   &_products {
-    width: 560px;
+    width: 960px;
     height: 518px;
     margin: 25px 0 0 0;
     background-color: $blueback;
     border: solid 2px $blueback;
     border-radius: 12px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 10px;
+    overflow-y: scroll;
+  }
+  &_products::-webkit-scrollbar {
+    @include button();
+    width: 20px;
+  }
+  &_products::-webkit-scrollbar-thumb {
+    background: $blueborder;
+    border-radius: 12px;
   }
   &_btn {
     display: flex;
   }
-  &_nextpage {
-    width: 476px;
+  &_back {
+    width: 960px;
     height: 50px;
     margin: 25px 0 0 0;
     @include button();
@@ -87,5 +86,12 @@
     width: 185px;
     height: 128px;
     border-radius: 12px;
+  }
+  &_registration {
+    height: 50px;
+    width: 184px;
+    margin-left: 16px;
+    margin-top: 50px;
+    @include button();
   }
 }
