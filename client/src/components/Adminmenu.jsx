@@ -31,7 +31,7 @@ function Adminmenu() {
             Добавить новый товар
           </button>
         </Link>
-        <Link className="adminmenu_btn" to="/changingproduct">
+        <Link className="adminmenu_btn" to="/beforchangingproduct">
           <button className="adminmenu_btn">Изменить товар</button>
         </Link>
         <Link className="adminmenu_btn" to="/checkdelproduct">

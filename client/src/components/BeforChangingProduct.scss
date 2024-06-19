@@ -1,0 +1,56 @@
+@import '../css/mixin';
+@import '../css/vars';
+
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  box-sizing: border-box;
+}
+.beforchangingproduct {
+  width: 1024px;
+  height: 768px;
+  background-color: $greyback;
+  padding-left: 25px;
+  padding-top: 50px;
+  position: relative;
+  &_timantan {
+    @include button();
+    height: 50px;
+    width: 960px;
+    @include center();
+  }
+  &_btn {
+    width: 960px;
+    height: 50px;
+    @include button();
+    position: absolute;
+    bottom: 50px;
+  }
+  &_productcard {
+    display: grid;
+    width: 960px;
+    height: 525px;
+    margin-right: 16px;
+  }
+  &_products {
+    width: 960px;
+    height: 525px;
+    margin: 25px 0 0 0;
+    background-color: $blueback;
+    border: solid 2px $blueback;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    gap: 10px;
+    overflow-y: scroll;
+  }
+  &_products::-webkit-scrollbar {
+    @include button();
+    width: 20px;
+  }
+  &_products::-webkit-scrollbar-thumb {
+    background: $blueborder;
+    border-radius: 12px;
+  }
+}

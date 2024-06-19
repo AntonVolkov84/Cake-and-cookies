@@ -8,10 +8,7 @@ function Programmquit() {
 
   async function getAllReports() {
     navigate('/report');
-
-    // const { data } = await axios.get('/report');
-    // console.log(busket);
-  }
+ }
 
   return (
     <main className="main_menuprogrammquit">

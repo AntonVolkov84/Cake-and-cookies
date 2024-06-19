@@ -16,6 +16,7 @@ import Checkdelproduct from './components/Checkdelproduct';
 import Delproduct from './components/Delproduct';
 import Registration from './components/Registration';
 import DateReport from './components/DateReport';
+import BeforChangingProduct from './components/BeforChangingProduct';
 import { useEffect } from 'react';
 import { fetchAuthMe, selectIsAuth } from './redux/slices/auth';
 
@@ -40,11 +41,12 @@ function App() {
       <Route path="/bucket" element={<Bucket />} />
       <Route path="/adminmenu" element={<Adminmenu />} />
       <Route path="/productadding" element={<Productadding />} />
-      <Route path="/changingproduct" element={<Changingproduct />} />
+      <Route path="/changingproduct/:id" element={<Changingproduct />} />
       <Route path="/checkdelproduct" element={<Checkdelproduct />} />
       <Route path="/delproduct" element={<Delproduct />} />
       <Route path="/report" element={<Report />} />
       <Route path="/datereport" element={<DateReport />} />
+      <Route path="/beforchangingproduct" element={<BeforChangingProduct />} />
     </Routes>
   );
 }

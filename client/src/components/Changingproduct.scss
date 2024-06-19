@@ -33,7 +33,7 @@
     margin-bottom: 2px;
   }
   &_cardboardtext {
-    width: 304px;
+    width: 204px;
     height: 64px;
     display: flex;
     align-items: center;
@@ -41,9 +41,10 @@
     border-right: 1px solid $blueborder;
     border-radius: 12px;
     padding-left: 20px;
+    overflow: hidden;
   }
   &_cardboardentry {
-    width: 656px;
+    width: 740px;
     height: 64px;
     display: flex;
     align-items: center;
@@ -51,6 +52,14 @@
     position: relative;
     border: none;
     outline: none;
+    overflow: hidden;
+  }
+  &_entrytext {
+    height: 64px;
+    width: 304px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
   }
   &_entryfile {
     display: none;
@@ -61,6 +70,7 @@
     height: 32px;
     position: absolute;
     right: 20px;
+
     @include center();
   }
   &_footer {
@@ -78,5 +88,11 @@
     @include button();
     width: 960px;
     height: 50px;
+  }
+  &_registration {
+    @include button();
+    height: 50px;
+    width: 184px;
+    margin: 50px 0 0 16px;
   }
 }

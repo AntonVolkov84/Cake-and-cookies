@@ -64,11 +64,21 @@
     margin-top: 100px;
   }
   &_save {
-    width: 960px;
+    width: 470px;
     height: 50px;
     position: absolute;
     bottom: 50px;
     @include button();
+    right: 38px;
+  }
+
+  &_backbtn {
+    width: 470px;
+    height: 50px;
+    position: absolute;
+    bottom: 50px;
+    @include button();
+    @include center();
   }
   &_total {
     @include button();

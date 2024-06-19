@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { useReactToPrint } from 'react-to-print';
+import { Link } from 'react-router-dom';
 
 function Report() {
   const contentToPrint = useRef(null);
@@ -98,6 +99,9 @@ function Report() {
             }, 0)}
         </div>
       </div>
+      <Link to="/adminmenu">
+        <button className="datereport_backbtn">Назад</button>
+      </Link>
       <button
         onClick={() => {
           handlePrint(null, () => contentToPrint.current);
