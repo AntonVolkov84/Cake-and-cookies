@@ -23,6 +23,7 @@ function Changingproduct() {
   const onSubmit = async (event) => {
     event.preventDefault();
     try {
+      console.log(val);
       const data = await axios.patch(`/products/${id}`, val);
       if (data.status === 200) {
         alert(data.data.message);
@@ -30,6 +31,22 @@ function Changingproduct() {
       }
     } catch (error) {
       alert(error.response.data[0].msg);
+    }
+  };
+
+  const handleChangeFile = async (event) => {
+    try {
+      const formData = new FormData();
+      const file = event.target.files[0];
+      formData.append('image', file);
+      const { data } = await axios.post('/upload', formData);
+      setVal((val) => ({
+        ...val,
+        productUrl: `http://localhost:3333${data.url}`,
+      }));
+    } catch (error) {
+      console.warn(error);
+      alert('Ошибка при загрузке файла');
     }
   };
 
@@ -91,9 +108,10 @@ function Changingproduct() {
             <label className="changingproduct_forentryfile">
               Выбрать другой файл
               <input
-                onChange={(e) =>
-                  setVal((val) => ({ ...val, productUrl: e.target.value }))
-                }
+                onChange={(e) => {
+                  handleChangeFile(e);
+                  setVal((val) => ({ ...val, productUrl: e.target.value }));
+                }}
                 type="file"
                 className="changingproduct_entryfile"
               ></input>
