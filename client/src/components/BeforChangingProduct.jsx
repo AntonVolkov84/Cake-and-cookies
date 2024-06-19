@@ -1,8 +1,9 @@
-import './BeforChangingProduct.scss';
 import { fetchProducts } from '../redux/slices/products';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+import './BeforChangingProduct.scss';
 
 function BeforChangingProduct() {
   const dispatch = useDispatch();
@@ -21,9 +22,7 @@ function BeforChangingProduct() {
   return (
     <main className="beforchangingproduct">
       <div className="beforchangingproduct_timantan">
-        <span className="beforchangingproduct_timantan_text">
-          Выберите товар, который нужно изменить
-        </span>
+        Выберите товар, который нужно изменить
       </div>
       <div className="beforchangingproduct_productcard">
         <section className="beforchangingproduct_products">

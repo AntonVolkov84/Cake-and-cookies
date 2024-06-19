@@ -19,6 +19,7 @@
   &_header {
     @include longbutton();
     @include center();
+    font-size: 24px;
   }
   &_menu {
     height: 368px;
@@ -44,30 +45,27 @@
     background: $blueborder;
     border-radius: 12px;
   }
-  &_roll {
-    width: 32px;
-    height: 368px;
-    @include button();
-    margin-left: 16px;
-    display: flex;
-    flex-direction: column;
+  &_productinbucket {
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
     align-items: center;
+    justify-items: center;
+    border-top: 1px solid $blueborder;
+    border-bottom: 1px solid $blueborder;
+    border-radius: 12px;
+    margin-bottom: 1px;
+
+    &_btn {
+      background-color: red;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: none;
+    }
   }
-  &_rollup {
-    margin-top: 16px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 10px 20px 10px;
-    border-color: transparent transparent $blueborder transparent;
-  }
-  &_rolldown {
-    margin-top: 295px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 20px 10px 0 10px;
-    border-color: $blueborder transparent transparent transparent;
+  &_productinbucket_names {
+    justify-self: start;
+    padding-left: 25px;
   }
   &_total {
     @include button();
@@ -101,22 +99,5 @@
     width: 272px;
     height: 50px;
     @include button();
-  }
-}
-.bucket_productinbucket {
-  display: grid;
-  grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
-  align-items: center;
-  justify-items: center;
-  border-top: 1px solid $blueborder;
-  border-bottom: 1px solid $blueborder;
-  border-radius: 12px;
-  margin-bottom: 1px;
-  &_btn {
-    background-color: red;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: none;
   }
 }

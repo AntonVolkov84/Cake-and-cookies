@@ -1,10 +1,11 @@
 import { useSelector } from 'react-redux';
-import './Bucket.scss';
 import { cleanBucket } from '../redux/slices/busket';
 import { useDispatch } from 'react-redux';
 import { delProduct } from '../redux/slices/busket';
 import { useNavigate } from 'react-router-dom';
 import axios from '../axios';
+
+import './Bucket.scss';
 
 function Bucket() {
   const navigate = useNavigate();

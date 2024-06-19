@@ -8,9 +8,7 @@ function Adminmenu() {
   return (
     <main className="adminmenu">
       <div className="adminmenu_header">
-        <div className="adminmenu_timantan">
-          <span className="adminmenu_timantan_text">Меню администратора</span>
-        </div>
+        <div className="adminmenu_timantan">Меню администратора</div>
       </div>
       <div className="adminmenu_card">
         <Link className="adminmenu_btn" to="/productadding">
