@@ -9,18 +9,12 @@ function Adminmenu() {
   return (
     <main className="adminmenu">
       <div className="adminmenu_header">
-        <Timantanshort />
-        <button className="trianglemain">
-          <div className="triangle"></div>
+        <div className="adminmenu_timantan">
+          <span className="adminmenu_timantan_text">Тимантан</span>
+        </div>
+        <button className="adminmenu_trianglemain">
+          <div className="adminmenu_triangle"></div>
         </button>
-        <Link to="/registration">
-          <button
-            // onClick={() => navigate('/registration')}
-            className="adminmenu_registration"
-          >
-            <span className="registration_text">Регистрация</span>
-          </button>
-        </Link>
       </div>
       <div className="adminmenu_card">
         <Link className="adminmenu_btn" to="/productadding">
@@ -40,7 +34,9 @@ function Adminmenu() {
         <Link className="adminmenu_btn" to="/datereport">
           <button className="adminmenu_btn">Просмотр отчета о продажах</button>
         </Link>
-        <button className="adminmenu_btn"></button>
+        <Link className="adminmenu_btn" to="/registration">
+          <button className="adminmenu_btn">Регистрация нового продавца</button>
+        </Link>
         <button className="adminmenu_btn"></button>
         <button className="adminmenu_btn"></button>
         <button className="adminmenu_btn"></button>
