@@ -11,17 +11,18 @@
   height: 768px;
   background-color: $greyback;
   padding-left: 25px;
+  padding-top: 50px;
   position: relative;
-  &_header {
-    display: flex;
-  }
-
-  &_footer {
-    width: 960px;
-    height: 50px;
+  &_timantan {
     @include button();
-    position: absolute;
-    bottom: 50px;
+    height: 50px;
+    width: 960px;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+  }
+  &_timantan_text {
+    font-size: 24px;
   }
   &_card {
     margin-top: 25px;
@@ -39,11 +40,11 @@
     @include center();
     text-decoration: none;
   }
-  &_registration {
-    @include button();
+  &_footer {
+    width: 960px;
     height: 50px;
-    width: 184px;
-    margin-left: 16px;
-    margin-top: 50px;
+    @include button();
+    position: absolute;
+    bottom: 50px;
   }
 }

@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import './Home.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import Timantanshort from '../Buttons/Timantanshort';
-import { fetchProducts } from '../redux/slices/products';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { selectIsAuth, selectIsAdmin } from '../redux/slices/auth';
-import axios from '../axios';
+import { fetchProducts } from '../redux/slices/products';
 import { cleanBucket } from '../redux/slices/busket';
+import axios from '../axios';
+
+import './Home.scss';
 
 function Home() {
   const isAuth = useSelector(selectIsAuth);
@@ -21,6 +21,7 @@ function Home() {
   useEffect(() => {
     dispatch(fetchProducts());
   }, []);
+
   function handleClick(event) {
     navigate(`/gweight/${event.target.parentNode.id}`);
   }
@@ -55,38 +56,33 @@ function Home() {
       {isAuth ? (
         <main className="main_menu">
           <header className="header">
-            <Timantanshort />
+            <div className="timantan">
+              <span className="timantan_text">Тимантан</span>
+            </div>
             {isAdmin ? (
-              <button
-                onClick={() => navigate('/adminmenu')}
-                className="trianglemain"
-              >
-                <div className="triangle"></div>
-              </button>
+              <Link to="/adminmenu">
+                <button className="trianglemain">
+                  <div className="triangle"></div>
+                </button>
+              </Link>
             ) : (
               <></>
             )}
             {isAdmin ? (
-              <button
-                onClick={() => navigate('/registration')}
-                className="registration"
-              >
-                <span className="registration_text">Регистрация</span>
-              </button>
+              <Link to="/registration">
+                <button className="registration">Регистрация</button>
+              </Link>
             ) : (
               <></>
             )}
             {isAuth ? (
-              <button
-                onClick={() => navigate('/programmquit')}
-                className="toreport"
-              >
-                Отчет
-              </button>
+              <Link to="/programmquit">
+                <button className="toreport">Отчет</button>
+              </Link>
             ) : (
-              <button onClick={() => navigate('/login')} className="login">
-                Логин
-              </button>
+              <Link to="/login">
+                <button className="login">Логин</button>
+              </Link>
             )}
           </header>
           <div className="productsection">
@@ -137,7 +133,9 @@ function Home() {
       ) : (
         <main className="main_menu">
           <header className="header">
-            <Timantanshort />
+            <div className="timantan">
+              <span className="timantan_text">Тимантан</span>
+            </div>
             <button onClick={() => navigate('/login')} className="login">
               Логин
             </button>

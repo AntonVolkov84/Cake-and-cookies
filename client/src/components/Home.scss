@@ -11,6 +11,17 @@
   height: 768px;
   background-color: $greyback;
   padding-left: 25px;
+  padding-top: 50px;
+}
+.timantan {
+  width: 400px;
+  height: 50px;
+  @include button();
+  @include center();
+}
+.timantan_text {
+  font-size: 24px;
+  list-style: none;
 }
 .triangle {
   width: 0;
@@ -19,38 +30,38 @@
   border-width: 30px 15px 0 15px;
   border-color: #0d99ff transparent transparent transparent;
 }
-.header {
-  display: flex;
-}
-.timantan {
-  width: 400px;
-  height: 50px;
-  @include button();
-  margin: 50px 0 0 0;
-  @include center();
-}
-.timantan_text .login_text .registration_text {
-  font-size: 16px;
-}
-.timantan_text {
-  padding-left: 16px;
-}
 .trianglemain {
   width: 144px;
   height: 50px;
   @include button();
-  margin: 50px 0 0 16px;
+  margin: 0 0 0 16px;
   @include center();
+}
+.header {
+  display: flex;
 }
 .login {
   width: 184px;
   height: 50px;
   @include button();
-  margin: 50px 0 0 16px;
+  margin: 0 0 0 16px;
   @include center();
+  text-decoration: none;
 }
 .registration {
-  @extend .login;
+  @include button();
+  width: 184px;
+  height: 50px;
+  margin-left: 16px;
+}
+.toreport {
+  @include button();
+  height: 50px;
+  width: 195px;
+  margin-left: 16px;
+}
+.productsection {
+  display: flex;
 }
 .productcard {
   display: grid;
@@ -58,10 +69,6 @@
   height: 593px;
   margin-right: 16px;
 }
-.productsection {
-  display: flex;
-}
-
 .basket {
   width: 304px;
   height: 593px;
@@ -89,7 +96,6 @@
   overflow-y: auto;
   overflow-x: hidden;
   max-height: 100vh;
-
   &_line {
     display: grid;
     grid-template-rows: 1fr repeat(6);
@@ -97,7 +103,6 @@
     width: 240px;
     height: 50px;
   }
-
   &_name {
     display: flex;
     justify-content: start;
@@ -143,15 +148,6 @@
   gap: 10px;
   overflow-y: scroll;
 }
-.nextpage {
-  width: 560px;
-  height: 50px;
-  margin: 25px 0 0 0;
-  @include button();
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .card {
   position: relative;
   width: 195px;
@@ -177,11 +173,4 @@
 .products::-webkit-scrollbar-thumb {
   background: $blueborder;
   border-radius: 12px;
-}
-.toreport {
-  @include button();
-  height: 50px;
-  width: 195px;
-  margin-top: 50px;
-  margin-left: 16px;
 }
