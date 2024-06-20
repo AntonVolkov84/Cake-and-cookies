@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { useNavigate, Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchAddProducts } from '../redux/slices/products';
 import axios from '../axios';

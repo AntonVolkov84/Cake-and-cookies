@@ -151,7 +151,7 @@ function Handleweight() {
         </div>
         <button
           onClick={() => navigate(`/gweight/${id}`)}
-          className="longbutton"
+          className="handleweight_back"
         >
           Назад
         </button>
