@@ -33,13 +33,23 @@ function Delproduct() {
         </header>
         <div className="delproduct_productsection">
           <section className="delproduct_products">
-            <div className="gweight_info">
+            <div className="delproduct_info">
               <img
-                className="gweight_card_img"
+                className="delproduct_card_img"
                 src={currentProduct.productUrl}
                 alt="cookies"
               ></img>
-              <h2 className="gweight_card_text">{currentProduct.fullname}</h2>
+              <div className="delproduct_name">
+                <h2 className="delproduct_card_text">
+                  Название: {currentProduct.fullname}
+                </h2>
+                <h2 className="delproduct_card_text">
+                  Цена: {currentProduct.price}
+                </h2>
+              </div>
+              <h2 className="delproduct_ingredients">
+                Ингридиенты: {currentProduct.ingredients}
+              </h2>
             </div>
           </section>
           <aside className="delproduct_basket">

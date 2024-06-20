@@ -30,6 +30,30 @@
     height: 400px;
     margin-right: 25px;
   }
+  &_info {
+    width: 500px;
+    height: 518px;
+    @include button();
+    margin-top: 25px;
+  }
+  &_card_img {
+    border-radius: 12px;
+    width: 460px;
+    height: 410px;
+    object-fit: cover;
+    margin: 10px 25px;
+    justify-self: center;
+  }
+  &_card_text {
+    margin-left: 25px;
+  }
+  &_name {
+    display: flex;
+  }
+  &_ingredients {
+    margin-top: 16px;
+    margin-left: 25px;
+  }
   &_basket {
     width: 384px;
     height: 518px;
@@ -50,6 +74,7 @@
     @include button();
     width: 192px;
     height: 96px;
+    color: red;
   }
   &_back {
     width: 960px;
