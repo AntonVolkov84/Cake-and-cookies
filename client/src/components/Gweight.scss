@@ -23,6 +23,7 @@
     &_span {
       width: 619px;
       margin: 62px 0 62px 90px;
+      font-size: 24px;
     }
     &_cookies {
       width: 333px;
@@ -31,7 +32,6 @@
       object-fit: cover;
     }
   }
-
   &_block {
     width: 960px;
     height: 412px;
@@ -39,9 +39,19 @@
   }
   &_info {
     width: 400px;
-    height: 400px;
+    height: 412px;
     @include button();
     margin-top: 25px;
+  }
+  &_card_img {
+    border-radius: 12px;
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+    margin: 10px 25px;
+  }
+  &_card_text {
+    margin-left: 25px;
   }
   &_entry {
     width: 544px;
@@ -50,7 +60,6 @@
     margin-top: 25px;
     margin-left: 16px;
   }
-
   &_menu {
     margin: 10px 10px 0 10px;
     width: 524px;
@@ -84,12 +93,6 @@
       border-radius: 12px;
     }
   }
-  &_handleadd {
-    width: 330px;
-    height: 90px;
-    @include button();
-    margin-right: 16px;
-  }
   &_get {
     width: 490px;
     height: 90px;
@@ -100,6 +103,12 @@
     margin: 25px 25px 0 25px;
     display: flex;
   }
+  &_handleadd {
+    width: 330px;
+    height: 90px;
+    @include button();
+    margin-right: 16px;
+  }
   &_add {
     width: 150px;
     height: 90px;
@@ -107,15 +116,5 @@
     border: none;
     padding: 10px;
     background-color: #14ae5c;
-  }
-  &_card_img {
-    border-radius: 12px;
-    width: 340px;
-    height: 340px;
-    object-fit: cover;
-    margin: 10px 25px;
-  }
-  &_card_text {
-    margin-left: 25px;
   }
 }

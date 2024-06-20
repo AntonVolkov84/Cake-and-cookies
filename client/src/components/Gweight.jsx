@@ -1,12 +1,10 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { cleanWeight } from '../redux/slices/weight';
-import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
-import './Gweight.scss';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { innerAction } from '../redux/slices/busket';
-import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+
+import './Gweight.scss';
 
 function Gweight() {
   const products = useSelector((state) => state.products.products.items);
@@ -15,8 +13,8 @@ function Gweight() {
   const [weight, setWeight] = useState();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const currentProduct = products.find((e) => e._id === id);
+
   useEffect(() => {
     setWeight(isAddingWeight[isAddingWeight.length - 1]);
   }, [isAddingWeight]);
@@ -45,7 +43,7 @@ function Gweight() {
   return (
     <main className="gweight">
       <div className="gweight_timantanlong">
-        <span className="gweight_timantanlong_span">Тимантан</span>
+        <span className="gweight_timantanlong_span">Меню выбора веса или количества товара</span>
         <img
           className="gweight_timantanlong_cookies"
           src={currentProduct.productUrl}
@@ -92,7 +90,7 @@ function Gweight() {
           </div>
         </div>
         <button onClick={() => navigate('/')} className="longbutton">
-          Отмена
+          Назад
         </button>
       </div>
     </main>
