@@ -1,9 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import axios from '../axios';
 import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import axios from '../axios';
 
 import './Changingproduct.scss';
 
@@ -53,17 +52,10 @@ function Changingproduct() {
   return (
     <main className="changingproduct">
       <div className="changingproduct_header">
-        <div className="timantan">
-          <span className="timantan_text">Тимантан</span>
-        </div>
+        <div className="changingproduct_timantan">Тимантан</div>
         <Link to="/adminmenu">
           <button className="trianglemain">
             <div className="triangle"></div>
-          </button>
-        </Link>
-        <Link to="/registration">
-          <button className="changingproduct_registration">
-            <span className="registration_text">Регистрация</span>
           </button>
         </Link>
       </div>

@@ -1,4 +1,3 @@
-import Timantanshort from '../Buttons/Timantanshort';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -50,7 +49,7 @@ function Productadding() {
   return (
     <main className="productadding">
       <div className="productadding_header">
-        <Timantanshort />
+        <div className="timantan">Тимантан</div>
         <Link to="/adminmenu">
           <button className="trianglemain">
             <div className="triangle"></div>

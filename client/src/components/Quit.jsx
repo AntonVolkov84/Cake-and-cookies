@@ -1,5 +1,4 @@
 import { logout } from '../redux/slices/auth';
-import TimantanLong from '../Buttons/TimantanLong';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
@@ -10,7 +9,14 @@ function Quit() {
   const dispatch = useDispatch();
   return (
     <main className="menuquit">
-      <TimantanLong />
+      <div className="gweight_timantanlong">
+        <span className="gweight_timantanlong_span">Тимантан</span>
+        <img
+          className="gweight_timantanlong_cookies"
+          src={currentProduct.productUrl}
+          alt="cookies"
+        />
+      </div>
       <div className="menuquit_block">
         <div className="menuquit_text">Итоговая сумма продаж:</div>
         <div className="menuquit_total">120.00</div>

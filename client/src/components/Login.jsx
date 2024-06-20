@@ -1,10 +1,10 @@
-import ExitShort from '../Buttons/ExitShort';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { selectIsAuth } from '../redux/slices/auth';
 import './Login.scss';
 import { fetchAuth } from '../redux/slices/auth';
+import { Link } from 'react-router-dom';
 
 function Login() {
   const isAuth = useSelector(selectIsAuth);
@@ -59,7 +59,9 @@ function Login() {
             Войти
           </button>
         </form>
-        <ExitShort />
+        <Link>
+          <button>Назад</button>
+        </Link>
       </section>
     </>
   );

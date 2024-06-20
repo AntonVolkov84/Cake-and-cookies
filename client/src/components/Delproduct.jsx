@@ -1,4 +1,3 @@
-import Timantanshort from '../Buttons/Timantanshort';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import axios from '../axios';
@@ -25,7 +24,7 @@ function Delproduct() {
     <>
       <main className="delproduct">
         <header className="delproduct_header">
-          <Timantanshort />
+          <div className="timantan">Тимантан</div>
           <Link to="/adminmenu">
             <button className="trianglemain">
               <div className="triangle"></div>

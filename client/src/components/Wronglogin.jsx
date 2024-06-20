@@ -1,5 +1,4 @@
-import ExitShort from '../Buttons/ExitShort';
-import TimantanLong from '../Buttons/TimantanLong';
+import { Link } from 'react-router-dom';
 
 import './Wronglogin.scss';
 
@@ -7,7 +6,14 @@ function Wronglogin() {
   return (
     <>
       <main className="main_wrongmenu">
-        <TimantanLong />
+        <div className="gweight_timantanlong">
+          <span className="gweight_timantanlong_span">Тимантан</span>
+          <img
+            className="gweight_timantanlong_cookies"
+            src={currentProduct.productUrl}
+            alt="cookies"
+          />
+        </div>
         <div className="wrongblocklogin">
           <div className="wrongblocklogin_container">
             <span className="wrongblocklogin_text">
@@ -16,7 +22,9 @@ function Wronglogin() {
             <button className="wrongblocklogin_btn">Попробовать еще</button>
           </div>
         </div>
-        <ExitShort />
+        <Link>
+          <button>Назад</button>
+        </Link>
       </main>
     </>
   );

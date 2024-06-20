@@ -11,10 +11,19 @@
   height: 768px;
   background-color: $greyback;
   padding-left: 25px;
+  padding-top: 50px;
   position: relative;
   &_header {
     display: flex;
   }
+  &_timantan {
+  width: 800px;
+  height: 50px;
+  @include button();
+  @include center();
+  font-size: 24px;
+  list-style: none;
+}
   &_card {
     width: 960px;
     height: 270px;
@@ -90,10 +99,5 @@
     width: 960px;
     height: 50px;
   }
-  &_registration {
-    @include button();
-    height: 50px;
-    width: 184px;
-    margin: 50px 0 0 16px;
-  }
+
 }

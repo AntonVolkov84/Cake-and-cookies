@@ -1,5 +1,5 @@
-import Longbutton from '../Buttons/Longbutton';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './Programmquit.scss';
 
@@ -8,7 +8,7 @@ function Programmquit() {
 
   async function getAllReports() {
     navigate('/report');
- }
+  }
 
   return (
     <main className="main_menuprogrammquit">
@@ -24,7 +24,9 @@ function Programmquit() {
           <div className="totalsum">120.00</div>
         </div>
       </div>
-      <Longbutton text={'Назад'} />
+      <Link to="/">
+        <button>Назад</button>
+      </Link>
     </main>
   );
 }

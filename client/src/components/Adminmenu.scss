@@ -17,8 +17,7 @@
     @include button();
     height: 50px;
     width: 960px;
-    display: flex;
-    align-items: center;
+    @include center();
     padding-left: 16px;
     font-size: 24px;
   }
