@@ -13,7 +13,7 @@ function Quit() {
         <span className="gweight_timantanlong_span">Тимантан</span>
         <img
           className="gweight_timantanlong_cookies"
-          src={currentProduct.productUrl}
+          src="http://localhost:3333/uploads/cookies.jpg"
           alt="cookies"
         />
       </div>
@@ -27,11 +27,10 @@ function Quit() {
           localStorage.removeItem('token', '');
           navigate('/');
         }}
-        className="longbutton"
+        className="menuquit_quit"
       >
         Выйти
       </button>
-      ;
     </main>
   );
 }

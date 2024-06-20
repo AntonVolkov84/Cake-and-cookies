@@ -1,10 +1,10 @@
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { selectIsAuth } from '../redux/slices/auth';
-import './Login.scss';
 import { fetchAuth } from '../redux/slices/auth';
-import { Link } from 'react-router-dom';
+
+import './Login.scss';
 
 function Login() {
   const isAuth = useSelector(selectIsAuth);
@@ -35,10 +35,16 @@ function Login() {
 
   return (
     <>
-      <section className="main_menus">
-        <div className="timantanlong">
-          <span className="timantanlong_span">Тимантан</span>
-          <img className="timantanlong_cookies" src="img/crol.png" alt="crol" />
+      <section className="mainlogin">
+        <div className="mainlogin_timantanlong">
+          <span className="mainlogin_timantanlong_span">
+            Пожалуйста, авторизируйтесь!
+          </span>
+          <img
+            className="mainlogin_timantanlong_cookies"
+            src="img/crol.png"
+            alt="crol"
+          />
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="blocklogin">
           <div className="blocklogin_container">
@@ -59,8 +65,8 @@ function Login() {
             Войти
           </button>
         </form>
-        <Link>
-          <button>Назад</button>
+        <Link to="/">
+          <button className="exitshort">Назад</button>
         </Link>
       </section>
     </>

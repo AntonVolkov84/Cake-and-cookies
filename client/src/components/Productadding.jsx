@@ -1,12 +1,11 @@
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-
-import './Productadding.scss';
-import axios from '../axios';
+import { useNavigate, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchAddProducts } from '../redux/slices/products';
+import axios from '../axios';
+
+import './Productadding.scss';
 
 function Productadding() {
   const navigate = useNavigate();
@@ -49,15 +48,10 @@ function Productadding() {
   return (
     <main className="productadding">
       <div className="productadding_header">
-        <div className="timantan">Тимантан</div>
+        <div className="productadding_timantan">Тимантан</div>
         <Link to="/adminmenu">
           <button className="trianglemain">
             <div className="triangle"></div>
-          </button>
-        </Link>
-        <Link to="/registration">
-          <button className="registration">
-            <span className="registration_text">Регистрация</span>
           </button>
         </Link>
       </div>

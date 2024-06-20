@@ -31,3 +31,10 @@
 .menuquit_text {
   margin-bottom: 12px;
 }
+.menuquit_quit {
+  height: 50px;
+  width: 960px;
+  @include button();
+  position: absolute;
+  bottom: 50px;
+}

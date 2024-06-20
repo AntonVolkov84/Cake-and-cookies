@@ -6,35 +6,29 @@
   padding: 0px 0px 0px 0px;
   box-sizing: border-box;
 }
-.main_menus {
+.mainlogin {
   width: 1024px;
   height: 768px;
   background-color: $greyback;
   position: relative;
   padding-top: 50px;
   padding-left: 25px;
-}
-.exitShort {
-  @include button();
-  @include center();
-  width: 176px;
-  height: 50px;
-  margin: 0 auto;
-}
-.timantanlong {
-  width: 960px;
-  height: 160px;
-  @include button();
-  display: flex;
-  &_span {
-    width: 619px;
-    margin: 62px 0 62px 90px;
-  }
-  &_cookies {
-    width: 333px;
-    margin: 8px 8px 8px 0;
-    border-radius: 12px;
-    object-fit: cover;
+  &_timantanlong {
+    width: 960px;
+    height: 160px;
+    @include button();
+    display: flex;
+    &_span {
+      width: 619px;
+      font-size: 24px;
+      @include center();
+    }
+    &_cookies {
+      width: 333px;
+      margin: 8px 8px 8px 0;
+      border-radius: 12px;
+      object-fit: cover;
+    }
   }
 }
 .blocklogin {
@@ -54,11 +48,6 @@
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr;
     background-color: $whiteback;
-  }
-  &_entry {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
   }
   &_text {
     text-align: center;
@@ -81,4 +70,10 @@
     width: 176px;
     margin: -13px auto;
   }
+}
+.exitshort {
+  @include button();
+  width: 960px;
+  height: 50px;
+  margin: 0 auto;
 }

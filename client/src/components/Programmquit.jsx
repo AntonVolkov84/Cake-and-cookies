@@ -25,7 +25,7 @@ function Programmquit() {
         </div>
       </div>
       <Link to="/">
-        <button>Назад</button>
+        <button className="programmquit_back">Назад</button>
       </Link>
     </main>
   );

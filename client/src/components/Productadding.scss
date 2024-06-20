@@ -11,9 +11,16 @@
   height: 768px;
   background-color: $greyback;
   padding-left: 25px;
+  padding-top: 50px;
   position: relative;
   &_header {
     display: flex;
+  }
+  &_timantan {
+    height: 50px;
+    width: 800px;
+    @include button();
+    @include center();
   }
   &_card {
     width: 960px;

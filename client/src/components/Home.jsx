@@ -89,7 +89,7 @@ function Home() {
             <div className="productcard">
               <section className="products">
                 {isProductsLoading ? (
-                  <span>Подождите!</span>
+                  <span className="homeawait">Подождите!</span>
                 ) : (
                   products.items.map((e, index) => (
                     <div
@@ -143,7 +143,7 @@ function Home() {
           <div className="productcard">
             <section className="products">
               {isProductsLoading ? (
-                <span>Подождите!</span>
+                <span className="homeawait">Подождите!</span>
               ) : (
                 products.items.map((e, index) => (
                   <div id={e._id} key={index} className="card">
