@@ -43,7 +43,9 @@ function Gweight() {
   return (
     <main className="gweight">
       <div className="gweight_timantanlong">
-        <span className="gweight_timantanlong_span">Меню выбора веса или количества товара</span>
+        <span className="gweight_timantanlong_span">
+          Меню выбора веса или количества товара
+        </span>
         <img
           className="gweight_timantanlong_cookies"
           src={currentProduct.productUrl}
@@ -89,7 +91,7 @@ function Gweight() {
             </button>
           </div>
         </div>
-        <button onClick={() => navigate('/')} className="longbutton">
+        <button onClick={() => navigate('/')} className="gweight_back">
           Назад
         </button>
       </div>
