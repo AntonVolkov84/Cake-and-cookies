@@ -1,12 +1,14 @@
 import { logout } from '../redux/slices/auth';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import './Quit.scss';
 
 function Quit() {
+  const totalSum = useSelector((state) => state.report.report.totalSumPerDay);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   return (
     <main className="menuquit">
       <div className="gweight_timantanlong">
@@ -19,7 +21,7 @@ function Quit() {
       </div>
       <div className="menuquit_block">
         <div className="menuquit_text">Итоговая сумма продаж:</div>
-        <div className="menuquit_total">120.00</div>
+        <div className="menuquit_total">{totalSum}</div>
       </div>
       <button
         onClick={() => {

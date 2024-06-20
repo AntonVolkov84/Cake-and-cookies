@@ -8,6 +8,7 @@ export const fetchReport = createAsyncThunk('report/fetchReport', async () => {
 
 const initialState = {
   report: {
+    totalSumPerDay: 0,
     items: [],
     status: 'loading',
   },
@@ -19,6 +20,9 @@ const reportSlice = createSlice({
   reducers: {
     cleanReport(state) {
       state.report.items = [];
+    },
+    addTotalSum(state, action) {
+      state.report.totalSumPerDay = action.payload;
     },
   },
   extraReducers: {
@@ -38,4 +42,4 @@ const reportSlice = createSlice({
 });
 
 export const reportReducer = reportSlice.reducer;
-export const { cleanReport } = reportSlice.actions;
+export const { cleanReport, addTotalSum } = reportSlice.actions;
