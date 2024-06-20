@@ -140,8 +140,8 @@ function Home() {
               Логин
             </button>
           </header>
-          <div className="productcard">
-            <section className="products">
+          <div className="notloginproductcard">
+            <section className="notloginproducts">
               {isProductsLoading ? (
                 <span className="homeawait">Подождите!</span>
               ) : (

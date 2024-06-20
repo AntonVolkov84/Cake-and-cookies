@@ -178,3 +178,30 @@
   background: $blueborder;
   border-radius: 12px;
 }
+.notloginproductcard {
+  display: grid;
+  width: 960px;
+  height: 593px;
+  margin-right: 16px;
+}
+.notloginproducts {
+  width: 960px;
+  height: 593px;
+  margin: 25px 0 0 0;
+  background-color: $blueback;
+  border: solid 2px $blueback;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  gap: 10px;
+  overflow-y: scroll;
+}
+.notloginproducts::-webkit-scrollbar {
+  @include button();
+  width: 20px;
+}
+.notloginproducts::-webkit-scrollbar-thumb {
+  background: $blueborder;
+  border-radius: 12px;
+}
