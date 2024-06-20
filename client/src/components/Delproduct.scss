@@ -13,18 +13,22 @@
   background-color: $greyback;
   padding-left: 25px;
   position: relative;
-
   &_header {
+    display: flex;
+  }
+  &_timantan {
+    width: 800px;
+    height: 50px;
+    @include button();
+    @include center();
+  }
+  &_productsection {
     display: flex;
   }
   &_products {
     width: 550px;
     height: 400px;
-    margin-top: 25px;
     margin-right: 25px;
-  }
-  &_productsection {
-    display: flex;
   }
   &_basket {
     width: 384px;
@@ -41,7 +45,12 @@
     font-size: 24px;
     color: red;
   }
-
+  &_basketbtn {
+    border: none;
+    @include button();
+    width: 192px;
+    height: 96px;
+  }
   &_back {
     width: 960px;
     height: 50px;
@@ -53,11 +62,5 @@
     margin-right: 10px;
     position: absolute;
     bottom: 50px;
-  }
-  &_basketbtn {
-    border: none;
-    @include button();
-    width: 192px;
-    height: 96px;
   }
 }

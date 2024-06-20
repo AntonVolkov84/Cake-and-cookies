@@ -1,13 +1,11 @@
-import { useEffect, useRef } from 'react';
-import './DateReport.scss';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
+import { useEffect, useRef, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { fetchReport, cleanReport } from '../redux/slices/report';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { useState } from 'react';
 import { useReactToPrint } from 'react-to-print';
-import { Link } from 'react-router-dom';
+
+import './DateReport.scss';
 
 function Report() {
   const contentToPrint = useRef(null);

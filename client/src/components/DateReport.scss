@@ -47,7 +47,17 @@
     padding: 10px;
     display: flex;
   }
-
+  &_input {
+    margin-right: 16px;
+    border: none;
+    @include button();
+    padding: 10px;
+  }
+  &_btn {
+    border: none;
+    @include button();
+    width: 100px;
+  }
   &_info {
     width: 930px;
     height: 50px;
@@ -63,23 +73,6 @@
     @include center();
     margin-top: 100px;
   }
-  &_save {
-    width: 470px;
-    height: 50px;
-    position: absolute;
-    bottom: 50px;
-    @include button();
-    right: 38px;
-  }
-
-  &_backbtn {
-    width: 470px;
-    height: 50px;
-    position: absolute;
-    bottom: 50px;
-    @include button();
-    @include center();
-  }
   &_total {
     @include button();
     height: 50px;
@@ -89,15 +82,20 @@
     right: 25px;
     @include center();
   }
-  &_input {
-    margin-right: 16px;
-    border: none;
+  &_backbtn {
+    width: 470px;
+    height: 50px;
+    position: absolute;
+    bottom: 50px;
     @include button();
-    padding: 10px;
+    @include center();
   }
-  &_btn {
-    border: none;
+  &_save {
+    width: 470px;
+    height: 50px;
+    position: absolute;
+    bottom: 50px;
     @include button();
-    width: 100px;
+    right: 38px;
   }
 }

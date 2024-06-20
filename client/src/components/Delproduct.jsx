@@ -24,7 +24,7 @@ function Delproduct() {
     <>
       <main className="delproduct">
         <header className="delproduct_header">
-          <div className="timantan">Тимантан</div>
+          <div className="delproduct_timantan">Тимантан</div>
           <Link to="/adminmenu">
             <button className="trianglemain">
               <div className="triangle"></div>
@@ -53,7 +53,9 @@ function Delproduct() {
             </section>
           </aside>
         </div>
-        <button className="delproduct_back">Назад</button>
+        <Link to="/adminmenu">
+          <button className="delproduct_back">Назад</button>
+        </Link>
       </main>
     </>
   );
