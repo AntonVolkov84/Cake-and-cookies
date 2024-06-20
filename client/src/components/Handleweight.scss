@@ -38,15 +38,16 @@
   }
   &_info {
     width: 400px;
-    height: 336px;
+    height: 412px;
     @include button();
     margin-top: 25px;
   }
   &_card_img {
     border-radius: 12px;
     width: 380px;
+    height: 350px;
     margin: 10px 10px 10px 10px;
-    object-fit: contain;
+    object-fit: cover;
   }
   &_card_text {
     margin-left: 10px;

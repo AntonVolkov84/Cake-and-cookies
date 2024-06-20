@@ -1,9 +1,7 @@
-import { useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { innerWeight } from '../redux/slices/weight';
-import { useDispatch } from 'react-redux';
 
 import './Handleweight.scss';
 
@@ -18,12 +16,12 @@ function Handleweight() {
   function handleWeight(e) {
     setWeight(`${weight}` + `${e.target.value}`);
   }
-  function clearInput() {
-    setWeight('');
-  }
   function addHandleWeight() {
     dispatch(innerWeight(parseFloat(weight)));
     navigate(`/gweight/${id}`);
+    setWeight('');
+  }
+  function clearWeight() {
     setWeight('');
   }
   return (
@@ -60,7 +58,7 @@ function Handleweight() {
             />
             <div className="handleweightdel">
               <button
-                onClick={clearInput}
+                onClick={clearWeight}
                 className="handleweightdel_btn"
               ></button>
             </div>
