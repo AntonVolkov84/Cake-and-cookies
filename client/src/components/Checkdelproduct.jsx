@@ -23,19 +23,10 @@ function Checkdelproduct() {
     <>
       <main className="checkdelproduct">
         <header className="checkdelproduct_header">
-          <div className="checkdelproduct_timantan">
-            <span className="checkdelproduct_timantan_text">
-              Удаление товара!!!
-            </span>
-          </div>
+          <div className="checkdelproduct_timantan">Удаление товара!!!</div>
           <Link to="/adminmenu">
             <button className="trianglemain">
               <div className="triangle"></div>
-            </button>
-          </Link>
-          <Link to="/registration">
-            <button className="checkdelproduct_registration">
-              <span className="registration_text">Регистрация</span>
             </button>
           </Link>
         </header>

@@ -12,6 +12,7 @@
   height: 768px;
   background-color: $greyback;
   padding-left: 25px;
+  padding-top: 50px;
 
   &_header {
     display: flex;
@@ -20,10 +21,7 @@
     @include button();
     @include center();
     height: 50px;
-    margin-top: 50px;
-    width: 400px;
-  }
-  &_timantan_text {
+    width: 800px;
     color: red;
     font-size: 20px;
   }
@@ -61,19 +59,6 @@
     background: $blueborder;
     border-radius: 12px;
   }
-  &_btn {
-    display: flex;
-  }
-  &_back {
-    width: 960px;
-    height: 50px;
-    margin: 25px 0 0 0;
-    @include button();
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-  }
   &_card_text {
     padding-left: 10px;
     position: absolute;
@@ -87,11 +72,14 @@
     height: 128px;
     border-radius: 12px;
   }
-  &_registration {
+  &_btn {
+    display: flex;
+  }
+  &_back {
+    width: 960px;
     height: 50px;
-    width: 184px;
-    margin-left: 16px;
-    margin-top: 50px;
+    margin: 25px 0 0 0;
     @include button();
+    margin-right: 10px;
   }
 }
