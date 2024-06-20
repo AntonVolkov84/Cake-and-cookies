@@ -1,13 +1,13 @@
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import './Registration.scss';
 import { fetchRegistration } from '../redux/slices/registration';
 import { selectIsAdmin } from '../redux/slices/auth';
 
+import './Registration.scss';
+
 function Registration() {
   const isAdmin = useSelector(selectIsAdmin);
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm({
@@ -45,8 +45,8 @@ function Registration() {
           </span>
           <img
             className="registrationblock_timantanlong_cookies"
-            src="img/crol.png"
-            alt="crol"
+            src="http://localhost:3333/uploads/cookies.jpg"
+            alt="cookies"
           />
         </div>
         <form
@@ -90,7 +90,7 @@ function Registration() {
           onClick={() => {
             navigate('/');
           }}
-          className="exitShort"
+          className="registrationblock_exitShort"
         >
           Назад
         </button>

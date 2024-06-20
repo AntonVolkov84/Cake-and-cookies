@@ -10,7 +10,7 @@ function Wronglogin() {
           <span className="gweight_timantanlong_span">Тимантан</span>
           <img
             className="gweight_timantanlong_cookies"
-            src={currentProduct.productUrl}
+            src="http://localhost:3333/uploads/cookies.jpg"
             alt="cookies"
           />
         </div>
@@ -19,11 +19,13 @@ function Wronglogin() {
             <span className="wrongblocklogin_text">
               Неверный логин или пароль
             </span>
-            <button className="wrongblocklogin_btn">Попробовать еще</button>
+            <Link to="/login">
+              <button className="wrongblocklogin_btn">Попробовать еще</button>
+            </Link>
           </div>
         </div>
-        <Link>
-          <button>Назад</button>
+        <Link to="/">
+          <button className="wrongblocklogin_back">Назад</button>
         </Link>
       </main>
     </>

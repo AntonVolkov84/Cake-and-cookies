@@ -18,6 +18,7 @@
     height: 50px;
     @include button();
     @include center();
+    font-size: 24px;
   }
   &_infofield {
     width: 960px;
@@ -56,6 +57,9 @@
     @include center();
     font-size: 16px;
   }
+  &_text {
+    margin: 25px 35px 0 35px;
+  }
   &_info {
     width: 930px;
     height: 50px;
@@ -63,20 +67,10 @@
     grid-auto-flow: row;
     grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr;
   }
-  &_text {
-    margin: 25px 35px 0 35px;
-  }
   &_wait {
     font-size: 40px;
     @include center();
     margin-top: 100px;
-  }
-  &_save {
-    width: 960px;
-    height: 50px;
-    position: absolute;
-    bottom: 50px;
-    @include button();
   }
   &_total {
     @include button();
@@ -86,5 +80,12 @@
     bottom: 25px;
     right: 25px;
     @include center();
+  }
+  &_save {
+    width: 960px;
+    height: 50px;
+    position: absolute;
+    bottom: 50px;
+    @include button();
   }
 }

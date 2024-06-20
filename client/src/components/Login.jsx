@@ -21,11 +21,11 @@ function Login() {
   const onSubmit = async (values) => {
     const data = await dispatch(fetchAuth(values));
     if (!data.payload) {
-      alert('Не удалось авторизоваться');
+      navigate('/wronglogin');
     } else if ('token' in data.payload) {
       localStorage.setItem('token', data.payload.token);
     } else {
-      alert('Не удалось авторизоваться');
+      navigate('/wronglogin');
     }
   };
 

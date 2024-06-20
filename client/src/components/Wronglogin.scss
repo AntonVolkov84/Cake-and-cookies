@@ -36,4 +36,9 @@
     margin-top: 40px;
     @include button();
   }
+  &_back {
+    width: 960px;
+    height: 50px;
+    @include button();
+  }
 }

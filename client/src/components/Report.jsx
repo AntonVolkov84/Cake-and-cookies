@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react';
-import './Report.scss';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-import { fetchReport, cleanReport } from '../redux/slices/report';
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { fetchReport, cleanReport } from '../redux/slices/report';
 import { useReactToPrint } from 'react-to-print';
+
+import './Report.scss';
 
 function Report() {
   const contentToPrint = useRef(null);
@@ -19,7 +19,6 @@ function Report() {
     },
     removeAfterPrint: true,
   });
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const salesman = useSelector((state) => state.auth.data.fullname);
@@ -47,7 +46,7 @@ function Report() {
 
   return (
     <section className="reportblock">
-      <div className="reportblock_timantan">Тимантан, сохранение отчета</div>
+      <div className="reportblock_timantan">Cохранените отчет, пожалуйста</div>
       <div ref={contentToPrint} className="reportblock_infofield">
         <div className="reportblock_timeAndSalesman">
           <div className="reportblock_salesman">Продавец: {salesman}</div>

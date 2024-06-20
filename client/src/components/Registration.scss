@@ -15,13 +15,6 @@
     padding-top: 50px;
     padding-left: 25px;
   }
-  &_exitShort {
-    @include button();
-    @include center();
-    width: 176px;
-    height: 50px;
-    margin: 0 auto;
-  }
   &_timantanlong {
     width: 960px;
     height: 160px;
@@ -56,11 +49,6 @@
       grid-template-rows: 1fr 1fr 1fr 1fr;
       background-color: $whiteback;
     }
-    &_entry {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      grid-template-rows: 1fr;
-    }
     &_text {
       text-align: center;
       justify-items: center;
@@ -82,5 +70,12 @@
       width: 176px;
       margin: -13px auto;
     }
+  }
+  &_exitShort {
+    @include button();
+    @include center();
+    width: 176px;
+    height: 50px;
+    margin: 0 auto;
   }
 }
