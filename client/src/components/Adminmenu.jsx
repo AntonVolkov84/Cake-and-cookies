@@ -26,6 +26,9 @@ function Adminmenu() {
         <Link className="adminmenu_btn" to="/registration">
           <button className="adminmenu_btn">Регистрация нового продавца</button>
         </Link>
+        <Link className="adminmenu_btn" to="/replenishment">
+          <button className="adminmenu_btn">Приход товара</button>
+        </Link>
       </div>
       <button onClick={() => navigate('/')} className="adminmenu_footer">
         Назад

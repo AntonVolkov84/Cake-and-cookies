@@ -17,6 +17,9 @@ import Delproduct from './components/Delproduct';
 import Registration from './components/Registration';
 import DateReport from './components/DateReport';
 import BeforChangingProduct from './components/BeforChangingProduct';
+import Replenishment from './components/Replenishment';
+import AddingReplenishment from './components/AddingReplenishment';
+
 import { useEffect } from 'react';
 import { fetchAuthMe, selectIsAuth } from './redux/slices/auth';
 
@@ -44,9 +47,14 @@ function App() {
       <Route path="/changingproduct/:id" element={<Changingproduct />} />
       <Route path="/checkdelproduct" element={<Checkdelproduct />} />
       <Route path="/delproduct/:id" element={<Delproduct />} />
+      <Route
+        path="/addingreplenishment/:id"
+        element={<AddingReplenishment />}
+      />
       <Route path="/report" element={<Report />} />
       <Route path="/datereport" element={<DateReport />} />
       <Route path="/beforchangingproduct" element={<BeforChangingProduct />} />
+      <Route path="/replenishment" element={<Replenishment />} />
     </Routes>
   );
 }
