@@ -27,7 +27,9 @@ function Handleweight() {
   return (
     <main className="handleweight">
       <div className="handleweight_timantanlong">
-        <span className="handleweight_timantanlong_span">Тимантан</span>
+        <span className="handleweight_timantanlong_span">
+          Ручной ввод веса или количества
+        </span>
         <img
           className="handleweight_timantanlong_cookies"
           src={currentProduct.productUrl}

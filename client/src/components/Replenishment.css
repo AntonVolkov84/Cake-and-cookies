@@ -5,19 +5,19 @@
           box-sizing: border-box;
 }
 
-.checkdelproduct {
+.replenishment {
   width: 1024px;
   height: 768px;
   background-color: #F4F4F4;
   padding-left: 25px;
   padding-top: 50px;
 }
-.checkdelproduct_header {
+.replenishment_header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.checkdelproduct_timantan {
+.replenishment_timantan {
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
   border-radius: 12px;
@@ -34,15 +34,14 @@
           align-items: center;
   height: 50px;
   width: 800px;
-  color: red;
   font-size: 20px;
 }
-.checkdelproduct_productcard {
+.replenishment_productcard {
   display: grid;
   width: 960px;
   height: 518px;
 }
-.checkdelproduct_checkout {
+.replenishment_checkout {
   width: 344px;
   height: 88px;
   background-color: #DBF0FF;
@@ -53,7 +52,7 @@
   margin: 0 10px 10px 10px;
   font-size: 24px;
 }
-.checkdelproduct_products {
+.replenishment_products {
   width: 960px;
   height: 518px;
   margin: 25px 0 0 0;
@@ -66,7 +65,7 @@
   gap: 10px;
   overflow-y: scroll;
 }
-.checkdelproduct_products::-webkit-scrollbar {
+.replenishment_products::-webkit-scrollbar {
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
   border-radius: 12px;
@@ -74,29 +73,29 @@
   font-family: Arial, Helvetica, sans-serif;
   width: 20px;
 }
-.checkdelproduct_products::-webkit-scrollbar-thumb {
+.replenishment_products::-webkit-scrollbar-thumb {
   background: #0D99FF;
   border-radius: 12px;
 }
-.checkdelproduct_card_text {
+.replenishment_card_text {
   padding-left: 10px;
   position: absolute;
   top: 80px;
   position: relative;
   color: #ffffff;
 }
-.checkdelproduct_card_img {
+.replenishment_card_img {
   position: absolute;
   width: 185px;
   height: 128px;
   border-radius: 12px;
 }
-.checkdelproduct_btn {
+.replenishment_btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.checkdelproduct_back {
+.replenishment_back {
   width: 960px;
   height: 50px;
   margin: 25px 0 0 0;

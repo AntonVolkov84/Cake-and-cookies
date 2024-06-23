@@ -41,3 +41,15 @@
 .menuquit_text {
   margin-bottom: 12px;
 }
+
+.menuquit_quit {
+  height: 50px;
+  width: 960px;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  bottom: 50px;
+}

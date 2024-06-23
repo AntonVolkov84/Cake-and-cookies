@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-.main_menus {
+.mainlogin {
   width: 1024px;
   height: 768px;
   background-color: #F4F4F4;
@@ -13,28 +13,7 @@
   padding-top: 50px;
   padding-left: 25px;
 }
-
-.exitShort {
-  background-color: #DBF0FF;
-  border: solid 2px #0D99FF;
-  border-radius: 12px;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 176px;
-  height: 50px;
-  margin: 0 auto;
-}
-
-.timantanlong {
+.mainlogin_timantanlong {
   width: 960px;
   height: 160px;
   background-color: #DBF0FF;
@@ -46,11 +25,20 @@
   display: -ms-flexbox;
   display: flex;
 }
-.timantanlong_span {
+.mainlogin_timantanlong_span {
   width: 619px;
-  margin: 62px 0 62px 90px;
+  font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.timantanlong_cookies {
+.mainlogin_timantanlong_cookies {
   width: 333px;
   margin: 8px 8px 8px 0;
   border-radius: 12px;
@@ -78,11 +66,6 @@
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
   background-color: #FBFBFB;
-}
-.blocklogin_entry {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr;
 }
 .blocklogin_text {
   text-align: center;
@@ -116,4 +99,15 @@
   height: 50px;
   width: 176px;
   margin: -13px auto;
+}
+
+.exitshort {
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 960px;
+  height: 50px;
+  margin: 0 auto;
 }

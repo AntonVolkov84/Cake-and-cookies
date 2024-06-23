@@ -30,6 +30,7 @@
 .gweight_timantanlong_span {
   width: 619px;
   margin: 62px 0 62px 90px;
+  font-size: 24px;
 }
 .gweight_timantanlong_cookies {
   width: 333px;
@@ -47,13 +48,24 @@
 }
 .gweight_info {
   width: 400px;
-  height: 400px;
+  height: 412px;
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
   border-radius: 12px;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 25px;
+}
+.gweight_card_img {
+  border-radius: 12px;
+  width: 340px;
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 10px 25px;
+}
+.gweight_card_text {
+  margin-left: 25px;
 }
 .gweight_entry {
   width: 544px;
@@ -105,16 +117,6 @@
   border: 2px solid #14ae5c;
   border-radius: 12px;
 }
-.gweight_handleadd {
-  width: 330px;
-  height: 90px;
-  background-color: #DBF0FF;
-  border: solid 2px #0D99FF;
-  border-radius: 12px;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-right: 16px;
-}
 .gweight_get {
   width: 490px;
   height: 90px;
@@ -131,6 +133,16 @@
   display: -ms-flexbox;
   display: flex;
 }
+.gweight_handleadd {
+  width: 330px;
+  height: 90px;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 16px;
+}
 .gweight_add {
   width: 150px;
   height: 90px;
@@ -139,14 +151,14 @@
   padding: 10px;
   background-color: #14ae5c;
 }
-.gweight_card_img {
+.gweight_back {
+  width: 960px;
+  height: 50px;
+  position: absolute;
+  bottom: 50px;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
   border-radius: 12px;
-  width: 340px;
-  height: 340px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin: 10px 25px;
-}
-.gweight_card_text {
-  margin-left: 25px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }

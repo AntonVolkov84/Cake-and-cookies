@@ -3,20 +3,17 @@
   padding: 0px 0px 0px 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-.bucket {
+.datereport {
   width: 1024px;
   height: 768px;
   background-color: #F4F4F4;
   position: relative;
   padding-top: 50px;
   padding-left: 25px;
-  padding-right: 25px;
 }
-.bucket_header {
+.datereport_timantan {
   width: 960px;
   height: 50px;
   background-color: #DBF0FF;
@@ -33,27 +30,19 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 24px;
 }
-.bucket_menu {
-  height: 368px;
+.datereport_infofield {
   width: 960px;
-  border-radius: 12px;
+  height: 517px;
   margin-top: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.bucket_info {
-  background-color: #FBFBFB;
-  width: 960px;
-  height: 368px;
+  border: 2px solid #0D99FF;
   border-radius: 12px;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
   overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #FBFBFB;
+  position: relative;
 }
-.bucket_info::-webkit-scrollbar {
+.datereport_infofield::-webkit-scrollbar {
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
   border-radius: 12px;
@@ -61,42 +50,52 @@
   font-family: Arial, Helvetica, sans-serif;
   width: 20px;
 }
-.bucket_info::-webkit-scrollbar-thumb {
+.datereport_infofield::-webkit-scrollbar-thumb {
   background: #0D99FF;
   border-radius: 12px;
 }
-.bucket_productinbucket {
-  display: grid;
-  grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
-  border-top: 1px solid #0D99FF;
-  border-bottom: 1px solid #0D99FF;
+.datereport_timeAndSalesman {
+  width: 910px;
+  height: 50px;
+  margin: 25px 25px 0 25px;
+  background-color: #F4F4F4;
   border-radius: 12px;
-  margin-bottom: 1px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-.bucket_productinbucket_btn {
-  background-color: red;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
+.datereport_input {
+  margin-right: 16px;
   border: none;
-}
-.bucket_productinbucket_names {
-  justify-self: start;
-  padding-left: 25px;
-}
-.bucket_total {
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
   border-radius: 12px;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
-  width: 240px;
+  padding: 10px;
+}
+.datereport_btn {
+  border: none;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100px;
+}
+.datereport_info {
+  width: 930px;
   height: 50px;
-  font-size: 24px;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr;
+}
+.datereport_text {
+  margin: 25px 35px 0 35px;
+}
+.datereport_wait {
+  font-size: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,44 +105,58 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 720px;
-  margin-top: 32px;
-  margin-right: 25px;
+  margin-top: 100px;
 }
-.bucket_checkout {
-  width: 960px;
-  height: 50px;
+.datereport_total {
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
   border-radius: 12px;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
-  margin-top: 32px;
-}
-.bucket_footer {
-  margin-top: 25px;
-  width: 960px;
   height: 50px;
+  width: 250px;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.bucket_back {
-  width: 672px;
+.datereport_backbtn {
+  width: 470px;
   height: 50px;
-  margin-right: 16px;
+  position: absolute;
+  bottom: 50px;
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
   border-radius: 12px;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.bucket_del {
-  width: 272px;
+.datereport_save {
+  width: 470px;
   height: 50px;
+  position: absolute;
+  bottom: 50px;
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
   border-radius: 12px;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
+  right: 38px;
 }
