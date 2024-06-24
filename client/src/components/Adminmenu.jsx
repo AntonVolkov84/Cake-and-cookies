@@ -34,6 +34,14 @@ function Adminmenu() {
             Просмотр отчета о приходе товаров
           </button>
         </Link>
+        <Link className="adminmenu_btn" to="/writeoff">
+          <button className="adminmenu_btn">Списание товара</button>
+        </Link>
+        <Link className="adminmenu_btn" to="/writeoffreport">
+          <button className="adminmenu_btn">
+            Просмотр отчета о списании товара
+          </button>
+        </Link>
       </div>
       <button onClick={() => navigate('/')} className="adminmenu_footer">
         Назад

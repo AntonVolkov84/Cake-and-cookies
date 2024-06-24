@@ -6,12 +6,14 @@ import cors from 'cors';
 import { registerValidation, loginValidation } from './validations/auth.js';
 import { productValidation } from './validations/products.js';
 import { reportValidation } from './validations/reportValidation.js';
+import { writeoffValidation } from './validations/writeoffValidation.js';
 import { replenishmentValidation } from './validations/replenishmentValidation.js';
 
 import * as UserController from './controllers/UserController.js';
 import * as ProductsController from './controllers/ProductsController.js';
 import * as reportController from './controllers/reportController.js';
 import * as ReplenishmentController from './controllers/ReplenishmentController.js';
+import * as WriteoffController from './controllers/WriteoffController.js';
 import handleValidationErrors from './utils/handleValidationErrors.js';
 
 import checkAuth from './utils/checkAuth.js';
@@ -63,6 +65,15 @@ app.post(
   ReplenishmentController.addReplenishment
 );
 app.get('/replenishment', checkAuth, ReplenishmentController.getAll);
+
+// Списание товаров
+app.post(
+  '/writeoff',
+  checkAuth,
+  writeoffValidation,
+  WriteoffController.addWriteoff
+);
+app.get('/writeoff', checkAuth, WriteoffController.getAll);
 
 // Вывод товаров
 app.get('/products', ProductsController.getAll);

@@ -20,6 +20,8 @@ import BeforChangingProduct from './components/BeforChangingProduct';
 import Replenishment from './components/Replenishment';
 import AddingReplenishment from './components/AddingReplenishment';
 import ReplenReport from './components/ReplenReport';
+import Writeoff from './components/Writeoff';
+import Writeoffreport from './components/Writeoffreport';
 
 import { useEffect } from 'react';
 import { fetchAuthMe, selectIsAuth } from './redux/slices/auth';
@@ -57,6 +59,8 @@ function App() {
       <Route path="/beforchangingproduct" element={<BeforChangingProduct />} />
       <Route path="/replenishment" element={<Replenishment />} />
       <Route path="/replenreport" element={<ReplenReport />} />
+      <Route path="/writeoff" element={<Writeoff />} />
+      <Route path="/writeoffreport" element={<Writeoffreport />} />
     </Routes>
   );
 }
