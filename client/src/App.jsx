@@ -19,6 +19,7 @@ import DateReport from './components/DateReport';
 import BeforChangingProduct from './components/BeforChangingProduct';
 import Replenishment from './components/Replenishment';
 import AddingReplenishment from './components/AddingReplenishment';
+import ReplenReport from './components/ReplenReport';
 
 import { useEffect } from 'react';
 import { fetchAuthMe, selectIsAuth } from './redux/slices/auth';
@@ -55,6 +56,7 @@ function App() {
       <Route path="/datereport" element={<DateReport />} />
       <Route path="/beforchangingproduct" element={<BeforChangingProduct />} />
       <Route path="/replenishment" element={<Replenishment />} />
+      <Route path="/replenreport" element={<ReplenReport />} />
     </Routes>
   );
 }

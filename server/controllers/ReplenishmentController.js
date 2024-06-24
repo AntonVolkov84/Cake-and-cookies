@@ -27,7 +27,7 @@ export const addReplenishment = async (req, res) => {
 
 export const getAll = async (req, res) => {
   try {
-    const replenishment = await ReplenishmentModel.find();
+    const replenishment = await replenishmentModel.find();
     res.json(replenishment);
   } catch (error) {
     console.log(error);

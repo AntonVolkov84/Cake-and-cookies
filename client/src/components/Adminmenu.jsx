@@ -29,6 +29,11 @@ function Adminmenu() {
         <Link className="adminmenu_btn" to="/replenishment">
           <button className="adminmenu_btn">Приход товара</button>
         </Link>
+        <Link className="adminmenu_btn" to="/replenreport">
+          <button className="adminmenu_btn">
+            Просмотр отчета о приходе товаров
+          </button>
+        </Link>
       </div>
       <button onClick={() => navigate('/')} className="adminmenu_footer">
         Назад
