@@ -1,6 +1,7 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 import { fetchReplenishment } from '../redux/slices/replenishment';
 import { useReactToPrint } from 'react-to-print';
 import './ReplenReport.scss';
@@ -9,6 +10,10 @@ function ReplenReport() {
   useEffect(() => {
     dispatch(fetchReplenishment());
   }, []);
+  const time = new Date();
+  const [timeForReport, setTimeForReport] = useState(
+    time.getDate() + ' ' + (time.getMonth() + 1) + ' ' + time.getFullYear()
+  );
   const replenishment = useSelector(
     (state) => state.replenishment.replenishment.items
   );
@@ -17,7 +22,7 @@ function ReplenReport() {
   );
   const contentToPrint = useRef(null);
   const handlePrint = useReactToPrint({
-    documentTitle: 'Отчет о продажах',
+    documentTitle: 'Отчет о приходе товара',
     onBeforePrint: () => {
       console.log('Ожидаем печать документа');
     },
@@ -28,13 +33,23 @@ function ReplenReport() {
   });
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const time = new Date();
-  const timeForReport =
-    time.getDate() + ' ' + (time.getMonth() + 1) + ' ' + time.getFullYear();
+  const { register, handleSubmit } = useForm({
+    defaultValues: {
+      addingDate: '',
+    },
+    mode: 'onChange',
+  });
 
   function saveAndQuit() {
     // dispatch(cleanReport());
     // navigate('/quit');
+  }
+
+  function onSubmit(values) {
+    const time = new Date(Date.parse(values.addingDate));
+    setTimeForReport(
+      time.getDate() + ' ' + (time.getMonth() + 1) + ' ' + time.getFullYear()
+    );
   }
 
   function filterByDate(item) {
@@ -46,10 +61,24 @@ function ReplenReport() {
 
   return (
     <section className="replenreport">
-      <div className="replenreport_timantan">Cохранените отчет, пожалуйста</div>
+      <div className="replenreport_timantan">Отчет о приходе товара</div>
       <div ref={contentToPrint} className="replenreport_infofield">
+        <div className="replenreport_texthead">Отчет о приходе товаров</div>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="replenreport_timeAndSalesman"
+        >
+          <input
+            {...register('addingDate', { required: 'Дата не выбрана' })}
+            type="date"
+            className="replenreport_input"
+          ></input>
+          <button type="submit" className="replenreport_btn">
+            Выбрать
+          </button>
+        </form>
         <div className="replenreport_timeAndSalesman">
-          <div className="replenreport_date">{'Дата ' + time}</div>
+          <div className="replenreport_date">{'Дата ' + timeForReport}</div>
         </div>
         {isReplenishmentLoaded === 'loaded' ? (
           replenishment

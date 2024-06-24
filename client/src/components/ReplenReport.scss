@@ -20,6 +20,21 @@
     @include center();
     font-size: 24px;
   }
+  &_input {
+    margin-right: 16px;
+    border: none;
+    @include button();
+    padding: 10px;
+  }
+  &_btn {
+    border: none;
+    @include button();
+    width: 100px;
+  }
+  &_texthead {
+    @include center();
+    height: 50px;
+  }
   &_infofield {
     width: 960px;
     height: 517px;
@@ -42,7 +57,7 @@
   &_timeAndSalesman {
     width: 910px;
     height: 50px;
-    margin: 25px 25px 0 25px;
+    margin: 0 25px 0 25px;
     background-color: $greyback;
     border-radius: 12px;
     padding: 10px;
