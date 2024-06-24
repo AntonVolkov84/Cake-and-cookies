@@ -170,6 +170,7 @@ function AddingReplenishment() {
             </div>
           </div>
         </div>
+        <button className="addingreplenishment_gweight">Получить вес</button>
         <Link to="/replenishment">
           <button className="addingreplenishment_back">Назад</button>
         </Link>

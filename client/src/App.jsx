@@ -22,6 +22,7 @@ import AddingReplenishment from './components/AddingReplenishment';
 import ReplenReport from './components/ReplenReport';
 import Writeoff from './components/Writeoff';
 import Writeoffreport from './components/Writeoffreport';
+import Addingwriteoff from './components/Addingwriteoff';
 
 import { useEffect } from 'react';
 import { fetchAuthMe, selectIsAuth } from './redux/slices/auth';
@@ -61,6 +62,7 @@ function App() {
       <Route path="/replenreport" element={<ReplenReport />} />
       <Route path="/writeoff" element={<Writeoff />} />
       <Route path="/writeoffreport" element={<Writeoffreport />} />
+      <Route path="/addingwriteoff/:id" element={<Addingwriteoff />} />
     </Routes>
   );
 }

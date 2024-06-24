@@ -1,0 +1,84 @@
+@import '../css/mixin';
+@import '../css/vars';
+
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  box-sizing: border-box;
+}
+
+.writeoff {
+  width: 1024px;
+  height: 768px;
+  background-color: $greyback;
+  padding-left: 25px;
+  padding-top: 50px;
+
+  &_header {
+    display: flex;
+  }
+  &_timantan {
+    @include button();
+    @include center();
+    height: 50px;
+    width: 800px;
+    font-size: 20px;
+  }
+  &_productcard {
+    display: grid;
+    width: 960px;
+    height: 518px;
+  }
+
+  &_checkout {
+    width: 344px;
+    height: 88px;
+    @include button();
+    margin: 0 10px 10px 10px;
+    font-size: 24px;
+  }
+  &_products {
+    width: 960px;
+    height: 518px;
+    margin: 25px 0 0 0;
+    background-color: $blueback;
+    border: solid 2px $blueback;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    overflow-y: scroll;
+  }
+  &_products::-webkit-scrollbar {
+    @include button();
+    width: 20px;
+  }
+  &_products::-webkit-scrollbar-thumb {
+    background: $blueborder;
+    border-radius: 12px;
+  }
+  &_card_text {
+    padding-left: 10px;
+    position: absolute;
+    top: 80px;
+    position: relative;
+    color: #ffffff;
+  }
+  &_card_img {
+    position: absolute;
+    width: 185px;
+    height: 128px;
+    border-radius: 12px;
+  }
+  &_btn {
+    display: flex;
+  }
+  &_back {
+    width: 960px;
+    height: 50px;
+    margin: 25px 0 0 0;
+    @include button();
+    margin-right: 10px;
+  }
+}
