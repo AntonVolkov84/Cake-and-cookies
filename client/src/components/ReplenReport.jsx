@@ -40,11 +40,6 @@ function ReplenReport() {
     mode: 'onChange',
   });
 
-  function saveAndQuit() {
-    // dispatch(cleanReport());
-    // navigate('/quit');
-  }
-
   function onSubmit(values) {
     const time = new Date(Date.parse(values.addingDate));
     setTimeForReport(

@@ -171,10 +171,11 @@ function Addingwriteoff() {
           </div>
         </div>
         <textarea
+          placeholder="Введите основания для списания товара"
           onChange={handleText}
           className="addingwriteoff_textinput"
         ></textarea>
-        <Link to="/replenishment">
+        <Link to="/writeoff">
           <button className="addingwriteoff_back">Назад</button>
         </Link>
       </main>
