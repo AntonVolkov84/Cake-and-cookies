@@ -1,0 +1,146 @@
+@import '../css/mixin';
+@import '../css/vars';
+
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.addingwriteoff {
+  width: 1024px;
+  height: 768px;
+  background-color: $greyback;
+  position: relative;
+  padding-top: 50px;
+  padding-left: 25px;
+  &_header {
+    display: flex;
+  }
+  &_timantan {
+    width: 800px;
+    height: 50px;
+    @include button();
+    font-size: 24px;
+    @include center();
+  }
+  &_block {
+    width: 960px;
+    height: 412px;
+    display: flex;
+  }
+  &_info {
+    width: 400px;
+    height: 412px;
+    @include button();
+    margin-top: 25px;
+  }
+  &_card_img {
+    border-radius: 12px;
+    width: 380px;
+    height: 250px;
+    margin: 10px 10px 10px 10px;
+    object-fit: cover;
+  }
+  &_card_text {
+    margin-bottom: 16px;
+    margin-left: 10px;
+  }
+  &_entry {
+    width: 544px;
+    height: 412px;
+    @include button();
+    margin-top: 25px;
+    margin-left: 16px;
+  }
+  &_menu {
+    width: 494px;
+    height: 70px;
+    background-color: $whiteback;
+    margin: 25px 25px 0 25px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    &_text {
+      padding: 16px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+    &_input {
+      border: none;
+      padding: 16px;
+    }
+    &_input:focus {
+      outline: none;
+      border: 2px solid $blueborder;
+      border-radius: 12px;
+    }
+    &_input:invalid {
+      border: 2px solid red;
+      border-radius: 12px;
+    }
+    &_input:valid {
+      border: 2px solid #14ae5c;
+      border-radius: 12px;
+    }
+  }
+  &_del {
+    @include center();
+  }
+  &_del_btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background-color: red;
+  }
+  &_adding {
+    width: 494px;
+    height: 268px;
+    margin: 25px;
+    border-radius: 12px;
+    background-color: $whiteback;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    &_text {
+      @include center();
+      font-size: 20px;
+      border: 1px solid grey;
+      background-color: $whiteback;
+    }
+    &_text:first-child {
+      border-radius: 12px 0px 0px 0px;
+    }
+    &_text:nth-child(3) {
+      border-radius: 0px 12px 0px 0px;
+    }
+    &_text:nth-child(10) {
+      border-radius: 0px 0px 0px 12px;
+    }
+    &_btn {
+      border: none;
+      background-color: #14ae5c;
+      border-radius: 0px 0px 12px 0px;
+    }
+  }
+  &_textinput {
+    width: 544px;
+    @include button();
+    margin-top: 25px;
+    position: absolute;
+    height: 100px;
+    bottom: 116px;
+    right: 40px;
+    padding: 16px;
+  }
+  &_back {
+    width: 960px;
+    height: 50px;
+    @include button();
+    position: absolute;
+    bottom: 50px;
+  }
+}

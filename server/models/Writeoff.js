@@ -10,6 +10,10 @@ const WriteoffSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    text: {
+      type: String,
+      required: true,
+    },
     weight: {
       type: Number,
       required: true,

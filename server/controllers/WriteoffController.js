@@ -11,6 +11,7 @@ export const addWriteoff = async (req, res) => {
       fullname: req.body.fullname,
       productId: req.body.productId,
       weight: req.body.weight,
+      text: req.body.text,
     });
     const writeoff = await doc.save();
     res.json({

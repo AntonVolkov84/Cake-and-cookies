@@ -37,7 +37,7 @@ function AddingReplenishment() {
     <>
       <main className="addingreplenishment">
         <header className="addingreplenishment_header">
-          <div className="addingreplenishment_timantan">Тимантан</div>
+          <div className="addingreplenishment_timantan">Приход товара</div>
           <Link to="/adminmenu">
             <button className="trianglemain">
               <div className="triangle"></div>
