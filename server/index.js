@@ -8,12 +8,14 @@ import { productValidation } from './validations/products.js';
 import { reportValidation } from './validations/reportValidation.js';
 import { writeoffValidation } from './validations/writeoffValidation.js';
 import { replenishmentValidation } from './validations/replenishmentValidation.js';
+import { remainingValidation } from './validations/remainingValidation.js';
 
 import * as UserController from './controllers/UserController.js';
 import * as ProductsController from './controllers/ProductsController.js';
 import * as reportController from './controllers/reportController.js';
 import * as ReplenishmentController from './controllers/ReplenishmentController.js';
 import * as WriteoffController from './controllers/WriteoffController.js';
+import * as RemainingController from './controllers/RemainingController.js';
 import handleValidationErrors from './utils/handleValidationErrors.js';
 
 import checkAuth from './utils/checkAuth.js';
@@ -90,6 +92,21 @@ app.patch(
   productValidation,
   handleValidationErrors,
   ProductsController.update
+);
+// Вывод остатков по товарам
+app.get('/remaining', RemainingController.getAll);
+app.post(
+  '/remaining',
+  remainingValidation,
+  handleValidationErrors,
+  RemainingController.addRemaining
+);
+app.delete('/remaining', RemainingController.remove);
+app.patch(
+  '/remaining',
+  remainingValidation,
+  handleValidationErrors,
+  RemainingController.update
 );
 
 // Логин

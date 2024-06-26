@@ -7,6 +7,7 @@ import { registrationReducer } from './slices/registration';
 import { reportReducer } from './slices/report';
 import { replenishmentReducer } from './slices/replenishment';
 import { writeoffReducer } from './slices/writeoff';
+import { remainingReducer } from './slices/remaining';
 
 const store = configureStore({
   reducer: {
@@ -18,6 +19,7 @@ const store = configureStore({
     report: reportReducer,
     replenishment: replenishmentReducer,
     writeoff: writeoffReducer,
+    remaining: remainingReducer,
   },
 });
 export default store;

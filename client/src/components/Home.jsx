@@ -66,7 +66,9 @@ function Home() {
                 </button>
               </Link>
             ) : (
-              <></>
+              <Link to="/remaining">
+                <button className="remaining_btn">Остатки</button>
+              </Link>
             )}
             {isAdmin ? (
               <Link to="/registration">

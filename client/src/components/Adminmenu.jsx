@@ -42,6 +42,9 @@ function Adminmenu() {
             Просмотр отчета о списании товара
           </button>
         </Link>
+        <Link className="adminmenu_btn" to="/remaining">
+          <button className="adminmenu_btn">Остатки товаров</button>
+        </Link>
       </div>
       <button onClick={() => navigate('/')} className="adminmenu_footer">
         Назад
