@@ -1,6 +1,7 @@
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { fetchPatchRemaining, fetchRemaining } from '../redux/slices/remaining';
 import axios from '../axios';
 
 import './AddingReplenishment.scss';
@@ -10,7 +11,13 @@ function AddingReplenishment() {
   const products = useSelector((state) => state.products.products.items);
   const { id } = useParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const currentProduct = products.find((e) => e._id === id);
+  const remaining = useSelector((state) => state.remaining.remaining.items);
+  const filteredRemaining = remaining.filter((e) => e.productId === id);
+  useEffect(() => {
+    dispatch(fetchRemaining());
+  }, []);
 
   async function onSubmit() {
     try {
@@ -20,11 +27,21 @@ function AddingReplenishment() {
         productId: id,
       });
       alert(data.data.message);
+      addingRemaining();
       clearWeight();
       navigate('/replenishment');
     } catch (error) {
       console.warn(error.message);
     }
+  }
+  function addingRemaining() {
+    dispatch(
+      fetchPatchRemaining({
+        fullname: currentProduct.fullname,
+        weight: Number(filteredRemaining[0].weight) + Number(weight),
+        productId: id,
+      })
+    );
   }
   function addingreplenishment(e) {
     setWeight(`${weight}` + `${e.target.value}`);
