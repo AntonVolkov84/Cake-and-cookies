@@ -1,8 +1,9 @@
 import { useForm } from 'react-hook-form';
 import { useNavigate, Link } from 'react-router-dom';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchAddProducts } from '../redux/slices/products';
+import { fetchAddRemaining } from '../redux/slices/remaining';
 import axios from '../axios';
 
 import './Productadding.scss';
@@ -25,12 +26,24 @@ function Productadding() {
   const onSubmit = async (values) => {
     const data = await dispatch(fetchAddProducts(values));
     if (data.payload.product._id) {
+      const id = data.payload.product._id;
       alert('Продукт добавлен');
+      addToRemaining(values, id);
       navigate('/');
     } else {
       alert('Неудачная попытка добавить товар');
     }
   };
+
+  function addToRemaining(values, id) {
+    dispatch(
+      fetchAddRemaining({
+        fullname: values.fullname,
+        productId: id,
+        weight: 0,
+      })
+    );
+  }
 
   const handleChangeFile = async (event) => {
     try {
