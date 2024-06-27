@@ -101,7 +101,7 @@ app.post(
   handleValidationErrors,
   RemainingController.addRemaining
 );
-app.delete('/remaining', RemainingController.remove);
+app.delete('/remaining/:id', RemainingController.remove);
 app.patch(
   '/remaining',
   remainingValidation,

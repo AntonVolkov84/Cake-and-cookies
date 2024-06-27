@@ -14,6 +14,7 @@ function Delproduct() {
     try {
       const data = await axios.delete(`/products/${id}`);
       alert(data.data.message);
+      await axios.delete(`/remaining/${id}`);
       navigate('/adminmenu');
     } catch (error) {
       alert(error.message);

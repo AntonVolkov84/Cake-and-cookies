@@ -27,7 +27,7 @@ export const addRemaining = async (req, res) => {
 };
 export const remove = async (req, res) => {
   try {
-    const productId = req.body.productId;
+    const productId = req.params.id;
     const doc = await RemainingModel.findOneAndDelete({
       productId: productId,
     });
