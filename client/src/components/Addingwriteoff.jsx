@@ -1,7 +1,8 @@
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
 import axios from '../axios';
+import { fetchPatchRemaining, fetchRemaining } from '../redux/slices/remaining';
 
 import './Addingwriteoff.scss';
 
@@ -10,8 +11,14 @@ function Addingwriteoff() {
   const [text, setText] = useState('');
   const products = useSelector((state) => state.products.products.items);
   const { id } = useParams();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const currentProduct = products.find((e) => e._id === id);
+  const remaining = useSelector((state) => state.remaining.remaining.items);
+  const filteredRemaining = remaining.filter((e) => e.productId === id);
+  useEffect(() => {
+    dispatch(fetchRemaining());
+  }, []);
 
   async function onSubmit() {
     try {
@@ -22,11 +29,21 @@ function Addingwriteoff() {
         text: text,
       });
       alert(data.data.message);
+      addingRemaining();
       navigate('/writeoff');
     } catch (error) {
       alert(error.response.data[0].msg);
       console.warn(error);
     }
+  }
+  function addingRemaining() {
+    dispatch(
+      fetchPatchRemaining({
+        fullname: currentProduct.fullname,
+        weight: Number(filteredRemaining[0].weight) - Number(weight),
+        productId: id,
+      })
+    );
   }
   function addingwriteoff(e) {
     setWeight(`${weight}` + `${e.target.value}`);
