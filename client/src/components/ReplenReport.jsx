@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { fetchReplenishment } from '../redux/slices/replenishment';
 import { useReactToPrint } from 'react-to-print';
@@ -89,14 +89,19 @@ function ReplenReport() {
           <div className="replenreport_wait">Подождите пожалуйста</div>
         )}
       </div>
-      <button
-        onClick={() => {
-          handlePrint(null, () => contentToPrint.current);
-        }}
-        className="replenreport_save"
-      >
-        Сохранить изменения и выйти
-      </button>
+      <div className="replenreport_footer">
+        <Link to="/adminmenu">
+          <button className="replenreport_back">Назад</button>
+        </Link>
+        <button
+          onClick={() => {
+            handlePrint(null, () => contentToPrint.current);
+          }}
+          className="replenreport_save"
+        >
+          Сохранить изменения и выйти
+        </button>
+      </div>
     </section>
   );
 }

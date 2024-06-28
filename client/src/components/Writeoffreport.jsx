@@ -88,17 +88,19 @@ function Writeoffreport() {
           <div className="writeoffreport_wait">Подождите пожалуйста</div>
         )}
       </div>
-      <Link to="/adminmenu">
-        <button className="writeoffreport_back">Назад</button>
-      </Link>
-      <button
-        onClick={() => {
-          handlePrint(null, () => contentToPrint.current);
-        }}
-        className="writeoffreport_save"
-      >
-        Сохранить изменения и выйти
-      </button>
+      <div className="writeoffreport_footer">
+        <Link to="/adminmenu">
+          <button className="writeoffreport_back">Назад</button>
+        </Link>
+        <button
+          onClick={() => {
+            handlePrint(null, () => contentToPrint.current);
+          }}
+          className="writeoffreport_save"
+        >
+          Сохранить изменения и выйти
+        </button>
+      </div>
     </section>
   );
 }

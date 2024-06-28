@@ -37,7 +37,7 @@
   }
   &_infofield {
     width: 960px;
-    height: 461px;
+    height: 518px;
     margin-top: 25px;
     border: 2px solid $blueborder;
     border-radius: 12px;
@@ -96,18 +96,20 @@
     right: 25px;
     @include center();
   }
-  &_back {
-    width: 960px;
-    height: 50px;
-    position: absolute;
-    bottom: 116px;
-    @include button();
-  }
-  &_save {
-    width: 960px;
-    height: 50px;
+  &_footer {
     position: absolute;
     bottom: 50px;
+    display: flex;
+  }
+  &_back {
+    width: 472px;
+    height: 50px;
+    @include button();
+    margin-right: 16px;
+  }
+  &_save {
+    width: 472px;
+    height: 50px;
     @include button();
   }
 }
