@@ -22,7 +22,7 @@
   }
   &_infofield {
     width: 960px;
-    height: 517px;
+    height: 461px;
     margin-top: 25px;
     border: 2px solid $blueborder;
     border-radius: 12px;
@@ -77,8 +77,8 @@
     height: 50px;
     width: 250px;
     position: absolute;
-    bottom: 25px;
-    right: 25px;
+    bottom: 116px;
+    right: 39px;
     @include center();
   }
   &_save {
