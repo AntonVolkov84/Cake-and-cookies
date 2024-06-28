@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { fetchWriteoff } from '../redux/slices/writeoff';
 import { useReactToPrint } from 'react-to-print';
@@ -88,6 +88,9 @@ function Writeoffreport() {
           <div className="writeoffreport_wait">Подождите пожалуйста</div>
         )}
       </div>
+      <Link to="/adminmenu">
+        <button className="writeoffreport_back">Назад</button>
+      </Link>
       <button
         onClick={() => {
           handlePrint(null, () => contentToPrint.current);

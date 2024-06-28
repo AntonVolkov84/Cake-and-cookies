@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { selectIsAuth, selectIsAdmin } from '../redux/slices/auth';
 import { fetchProducts } from '../redux/slices/products';
+import { fetchRemaining, fetchPatchRemaining } from '../redux/slices/remaining';
 import { cleanBucket } from '../redux/slices/busket';
 import axios from '../axios';
 
@@ -17,9 +18,11 @@ function Home() {
   const { busket } = useSelector((state) => state.busket);
   const isProductsLoading = products.status === 'loading';
   const dateParse = Date.parse(new Date()) + 10800000;
+  const remaining = useSelector((state) => state.remaining.remaining.items);
 
   useEffect(() => {
     dispatch(fetchProducts());
+    dispatch(fetchRemaining());
   }, []);
 
   function handleClick(event) {
@@ -46,9 +49,22 @@ function Home() {
     } catch (error) {
       console.warn(error);
     }
-
+    busket.items.forEach((e) => {
+      addToRemaining(e);
+    });
     dispatch(cleanBucket());
     navigate('/');
+  }
+
+  function addToRemaining(e) {
+    const filteredRemaining = remaining.filter((el) => el.productId === e.id);
+    dispatch(
+      fetchPatchRemaining({
+        fullname: e.fullname,
+        productId: e.id,
+        weight: Number(filteredRemaining[0].weight - Number(e.weight)),
+      })
+    );
   }
 
   return (
