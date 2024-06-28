@@ -1,8 +1,9 @@
-import { useSelector } from 'react-redux';
 import { cleanBucket } from '../redux/slices/busket';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { delProduct } from '../redux/slices/busket';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { fetchRemaining, fetchPatchRemaining } from '../redux/slices/remaining';
 import axios from '../axios';
 
 import './Bucket.scss';
@@ -12,7 +13,11 @@ function Bucket() {
   const { busket } = useSelector((state) => state.busket);
   const dispatch = useDispatch();
   const dateParse = Date.parse(new Date()) + 10800000;
+  const remaining = useSelector((state) => state.remaining.remaining.items);
 
+  useEffect(() => {
+    dispatch(fetchRemaining());
+  }, []);
   function delProductFromBucket(event) {
     dispatch(delProduct(event.target.parentNode.id));
   }
@@ -41,9 +46,22 @@ function Bucket() {
     } catch (error) {
       console.warn(error);
     }
+    busket.items.forEach((e) => {
+      addToRemaining(e);
+    });
 
     dispatch(cleanBucket());
     navigate('/');
+  }
+  function addToRemaining(e) {
+    const filteredRemaining = remaining.filter((el) => el.productId === e.id);
+    dispatch(
+      fetchPatchRemaining({
+        fullname: e.fullname,
+        productId: e.id,
+        weight: Number(filteredRemaining[0].weight - Number(e.weight)),
+      })
+    );
   }
 
   return (
