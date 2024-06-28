@@ -1,4 +1,0 @@
-l antvolkov84
-p j0Pal1thWa5XtHwS
-mongodb+srv://antvolkov84:j0Pal1thWa5XtHwS@cluster0.1t50rt5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-
