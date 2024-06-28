@@ -37,7 +37,7 @@
   }
   &_infofield {
     width: 960px;
-    height: 517px;
+    height: 461px;
     margin-top: 25px;
     border: 2px solid $blueborder;
     border-radius: 12px;
@@ -95,6 +95,13 @@
     bottom: 25px;
     right: 25px;
     @include center();
+  }
+  &_back {
+    width: 960px;
+    height: 50px;
+    position: absolute;
+    bottom: 116px;
+    @include button();
   }
   &_save {
     width: 960px;

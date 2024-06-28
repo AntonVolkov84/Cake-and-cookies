@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useReactToPrint } from 'react-to-print';
 import { fetchRemaining } from '../redux/slices/remaining';
@@ -36,16 +36,19 @@ function Remaining() {
         <div className="remaining_texthead">Отчет о приходе товаров</div>
         {isRemainingLoaded === 'loaded' ? (
           remaining.map((e, index) => (
-              <div key={index} className="remaining_info">
-                <div className="remaining_text">{e.fullname}</div>
-                <div className="remaining_text">{e.productId}</div>
-                <div className="remaining_text">{e.weight}</div>
-              </div>
-            ))
+            <div key={index} className="remaining_info">
+              <div className="remaining_text">{e.fullname}</div>
+              <div className="remaining_text">{e.productId}</div>
+              <div className="remaining_text">{e.weight}</div>
+            </div>
+          ))
         ) : (
           <div className="remaining_wait">Подождите пожалуйста</div>
         )}
       </div>
+      <Link to="/adminmenu">
+        <button className="remaining_back">Назад</button>
+      </Link>
       <button
         onClick={() => {
           handlePrint(null, () => contentToPrint.current);
