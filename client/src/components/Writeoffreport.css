@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-.reportblock {
+.writeoffreport {
   width: 1024px;
   height: 768px;
   background-color: #F4F4F4;
@@ -13,7 +13,7 @@
   padding-top: 50px;
   padding-left: 25px;
 }
-.reportblock_timantan {
+.writeoffreport_timantan {
   width: 960px;
   height: 50px;
   background-color: #DBF0FF;
@@ -32,9 +32,40 @@
           align-items: center;
   font-size: 24px;
 }
-.reportblock_infofield {
+.writeoffreport_input {
+  margin-right: 16px;
+  border: none;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+.writeoffreport_btn {
+  border: none;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100px;
+}
+.writeoffreport_texthead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+}
+.writeoffreport_infofield {
   width: 960px;
-  height: 461px;
+  height: 518px;
   margin-top: 25px;
   border: 2px solid #0D99FF;
   border-radius: 12px;
@@ -43,7 +74,7 @@
   background-color: #FBFBFB;
   position: relative;
 }
-.reportblock_infofield::-webkit-scrollbar {
+.writeoffreport_infofield::-webkit-scrollbar {
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
   border-radius: 12px;
@@ -51,22 +82,23 @@
   font-family: Arial, Helvetica, sans-serif;
   width: 20px;
 }
-.reportblock_infofield::-webkit-scrollbar-thumb {
+.writeoffreport_infofield::-webkit-scrollbar-thumb {
   background: #0D99FF;
   border-radius: 12px;
 }
-.reportblock_timeAndSalesman {
+.writeoffreport_timeAndSalesman {
   width: 910px;
   height: 50px;
-  margin: 25px 25px 0 25px;
+  margin: 0 25px 0 25px;
   background-color: #F4F4F4;
   border-radius: 12px;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 2px;
 }
-.reportblock_salesman {
+.writeoffreport_salesman {
   font-size: 16px;
   margin-right: 25px;
   display: -webkit-box;
@@ -79,7 +111,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.reportblock_date {
+.writeoffreport_date {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,17 +123,22 @@
           align-items: center;
   font-size: 16px;
 }
-.reportblock_text {
-  margin: 25px 35px 0 35px;
+.writeoffreport_text {
+  padding-right: 10px;
 }
-.reportblock_info {
-  width: 930px;
-  height: 50px;
+.writeoffreport_info {
+  width: 910px;
+  height: auto;
+  margin-left: 25px;
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 0.5fr 3fr;
+  background-color: #F4F4F4;
+  border-radius: 12px;
+  margin-bottom: 2px;
+  padding: 10px;
 }
-.reportblock_wait {
+.writeoffreport_wait {
   font-size: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,7 +151,7 @@
           align-items: center;
   margin-top: 100px;
 }
-.reportblock_total {
+.writeoffreport_total {
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
   border-radius: 12px;
@@ -123,8 +160,8 @@
   height: 50px;
   width: 250px;
   position: absolute;
-  bottom: 116px;
-  right: 39px;
+  bottom: 25px;
+  right: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,11 +172,26 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.reportblock_save {
-  width: 960px;
-  height: 50px;
+.writeoffreport_footer {
   position: absolute;
   bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.writeoffreport_back {
+  width: 472px;
+  height: 50px;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 16px;
+}
+.writeoffreport_save {
+  width: 472px;
+  height: 50px;
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
   border-radius: 12px;

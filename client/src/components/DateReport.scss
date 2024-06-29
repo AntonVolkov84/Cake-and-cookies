@@ -29,6 +29,7 @@
     overflow-x: hidden;
     background-color: $whiteback;
     position: relative;
+    padding-left: 25px;
   }
   &_infofield::-webkit-scrollbar {
     @include button();
@@ -41,7 +42,7 @@
   &_timeAndSalesman {
     width: 910px;
     height: 50px;
-    margin: 25px 25px 0 25px;
+    margin-top: 25px;
     background-color: $greyback;
     border-radius: 12px;
     padding: 10px;
@@ -58,15 +59,16 @@
     @include button();
     width: 100px;
   }
-  &_info {
+  &_info,
+  &_title {
     width: 930px;
     height: 50px;
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
   }
   &_text {
-    margin: 25px 35px 0 35px;
+    margin: 16px;
   }
   &_wait {
     font-size: 40px;

@@ -41,6 +41,7 @@
   overflow-x: hidden;
   background-color: #FBFBFB;
   position: relative;
+  padding-left: 25px;
 }
 .datereport_infofield::-webkit-scrollbar {
   background-color: #DBF0FF;
@@ -57,7 +58,7 @@
 .datereport_timeAndSalesman {
   width: 910px;
   height: 50px;
-  margin: 25px 25px 0 25px;
+  margin-top: 25px;
   background-color: #F4F4F4;
   border-radius: 12px;
   padding: 10px;
@@ -84,15 +85,15 @@
   font-family: Arial, Helvetica, sans-serif;
   width: 100px;
 }
-.datereport_info {
+.datereport_info, .datereport_title {
   width: 930px;
   height: 50px;
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
 }
 .datereport_text {
-  margin: 25px 35px 0 35px;
+  margin: 16px;
 }
 .datereport_wait {
   font-size: 40px;

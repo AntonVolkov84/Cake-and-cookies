@@ -65,6 +65,17 @@
           align-items: center;
 }
 
+.remaining_btn {
+  height: 50px;
+  width: 195px;
+  margin-left: 16px;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;

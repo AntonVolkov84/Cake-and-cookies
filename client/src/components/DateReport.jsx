@@ -52,6 +52,12 @@ function Report() {
       parse.getFullYear() + ' ' + (parse.getMonth() + 1) + ' ' + parse.getDate()
     );
   }
+  function normalTime(e) {
+    const parse = new Date(Date.parse(e.createdAt));
+    return (
+      parse.getDate() + ' ' + (parse.getMonth() + 1) + ' ' + parse.getFullYear()
+    );
+  }
 
   return (
     <section ref={contentToPrint} className="datereport">
@@ -72,12 +78,20 @@ function Report() {
             Выбрать
           </button>
         </form>
+        <div className="datereport_title">
+          <span className="datereport_text">Дата</span>
+          <span className="datereport_text">Название товара</span>
+          <span className="datereport_text">Цена</span>
+          <span className="datereport_text">Продано</span>
+          <span className="datereport_text">Сумма</span>
+          <span className="datereport_text">Общая</span>
+        </div>
         {isReportLoaded === 'loaded' ? (
           report
             .filter((e) => filterByDate(e.dateCreated) === AddtimeForReport)
             .map((e, index) => (
               <div key={index} className="datereport_info">
-                <div className="datereport_text">{e.dateCreated}</div>
+                <div className="datereport_text">{normalTime(e)}</div>
                 <div className="datereport_text">{e.fullname}</div>
                 <div className="datereport_text">{e.price}</div>
                 <div className="datereport_text">{e.weight}</div>

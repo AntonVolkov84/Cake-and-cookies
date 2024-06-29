@@ -41,8 +41,8 @@
   width: 960px;
   height: 475px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-flow: row;
   gap: 25px;
 }
 .adminmenu_btn {

@@ -55,8 +55,8 @@ function Report() {
         {isReportLoaded === 'loaded' ? (
           report
             .filter((e) => filterByDate(e.dateCreated) === timeForReport)
-            .map((e) => (
-              <div className="reportblock_info">
+            .map((e, index) => (
+              <div key={index} className="reportblock_info">
                 <div className="reportblock_text">{e.dateCreated}</div>
                 <div className="reportblock_text">{e.fullname}</div>
                 <div className="reportblock_text">{e.price}</div>

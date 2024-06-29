@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-.reportblock {
+.remaining {
   width: 1024px;
   height: 768px;
   background-color: #F4F4F4;
@@ -13,7 +13,7 @@
   padding-top: 50px;
   padding-left: 25px;
 }
-.reportblock_timantan {
+.remaining_timantan {
   width: 960px;
   height: 50px;
   background-color: #DBF0FF;
@@ -32,9 +32,40 @@
           align-items: center;
   font-size: 24px;
 }
-.reportblock_infofield {
+.remaining_input {
+  margin-right: 16px;
+  border: none;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+.remaining_btn {
+  border: none;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 195px;
+}
+.remaining_texthead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+}
+.remaining_infofield {
   width: 960px;
-  height: 461px;
+  height: 518px;
   margin-top: 25px;
   border: 2px solid #0D99FF;
   border-radius: 12px;
@@ -43,7 +74,7 @@
   background-color: #FBFBFB;
   position: relative;
 }
-.reportblock_infofield::-webkit-scrollbar {
+.remaining_infofield::-webkit-scrollbar {
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
   border-radius: 12px;
@@ -51,14 +82,14 @@
   font-family: Arial, Helvetica, sans-serif;
   width: 20px;
 }
-.reportblock_infofield::-webkit-scrollbar-thumb {
+.remaining_infofield::-webkit-scrollbar-thumb {
   background: #0D99FF;
   border-radius: 12px;
 }
-.reportblock_timeAndSalesman {
+.remaining_timeAndSalesman {
   width: 910px;
   height: 50px;
-  margin: 25px 25px 0 25px;
+  margin: 0 25px 0 25px;
   background-color: #F4F4F4;
   border-radius: 12px;
   padding: 10px;
@@ -66,7 +97,7 @@
   display: -ms-flexbox;
   display: flex;
 }
-.reportblock_salesman {
+.remaining_salesman {
   font-size: 16px;
   margin-right: 25px;
   display: -webkit-box;
@@ -79,7 +110,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.reportblock_date {
+.remaining_date {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,17 +122,17 @@
           align-items: center;
   font-size: 16px;
 }
-.reportblock_text {
+.remaining_text {
   margin: 25px 35px 0 35px;
 }
-.reportblock_info {
+.remaining_info {
   width: 930px;
   height: 50px;
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 3fr 1fr;
 }
-.reportblock_wait {
+.remaining_wait {
   font-size: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,7 +145,7 @@
           align-items: center;
   margin-top: 100px;
 }
-.reportblock_total {
+.remaining_total {
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
   border-radius: 12px;
@@ -123,8 +154,8 @@
   height: 50px;
   width: 250px;
   position: absolute;
-  bottom: 116px;
-  right: 39px;
+  bottom: 25px;
+  right: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,11 +166,26 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.reportblock_save {
-  width: 960px;
-  height: 50px;
+.remaining_footer {
   position: absolute;
   bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.remaining_back {
+  width: 472px;
+  height: 50px;
+  background-color: #DBF0FF;
+  border: solid 2px #0D99FF;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 16px;
+}
+.remaining_save {
+  width: 472px;
+  height: 50px;
   background-color: #DBF0FF;
   border: solid 2px #0D99FF;
   border-radius: 12px;
