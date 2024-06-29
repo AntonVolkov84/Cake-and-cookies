@@ -19,9 +19,6 @@ function Gweight() {
     setWeight(isAddingWeight[isAddingWeight.length - 1]);
   }, [isAddingWeight]);
 
-  function inputChange(event) {
-    setWeight(event.target.value);
-  }
   function addToBusket() {
     if (weight === undefined) {
       return alert('Вы не выбрали вес или количество товара');
@@ -75,7 +72,9 @@ function Gweight() {
               max="999.999"
               step="0.001"
               required
-              onChange={inputChange}
+              onChange={(event) => {
+                setWeight(event.target.value);
+              }}
             />
           </div>
           <button className="gweight_get">Получить вес</button>

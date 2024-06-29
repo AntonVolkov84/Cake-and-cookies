@@ -60,11 +60,11 @@ function Report() {
   }
 
   return (
-    <section ref={contentToPrint} className="datereport">
+    <section className="datereport">
       <div className="datereport_timantan">
         Тимантан, отчет за дату {AddtimeForReport}
       </div>
-      <div className="datereport_infofield">
+      <div ref={contentToPrint} className="datereport_infofield">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="datereport_timeAndSalesman"
@@ -102,14 +102,14 @@ function Report() {
         ) : (
           <div className="datereport_wait">Выберите дату, пожалуйста!</div>
         )}
-        <div className="datereport_total">
-          Сумма по отчету:{' '}
-          {report
-            .filter((e) => filterByDate(e.dateCreated) === AddtimeForReport)
-            .reduce((acc, e) => {
-              return (acc += e.totalPerProduct);
-            }, 0)}
-        </div>
+      </div>
+      <div className="datereport_total">
+        Сумма по отчету:{' '}
+        {report
+          .filter((e) => filterByDate(e.dateCreated) === AddtimeForReport)
+          .reduce((acc, e) => {
+            return (acc += e.totalPerProduct);
+          }, 0)}
       </div>
       <Link to="/adminmenu">
         <button className="datereport_backbtn">Назад</button>

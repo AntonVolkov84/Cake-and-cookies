@@ -32,11 +32,6 @@ function Report() {
     dispatch(fetchReport());
   }, []);
 
-  function saveAndQuit() {
-    dispatch(cleanReport());
-    navigate('/quit');
-  }
-
   function filterByDate(item) {
     const parse = new Date(Date.parse(item));
     return (

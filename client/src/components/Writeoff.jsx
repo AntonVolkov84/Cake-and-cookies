@@ -43,7 +43,7 @@ function Writeoff() {
                     className="card"
                     onClick={handleClick}
                   >
-                    <img className="card_img" src={e.productUrl}></img>
+                    <img className="card_img" alt='cookies' src={e.productUrl}></img>
                     <h2 className="card_text">{e.fullname}</h2>
                   </div>
                 ))

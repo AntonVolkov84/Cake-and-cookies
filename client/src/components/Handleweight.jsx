@@ -49,6 +49,9 @@ function Handleweight() {
           <div className="handleweight_menu">
             <span className="handleweight_menu_text">Вес, кол-во:</span>
             <input
+              onChange={(event) => {
+                setWeight(event.target.value);
+              }}
               value={weight}
               className="handleweight_menu_input"
               placeholder="Введите вес или количество товара"
