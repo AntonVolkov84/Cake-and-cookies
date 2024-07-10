@@ -30,7 +30,7 @@ function Report() {
     (timeForReport.getMonth() + 1) +
     ' ' +
     timeForReport.getDate();
-
+  
   const { register, handleSubmit } = useForm({
     defaultValues: {
       addingDate: '',
@@ -48,6 +48,8 @@ function Report() {
 
   function filterByDate(item) {
     const parse = new Date(Date.parse(item));
+    console.log('item', item)
+    console.log('parse', parse)
     return (
       parse.getFullYear() + ' ' + (parse.getMonth() + 1) + ' ' + parse.getDate()
     );
@@ -58,7 +60,7 @@ function Report() {
       parse.getDate() + ' ' + (parse.getMonth() + 1) + ' ' + parse.getFullYear()
     );
   }
-
+  
   return (
     <section className="datereport">
       <div className="datereport_timantan">
@@ -88,7 +90,7 @@ function Report() {
         </div>
         {isReportLoaded === 'loaded' ? (
           report
-            .filter((e) => filterByDate(e.dateCreated) === AddtimeForReport)
+            .filter((e) => filterByDate(e.createdAt) === AddtimeForReport)
             .map((e, index) => (
               <div key={index} className="datereport_info">
                 <div className="datereport_text">{normalTime(e)}</div>

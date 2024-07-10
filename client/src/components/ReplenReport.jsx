@@ -49,6 +49,8 @@ function ReplenReport() {
 
   function filterByDate(item) {
     const parse = new Date(Date.parse(item.createdAt));
+    console.log('item', item)
+    console.log('parse', parse)
     return (
       parse.getDate() + ' ' + (parse.getMonth() + 1) + ' ' + parse.getFullYear()
     );
