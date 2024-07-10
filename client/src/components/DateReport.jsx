@@ -48,9 +48,7 @@ function Report() {
 
   function filterByDate(item) {
     const parse = new Date(Date.parse(item));
-    console.log('item', item)
-    console.log('parse', parse)
-    return (
+      return (
       parse.getFullYear() + ' ' + (parse.getMonth() + 1) + ' ' + parse.getDate()
     );
   }
